@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact the library | Hearthside Library</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body data-page="contact">
+  <header id="site-header"></header>
+  <main class="shell page-main narrow-page">
+    <p class="eyebrow">A real person is on the other end</p><h1>Talk to the library.</h1><p class="page-lead">Questions about a book, a due date, or your account? Send us a note.</p>
+    <form id="contact-form" class="form-panel">
+      <label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required>
+      <label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required>
+      <label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="5" required></textarea>
+      <button class="button button-dark button-wide" type="submit">Send message</button>
+      <p id="contact-feedback" class="form-message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>

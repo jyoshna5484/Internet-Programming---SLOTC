@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse books | Hearthside Library</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body data-page="books">
+  <header id="site-header"></header>
+  <main class="shell page-main">
+    <div class="page-heading"><div><p class="eyebrow">The collection</p><h1>Find your next read.</h1><p class="page-lead">Search the shelves by title, author, or subject.</p></div></div>
+    <div class="catalog-tools"><label class="search-field"><span aria-hidden="true">⌕</span><input id="book-search" type="search" placeholder="Try “networks” or “Korth”" aria-label="Search books"></label><span id="book-count" class="result-count"></span></div>
+    <p id="book-empty" class="empty-state" hidden>No books match that search. Try another title or author.</p>
+    <div id="book-grid" class="book-grid"></div>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>

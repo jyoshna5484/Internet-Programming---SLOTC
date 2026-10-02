@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My loans | Hearthside Library</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body data-page="history">
+  <header id="site-header"></header>
+  <main class="shell page-main">
+    <p class="eyebrow">Your reading life</p><h1>Borrow history</h1><p class="page-lead">Keep an eye on due dates and any outstanding fines.</p>
+    <div class="summary-row"><div><span>Books on loan</span><strong id="active-loans">0</strong></div><div><span>Outstanding fine</span><strong id="fine-total">₹0</strong></div></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Book</th><th>Issue date</th><th>Expiry date</th><th>Status</th><th>Fine</th><th>Action</th></tr></thead><tbody id="history-body"></tbody></table></div>
+    <p id="history-empty" class="empty-state" hidden>You have no borrowing records yet. <a href="books.html">Find a book to borrow.</a></p>
+    <p id="history-message" class="form-message" role="status" aria-live="polite"></p>
+    <p class="fine-note">Overdue books accrue a fine of ₹5 per day. Fines stop accruing when the book is returned.</p>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>
