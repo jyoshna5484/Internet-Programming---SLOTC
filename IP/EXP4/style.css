@@ -1,0 +1,111 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f3f7f4;
+}
+
+header {
+    background-color: #28745c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+h2 {
+    color: #28745c;
+}
+
+h3 {
+    color: #555;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+select {
+    width: 90%;
+    padding: 9px;
+    margin: 8px 0;
+    border: 1px solid #aaa;
+}
+
+button {
+    background-color: #28745c;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #aaa;
+    padding: 9px;
+    text-align: left;
+}
+
+th {
+    background-color: #dcefe7;
+}
+
+.ticket {
+    border: 2px dashed #28745c;
+    padding: 15px;
+    background-color: #f7fffa;
+}
+
+footer {
+    background-color: #28745c;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    input,
+    select {
+        width: 95%;
+    }
+}

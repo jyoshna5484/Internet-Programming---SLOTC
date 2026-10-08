@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #fff5f5;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background-color: #8e4a5a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+/* Sections */
+
+section {
+    width: 88%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    color: #8e4a5a;
+}
+
+h3 {
+    color: #555;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: #8e4a5a;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/* Inputs */
+
+input,
+select,
+textarea {
+    padding: 9px;
+    margin: 7px;
+    border: 1px solid #aaa;
+}
+
+textarea {
+    width: 80%;
+    height: 70px;
+}
+
+
+/* Home */
+
+.home {
+    background-color: #f8dfe3;
+    text-align: center;
+    padding: 45px;
+}
+
+.home h2 {
+    font-size: 35px;
+}
+
+
+/* Categories */
+
+.category-box {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-box div {
+    width: 180px;
+    padding: 15px;
+    background-color: #f8e8eb;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+/* Cake List */
+
+.cake-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cake {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fffafa;
+}
+
+.cake a {
+    color: #8e4a5a;
+}
+
+
+/* Account */
+
+.account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.account div {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.account input {
+    display: block;
+    width: 85%;
+}
+
+
+/* Cart */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #8e4a5a;
+    color: white;
+}
+
+
+/* Shipping Status */
+
+.status {
+    background-color: #f8e0e5;
+    padding: 15px;
+}
+
+
+/* Admin */
+
+.admin {
+    background-color: #f1e7e9;
+}
+
+.admin textarea {
+    display: block;
+}
+
+.admin input,
+.admin select {
+    margin: 7px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #8e4a5a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .cake-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .account {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    section {
+        width: 94%;
+    }
+
+    .cake-list {
+        grid-template-columns: 1fr;
+    }
+
+    .category-box {
+        display: block;
+    }
+
+    .category-box div {
+        width: auto;
+        margin: 10px 0;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 90%;
+    }
+}

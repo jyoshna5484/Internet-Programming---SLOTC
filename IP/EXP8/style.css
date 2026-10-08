@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f3f9f9;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background-color: #176b87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+/* Home */
+
+.home {
+    width: 88%;
+    margin: 20px auto;
+    background-color: #d9eeee;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.home h2 {
+    color: #176b87;
+    font-size: 32px;
+}
+
+
+/* Sections */
+
+section {
+    width: 88%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cbdede;
+}
+
+h2 {
+    color: #176b87;
+}
+
+h3 {
+    color: #444;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: #219ebc;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #176b87;
+}
+
+
+/* Inputs */
+
+input,
+select,
+textarea {
+    padding: 9px;
+    margin: 7px;
+    border: 1px solid #9dbfc5;
+}
+
+textarea {
+    width: 80%;
+    height: 70px;
+}
+
+
+/* Hospitals */
+
+.hospital-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.hospital {
+    background-color: #f1f8f8;
+    border: 1px solid #c5dddd;
+    padding: 18px;
+}
+
+.hospital h3 {
+    color: #176b87;
+}
+
+
+/* Doctors Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #a9c5ca;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #176b87;
+    color: white;
+}
+
+
+/* Login */
+
+.account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.account div {
+    background-color: #f4fafa;
+    border: 1px solid #cbdede;
+    padding: 20px;
+}
+
+.account input {
+    display: block;
+    width: 85%;
+}
+
+
+/* Appointment */
+
+.appointment {
+    background-color: #e7f4f5;
+}
+
+.status {
+    background-color: #e0f2e5;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 5px solid #299653;
+}
+
+
+/* Patient Dashboard */
+
+.patient-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.patient-box div {
+    background-color: #f4fafa;
+    border: 1px solid #cbdede;
+    padding: 20px;
+}
+
+
+/* Hospital Registration */
+
+.hospital-registration {
+    background-color: #edf7f7;
+}
+
+
+/* Admin */
+
+.admin {
+    background-color: #e3f0f2;
+}
+
+.admin table {
+    background-color: white;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #176b87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .hospital-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .account {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-box {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    section,
+    .home {
+        width: 94%;
+    }
+
+    .hospital-list {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 90%;
+    }
+
+    .home h2 {
+        font-size: 25px;
+    }
+}

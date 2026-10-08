@@ -1,0 +1,99 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f2f6ff;
+}
+
+header {
+    background-color: #315a7d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #315a7d;
+}
+
+.buses {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.bus {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 220px;
+    background-color: #eef5ff;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+}
+
+textarea {
+    height: 60px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #315a7d;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    .bus {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 95%;
+    }
+}

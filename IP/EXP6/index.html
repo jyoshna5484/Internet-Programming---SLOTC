@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Cake Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Sweet Cake Store</h1>
+    <p>Online Cake Ordering System</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#cart">Cart</a>
+        <a href="#orders">My Orders</a>
+        <a href="#login">Login</a>
+        <a href="#admin">Admin</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="home">
+
+    <h2>Welcome to Sweet Cake Store</h2>
+
+    <p>
+        Order fresh and delicious cakes for birthdays,
+        weddings, anniversaries and other special occasions.
+    </p>
+
+    <button>Shop Cakes</button>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="categories">
+
+    <h2>Cake Categories</h2>
+
+    <div class="category-box">
+
+        <div>
+            <h3>Birthday Cakes</h3>
+            <p>Different birthday cakes</p>
+        </div>
+
+        <div>
+            <h3>Chocolate Cakes</h3>
+            <p>Chocolate flavoured cakes</p>
+        </div>
+
+        <div>
+            <h3>Wedding Cakes</h3>
+            <p>Cakes for weddings</p>
+        </div>
+
+        <div>
+            <h3>Anniversary Cakes</h3>
+            <p>Special anniversary cakes</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SEARCH AND FILTER -->
+<section id="cakes">
+
+    <h2>Search Cake</h2>
+
+    <input type="text" placeholder="Search cake name">
+
+    <select>
+        <option>Category</option>
+        <option>Birthday</option>
+        <option>Chocolate</option>
+        <option>Wedding</option>
+        <option>Anniversary</option>
+    </select>
+
+    <select>
+        <option>Sub Category</option>
+        <option>Eggless</option>
+        <option>Fresh Cream</option>
+        <option>Fondant</option>
+    </select>
+
+    <select>
+        <option>Price Range</option>
+        <option>Below Rs.500</option>
+        <option>Rs.500 - Rs.1000</option>
+        <option>Above Rs.1000</option>
+    </select>
+
+    <button>Search</button>
+
+</section>
+
+
+<!-- CAKE LIST -->
+<section>
+
+    <h2>Available Cakes</h2>
+
+    <div class="cake-list">
+
+        <div class="cake">
+
+            <h3>Chocolate Truffle Cake</h3>
+
+            <p>
+                Chocolate cake with chocolate cream.
+            </p>
+
+            <p><b>Price: Rs.650</b></p>
+
+            <select>
+                <option>Select Size</option>
+                <option>0.5 Kg</option>
+                <option>1 Kg</option>
+                <option>2 Kg</option>
+            </select>
+
+            <br>
+
+            <button>Add to Cart</button>
+
+            <p><a href="#">View Description</a></p>
+
+        </div>
+
+
+        <div class="cake">
+
+            <h3>Red Velvet Cake</h3>
+
+            <p>
+                Soft red velvet cake with cream.
+            </p>
+
+            <p><b>Price: Rs.750</b></p>
+
+            <select>
+                <option>Select Size</option>
+                <option>0.5 Kg</option>
+                <option>1 Kg</option>
+                <option>2 Kg</option>
+            </select>
+
+            <br>
+
+            <button>Add to Cart</button>
+
+            <p><a href="#">View Description</a></p>
+
+        </div>
+
+
+        <div class="cake">
+
+            <h3>Vanilla Cake</h3>
+
+            <p>
+                Fresh vanilla cake with cream.
+            </p>
+
+            <p><b>Price: Rs.550</b></p>
+
+            <select>
+                <option>Select Size</option>
+                <option>0.5 Kg</option>
+                <option>1 Kg</option>
+                <option>2 Kg</option>
+            </select>
+
+            <br>
+
+            <button>Add to Cart</button>
+
+            <p><a href="#">View Description</a></p>
+
+        </div>
+
+
+        <div class="cake">
+
+            <h3>Wedding Cake</h3>
+
+            <p>
+                Special cake for wedding occasions.
+            </p>
+
+            <p><b>Price: Rs.1800</b></p>
+
+            <select>
+                <option>Select Size</option>
+                <option>1 Kg</option>
+                <option>2 Kg</option>
+                <option>3 Kg</option>
+            </select>
+
+            <br>
+
+            <button>Add to Cart</button>
+
+            <p><a href="#">View Description</a></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOGIN AND REGISTER -->
+<section id="login">
+
+    <div class="account">
+
+        <div>
+            <h2>Student / Customer Login</h2>
+
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+
+            <br>
+
+            <button>Login</button>
+
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+
+
+        <div>
+            <h2>Register</h2>
+
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Phone Number">
+            <input type="password" placeholder="Password">
+
+            <br>
+
+            <button>Register</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMIZE CAKE -->
+<section>
+
+    <h2>Customize Cake</h2>
+
+    <p>Selected Cake: Chocolate Truffle Cake</p>
+
+    <label>Choose Size</label>
+
+    <select>
+        <option>0.5 Kg</option>
+        <option>1 Kg</option>
+        <option>2 Kg</option>
+    </select>
+
+    <br>
+
+    <label>Message on Cake</label>
+
+    <input type="text" placeholder="Happy Birthday">
+
+    <br>
+
+    <label>Delivery Date</label>
+
+    <input type="date">
+
+    <br>
+
+    <button>Add Customized Cake</button>
+
+</section>
+
+
+<!-- CART -->
+<section id="cart">
+
+    <h2>My Cart</h2>
+
+    <table>
+
+        <tr>
+            <th>Cake</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>Chocolate Truffle Cake</td>
+            <td>1 Kg</td>
+            <td>Rs.650</td>
+            <td><button>Remove</button></td>
+        </tr>
+
+    </table>
+
+    <h3>Total: Rs.650</h3>
+
+    <button>Proceed to Order</button>
+
+</section>
+
+
+<!-- SHIPPING ADDRESS -->
+<section>
+
+    <h2>Shipping Address</h2>
+
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="House / Street">
+    <input type="text" placeholder="City">
+    <input type="text" placeholder="Pincode">
+    <input type="text" placeholder="Phone Number">
+
+    <br>
+
+    <button>Save Address</button>
+    <button>Update Address</button>
+
+</section>
+
+
+<!-- PLACE ORDER -->
+<section>
+
+    <h2>Place Order</h2>
+
+    <p><b>Cake:</b> Chocolate Truffle Cake</p>
+    <p><b>Quantity:</b> 1</p>
+    <p><b>Total:</b> Rs.650</p>
+
+    <h3>Payment</h3>
+
+    <select>
+        <option>Select Payment Method</option>
+        <option>UPI</option>
+        <option>Debit Card</option>
+        <option>Credit Card</option>
+    </select>
+
+    <br>
+
+    <button>Place Order</button>
+
+</section>
+
+
+<!-- MY ORDERS -->
+<section id="orders">
+
+    <h2>My Orders</h2>
+
+    <table>
+
+        <tr>
+            <th>Order ID</th>
+            <th>Cake</th>
+            <th>Price</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>CAKE10245</td>
+            <td>Chocolate Truffle</td>
+            <td>Rs.650</td>
+            <td>Out for Delivery</td>
+        </tr>
+
+        <tr>
+            <td>CAKE10246</td>
+            <td>Red Velvet</td>
+            <td>Rs.750</td>
+            <td>Delivered</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- SHIPPING STATUS -->
+<section>
+
+    <h2>Shipping Status</h2>
+
+    <p><b>Order ID:</b> CAKE10245</p>
+
+    <p class="status">
+        Order Placed → Preparing → Shipped → Out for Delivery
+    </p>
+
+    <p><b>Current Status:</b> Out for Delivery</p>
+
+</section>
+
+
+<!-- ADMIN -->
+<section id="admin" class="admin">
+
+    <h2>Admin Panel</h2>
+
+    <h3>Admin Login</h3>
+
+    <input type="text" placeholder="Admin Username">
+    <input type="password" placeholder="Password">
+
+    <br>
+
+    <button>Login</button>
+
+    <h3>Manage Products</h3>
+
+    <input type="text" placeholder="Cake Name">
+    <input type="text" placeholder="Price">
+
+    <select>
+        <option>Select Category</option>
+        <option>Birthday</option>
+        <option>Chocolate</option>
+        <option>Wedding</option>
+    </select>
+
+    <br>
+
+    <input type="text" placeholder="Cake Image File Name">
+
+    <textarea placeholder="Cake Description"></textarea>
+
+    <br>
+
+    <button>Post Cake</button>
+    <button>Update Cake</button>
+    <button>Delete Cake</button>
+
+
+    <h3>Manage Orders</h3>
+
+    <table>
+
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Cake</th>
+            <th>Location</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>CAKE10245</td>
+            <td>Rahul</td>
+            <td>Chocolate Cake</td>
+            <td>Chennai</td>
+
+            <td>
+                <select>
+                    <option>Preparing</option>
+                    <option>Shipped</option>
+                    <option>Out for Delivery</option>
+                    <option>Delivered</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>CAKE10246</td>
+            <td>Priya</td>
+            <td>Red Velvet</td>
+            <td>Tambaram</td>
+
+            <td>
+                <select>
+                    <option>Preparing</option>
+                    <option>Shipped</option>
+                    <option>Delivered</option>
+                </select>
+            </td>
+        </tr>
+
+    </table>
+
+
+    <h3>Admin Information</h3>
+
+    <p>Total Products: 48</p>
+    <p>Total Orders: 25</p>
+    <p>Total Users: 120</p>
+
+    <button>Generate Report</button>
+
+    <br><br>
+
+    <button>Logout</button>
+
+</section>
+
+
+<footer>
+
+    <h3>Sweet Cake Store</h3>
+
+    <p>Online Cake Ordering System</p>
+
+    <p>Fresh Cakes Delivered to Your Door</p>
+
+</footer>
+
+</body>
+</html>

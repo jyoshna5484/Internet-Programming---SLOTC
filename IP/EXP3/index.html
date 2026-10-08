@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bus Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Online Bus Ticket Booking</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#buses">Buses</a>
+        <a href="#booking">Book Ticket</a>
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+        <a href="#history">History</a>
+        <a href="#admin">Admin</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Search Bus</h2>
+
+        <form>
+            <input type="text" placeholder="From">
+            <input type="text" placeholder="To">
+            <input type="date">
+            <input type="time">
+            <button>Search Bus</button>
+        </form>
+    </section>
+
+    <!-- Available Buses -->
+    <section id="buses">
+        <h2>Available Buses</h2>
+
+        <div class="buses">
+
+            <div class="bus">
+                <h3>Chennai Express</h3>
+                <p>Chennai to Bangalore</p>
+                <p>Time: 8:00 AM</p>
+                <p>Seats Available: 20</p>
+                <p>Price: Rs. 800</p>
+                <button>Book Now</button>
+            </div>
+
+            <div class="bus">
+                <h3>City Travels</h3>
+                <p>Chennai to Hyderabad</p>
+                <p>Time: 9:00 PM</p>
+                <p>Seats Available: 15</p>
+                <p>Price: Rs. 1200</p>
+                <button>Book Now</button>
+            </div>
+
+            <div class="bus">
+                <h3>Green Travels</h3>
+                <p>Chennai to Coimbatore</p>
+                <p>Time: 7:00 AM</p>
+                <p>Seats Available: 25</p>
+                <p>Price: Rs. 700</p>
+                <button>Book Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Login -->
+    <section id="login">
+        <h2>Login</h2>
+
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+
+        <p>Forgot Password?</p>
+    </section>
+
+    <!-- Registration -->
+    <section id="register">
+        <h2>Registration</h2>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone Number">
+            <input type="password" placeholder="Password">
+            <button>Register</button>
+        </form>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking">
+        <h2>Book Your Ticket</h2>
+
+        <form>
+            <input type="text" placeholder="Passenger Name">
+            <input type="number" placeholder="Age">
+
+            <select>
+                <option>Select Bus</option>
+                <option>Chennai Express</option>
+                <option>City Travels</option>
+                <option>Green Travels</option>
+            </select>
+
+            <select>
+                <option>Select Seat</option>
+                <option>Seat 1</option>
+                <option>Seat 2</option>
+                <option>Seat 3</option>
+                <option>Seat 4</option>
+            </select>
+
+            <select>
+                <option>Payment Method</option>
+                <option>UPI</option>
+                <option>Debit Card</option>
+                <option>Credit Card</option>
+            </select>
+
+            <button>Book Ticket</button>
+        </form>
+    </section>
+
+    <!-- Booking History -->
+    <section id="history">
+        <h2>Booking History</h2>
+
+        <p><b>Bus:</b> Chennai Express</p>
+        <p><b>Route:</b> Chennai to Bangalore</p>
+        <p><b>Seat:</b> Seat 5</p>
+        <p><b>Date:</b> 10-10-2026</p>
+        <p><b>Status:</b> Confirmed</p>
+
+        <button>Cancel Booking</button>
+    </section>
+
+    <!-- Comments -->
+    <section>
+        <h2>Comments</h2>
+
+        <p>Rahul: Good bus service.</p>
+        <p>Priya: Comfortable journey.</p>
+
+        <form>
+            <input type="text" placeholder="Your Name">
+            <textarea placeholder="Write your comment"></textarea>
+            <button>Post Comment</button>
+        </form>
+    </section>
+
+    <!-- Admin -->
+    <section id="admin">
+        <h2>Admin Panel</h2>
+
+        <form>
+            <input type="text" placeholder="Admin Username">
+            <input type="password" placeholder="Password">
+            <button>Admin Login</button>
+        </form>
+
+        <h3>Bus Categories</h3>
+        <p>Volvo</p>
+        <p>Sleeper Coach</p>
+        <p>Normal Coach</p>
+
+        <button>Add Category</button>
+        <button>Update Category</button>
+
+        <h3>Bus Information</h3>
+        <p>Bus Name: Chennai Express</p>
+        <p>Bus Type: Volvo</p>
+        <p>Route: Chennai to Bangalore</p>
+        <p>Available Seats: 20</p>
+
+        <button>Add Bus</button>
+        <button>Update Bus</button>
+
+        <h3>User Management</h3>
+        <p>Manage registered users and their bookings.</p>
+        <button>View Users</button>
+
+        <h3>Reports</h3>
+        <p>Generate booking and bus reports.</p>
+        <button>Generate Report</button>
+    </section>
+
+</div>
+
+<footer>
+    <p>Online Bus Ticket Booking System</p>
+</footer>
+
+</body>
+</html>

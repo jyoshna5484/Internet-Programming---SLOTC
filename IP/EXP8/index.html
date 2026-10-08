@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MedCare Hospital Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>MedCare Hospital</h1>
+    <p>Online Doctor Appointment System</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#patient">Patient</a>
+        <a href="#admin">Admin</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="home">
+
+    <h2>Book Your Doctor Appointment</h2>
+
+    <p>
+        Search doctors by specialty and location
+        and book an appointment at your convenient time.
+    </p>
+
+    <button>Find a Doctor</button>
+
+</section>
+
+
+<!-- SEARCH MODULE -->
+
+<section id="search">
+
+    <h2>Search Hospital / Doctor</h2>
+
+    <input type="text" placeholder="Enter Location">
+
+    <select>
+        <option>Select Specialty</option>
+        <option>Cardiology</option>
+        <option>Dermatology</option>
+        <option>General Medicine</option>
+        <option>Orthopedics</option>
+        <option>Pediatrics</option>
+    </select>
+
+    <input type="text" placeholder="Doctor Name">
+
+    <button>Search</button>
+
+</section>
+
+
+<!-- HOSPITAL LIST -->
+
+<section>
+
+    <h2>Available Hospitals</h2>
+
+    <div class="hospital-list">
+
+        <div class="hospital">
+            <h3>MedCare Main Hospital</h3>
+            <p>Location: Chennai</p>
+            <p>Specialties: Cardiology, Orthopedics</p>
+            <p>Rating: 4.5 / 5</p>
+
+            <button>View Hospital</button>
+            <button>View Map</button>
+        </div>
+
+
+        <div class="hospital">
+            <h3>City Care Hospital</h3>
+            <p>Location: Tambaram</p>
+            <p>Specialties: Pediatrics, Dermatology</p>
+            <p>Rating: 4.3 / 5</p>
+
+            <button>View Hospital</button>
+            <button>View Map</button>
+        </div>
+
+
+        <div class="hospital">
+            <h3>Health Plus Hospital</h3>
+            <p>Location: Porur</p>
+            <p>Specialties: General Medicine</p>
+            <p>Rating: 4.6 / 5</p>
+
+            <button>View Hospital</button>
+            <button>View Map</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DOCTORS -->
+
+<section id="doctors">
+
+    <h2>Available Doctors</h2>
+
+    <table>
+
+        <tr>
+            <th>Doctor</th>
+            <th>Specialty</th>
+            <th>Hospital</th>
+            <th>Rating</th>
+            <th>Available Time</th>
+        </tr>
+
+        <tr>
+            <td>Dr. Arun</td>
+            <td>Cardiology</td>
+            <td>MedCare Main Hospital</td>
+            <td>4.8</td>
+            <td>10 AM - 1 PM</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Priya</td>
+            <td>Dermatology</td>
+            <td>City Care Hospital</td>
+            <td>4.6</td>
+            <td>11 AM - 3 PM</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Kumar</td>
+            <td>Orthopedics</td>
+            <td>MedCare Main Hospital</td>
+            <td>4.5</td>
+            <td>2 PM - 5 PM</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Divya</td>
+            <td>Pediatrics</td>
+            <td>City Care Hospital</td>
+            <td>4.7</td>
+            <td>9 AM - 12 PM</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- LOGIN / SIGNUP -->
+
+<section class="account">
+
+    <div>
+
+        <h2>Patient Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <br>
+
+        <button>Login</button>
+
+        <p><a href="#">Forgot Password?</a></p>
+
+    </div>
+
+
+    <div>
+
+        <h2>Patient Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone Number">
+        <input type="password" placeholder="Password">
+
+        <br>
+
+        <button>Register</button>
+
+    </div>
+
+</section>
+
+
+<!-- APPOINTMENT BOOKING -->
+
+<section id="appointment" class="appointment">
+
+    <h2>Book Appointment</h2>
+
+    <h3>Doctor Details</h3>
+
+    <p><b>Doctor:</b> Dr. Arun</p>
+    <p><b>Specialty:</b> Cardiology</p>
+    <p><b>Hospital:</b> MedCare Main Hospital</p>
+
+
+    <h3>Select Date</h3>
+
+    <input type="date">
+
+
+    <h3>Select Time</h3>
+
+    <select>
+        <option>Select Time</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>12:00 PM</option>
+        <option>2:00 PM</option>
+        <option>3:00 PM</option>
+    </select>
+
+
+    <h3>Patient Details</h3>
+
+    <input type="text" placeholder="Patient Name">
+    <input type="number" placeholder="Age">
+    <input type="text" placeholder="Phone Number">
+
+    <br>
+
+    <button>Book Appointment</button>
+
+</section>
+
+
+<!-- CHECK IN -->
+
+<section>
+
+    <h2>Patient Check-in</h2>
+
+    <input type="text" placeholder="Appointment ID">
+
+    <input type="text" placeholder="Patient Name">
+
+    <select>
+        <option>Reason for Visit</option>
+        <option>Regular Checkup</option>
+        <option>Follow-up</option>
+        <option>New Problem</option>
+    </select>
+
+    <br>
+
+    <textarea placeholder="Enter your symptoms"></textarea>
+
+    <br>
+
+    <button>Submit Check-in</button>
+
+</section>
+
+
+<!-- APPOINTMENT STATUS -->
+
+<section>
+
+    <h2>Appointment Status</h2>
+
+    <input type="text" placeholder="Enter Appointment ID">
+
+    <button>Check Status</button>
+
+    <div class="status">
+        <p><b>Status:</b> Confirmed</p>
+        <p><b>Doctor:</b> Dr. Arun</p>
+        <p><b>Date:</b> 16-10-2026</p>
+        <p><b>Time:</b> 11:00 AM</p>
+    </div>
+
+</section>
+
+
+<!-- PATIENT DASHBOARD -->
+
+<section id="patient">
+
+    <h2>Patient Dashboard</h2>
+
+    <div class="patient-box">
+
+        <div>
+            <h3>Personal Details</h3>
+
+            <p>Name: Jyoshna</p>
+            <p>Email: jyoshna@example.com</p>
+            <p>Phone: 9876543210</p>
+
+            <button>Update Details</button>
+        </div>
+
+
+        <div>
+            <h3>Upcoming Appointment</h3>
+
+            <p>Doctor: Dr. Arun</p>
+            <p>Hospital: MedCare Main Hospital</p>
+            <p>Date: 16-10-2026</p>
+            <p>Time: 11:00 AM</p>
+
+            <button>Reschedule</button>
+            <button>Cancel</button>
+        </div>
+
+    </div>
+
+
+    <h3>Past Appointments</h3>
+
+    <table>
+
+        <tr>
+            <th>Doctor</th>
+            <th>Specialty</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>Dr. Priya</td>
+            <td>Dermatology</td>
+            <td>10-09-2026</td>
+            <td>Completed</td>
+        </tr>
+
+        <tr>
+            <td>Dr. Kumar</td>
+            <td>Orthopedics</td>
+            <td>25-08-2026</td>
+            <td>Completed</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- REVIEW -->
+
+<section>
+
+    <h2>Doctor Rating and Review</h2>
+
+    <input type="text" placeholder="Doctor Name">
+
+    <select>
+        <option>Select Rating</option>
+        <option>5 - Excellent</option>
+        <option>4 - Good</option>
+        <option>3 - Average</option>
+        <option>2 - Poor</option>
+        <option>1 - Bad</option>
+    </select>
+
+    <br>
+
+    <textarea placeholder="Write your review"></textarea>
+
+    <br>
+
+    <button>Submit Review</button>
+
+</section>
+
+
+<!-- HOSPITAL REGISTRATION -->
+
+<section class="hospital-registration">
+
+    <h2>Hospital Registration</h2>
+
+    <input type="text" placeholder="Hospital Name">
+    <input type="text" placeholder="Location">
+    <input type="text" placeholder="Phone Number">
+    <input type="email" placeholder="Email">
+
+    <br>
+
+    <button>Register Hospital</button>
+
+</section>
+
+
+<!-- HOSPITAL MANAGEMENT -->
+
+<section>
+
+    <h2>Hospital Details Management</h2>
+
+    <input type="text" placeholder="Hospital Name">
+
+    <textarea placeholder="Hospital Description"></textarea>
+
+    <input type="text" placeholder="Hospital Location">
+
+    <br>
+
+    <button>Create Details</button>
+    <button>Update Details</button>
+
+</section>
+
+
+<!-- ADMIN -->
+
+<section id="admin" class="admin">
+
+    <h2>Admin Panel</h2>
+
+    <h3>Admin Login</h3>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <br>
+
+    <button>Login</button>
+
+
+    <h3>Manage Doctors</h3>
+
+    <input type="text" placeholder="Doctor Name">
+
+    <select>
+        <option>Select Specialty</option>
+        <option>Cardiology</option>
+        <option>Dermatology</option>
+        <option>Orthopedics</option>
+        <option>Pediatrics</option>
+    </select>
+
+    <input type="text" placeholder="Hospital">
+
+    <button>Add Doctor</button>
+    <button>Update Doctor</button>
+    <button>Delete Doctor</button>
+
+
+    <h3>Manage Appointments</h3>
+
+    <table>
+
+        <tr>
+            <th>Appointment ID</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>AP1001</td>
+            <td>Rahul</td>
+            <td>Dr. Arun</td>
+            <td>16-10-2026</td>
+            <td>Confirmed</td>
+        </tr>
+
+        <tr>
+            <td>AP1002</td>
+            <td>Priya</td>
+            <td>Dr. Divya</td>
+            <td>17-10-2026</td>
+            <td>Pending</td>
+        </tr>
+
+    </table>
+
+
+    <h3>Appointment Statistics</h3>
+
+    <p>Total Appointments: 150</p>
+    <p>Completed: 110</p>
+    <p>Pending: 25</p>
+    <p>Cancelled: 15</p>
+
+
+    <h3>Rating Details</h3>
+
+    <p>Average Doctor Rating: 4.5 / 5</p>
+
+    <button>View Ratings</button>
+
+    <br><br>
+
+    <button>Logout</button>
+
+</section>
+
+
+<footer>
+
+    <h3>MedCare Hospital</h3>
+
+    <p>Online Appointment Booking System</p>
+
+    <p>Patient Care Made Simple</p>
+
+</footer>
+
+</body>
+</html>

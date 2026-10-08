@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f2f8f8;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background-color: #176b87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 5px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+/* Home */
+
+.home {
+    text-align: center;
+    background-color: #d9eff2;
+    padding: 45px;
+    margin: 20px auto;
+}
+
+.home h2 {
+    font-size: 32px;
+    color: #176b87;
+}
+
+
+/* Sections */
+
+section {
+    width: 88%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #c9dddd;
+}
+
+h2 {
+    color: #176b87;
+}
+
+h3 {
+    color: #444;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: #219ebc;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #176b87;
+}
+
+
+/* Inputs */
+
+input,
+select,
+textarea {
+    padding: 9px;
+    margin: 7px;
+    border: 1px solid #9bbfc5;
+}
+
+textarea {
+    width: 80%;
+    height: 70px;
+}
+
+
+/* Services */
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.service {
+    border: 1px solid #c9dddd;
+    padding: 18px;
+    background-color: #f4fbfb;
+}
+
+.service b {
+    color: #176b87;
+}
+
+
+/* Booking */
+
+.booking {
+    background-color: #e8f5f6;
+}
+
+.booking-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.booking-area select {
+    display: block;
+    width: 80%;
+}
+
+.available {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #c9dddd;
+}
+
+.slot {
+    background-color: #dff3e6;
+    padding: 10px;
+}
+
+.slot.booked {
+    background-color: #f3dada;
+    color: #a33;
+}
+
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #a8c4c9;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #176b87;
+    color: white;
+}
+
+
+/* Account */
+
+.account-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.account-box div {
+    background-color: #f4fbfb;
+    border: 1px solid #c9dddd;
+    padding: 20px;
+}
+
+
+/* Calendar */
+
+.calendar {
+    background-color: #edf7f8;
+}
+
+
+/* Admin */
+
+.admin {
+    background-color: #e3f0f2;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #176b87;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .service-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .booking-area {
+        grid-template-columns: 1fr;
+    }
+
+    .account-box {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    section {
+        width: 94%;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 90%;
+    }
+
+    .home h2 {
+        font-size: 25px;
+    }
+}
