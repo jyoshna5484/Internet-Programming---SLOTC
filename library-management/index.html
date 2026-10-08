@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Library Management System</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#books">Books</a>
+        <a href="#login">Login</a>
+        <a href="#register">Register</a>
+        <a href="#profile">Profile</a>
+        <a href="#admin">Admin</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <section id="home">
+        <h2>Welcome to Our Library</h2>
+        <p>Find books and study materials easily.</p>
+
+        <input type="text" placeholder="Search Book">
+        <button>Search</button>
+    </section>
+
+    <section id="books">
+        <h2>Available Books</h2>
+
+        <div class="books">
+
+            <div class="book">
+                <h3>Python Programming</h3>
+                <p>Author: John Smith</p>
+                <p>Available: Yes</p>
+                <button>Borrow</button>
+            </div>
+
+            <div class="book">
+                <h3>Database Management</h3>
+                <p>Author: James Brown</p>
+                <p>Available: Yes</p>
+                <button>Borrow</button>
+            </div>
+
+            <div class="book">
+                <h3>Web Programming</h3>
+                <p>Author: David Lee</p>
+                <p>Available: No</p>
+                <button>Borrow</button>
+            </div>
+
+            <div class="book">
+                <h3>Computer Networks</h3>
+                <p>Author: Robert Thomas</p>
+                <p>Available: Yes</p>
+                <button>Borrow</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="login">
+        <h2>User Login</h2>
+
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+    </section>
+
+    <section id="register">
+        <h2>Register</h2>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <input type="tel" placeholder="Phone Number">
+            <button>Register</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Borrow History</h2>
+
+        <p>Book: Python Programming</p>
+        <p>Issue Date: 01-10-2026</p>
+        <p>Return Date: 15-10-2026</p>
+        <p>Status: Borrowed</p>
+    </section>
+
+    <section>
+        <h2>Fine</h2>
+        <p>Current Fine: Rs. 0</p>
+        <button>Pay Fine</button>
+    </section>
+
+    <section>
+        <h2>Study Materials</h2>
+
+        <select>
+            <option>Select Year</option>
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+            <option>4th Year</option>
+        </select>
+
+        <select>
+            <option>Select Semester</option>
+            <option>Semester 1</option>
+            <option>Semester 2</option>
+            <option>Semester 3</option>
+            <option>Semester 4</option>
+        </select>
+
+        <button>Search Material</button>
+
+        <p>Python Notes - <a href="#">Download</a></p>
+        <p>DBMS Notes - <a href="#">Download</a></p>
+        <p>Web Programming Notes - <a href="#">Download</a></p>
+    </section>
+
+    <section id="profile">
+        <h2>My Profile</h2>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone">
+            <textarea placeholder="Address"></textarea>
+            <button>Update Profile</button>
+        </form>
+    </section>
+
+    <section id="admin">
+        <h2>Admin</h2>
+
+        <form>
+            <input type="text" placeholder="Admin Username">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+
+        <h3>Book Management</h3>
+        <button>Add Book</button>
+        <button>Update Book</button>
+        <button>Delete Book</button>
+
+        <h3>Issue and Return</h3>
+        <button>Issue Book</button>
+        <button>Return Book</button>
+
+        <h3>Fine Management</h3>
+        <button>Update Fine</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Phone: 9876543210</p>
+        <p>Email: library@gmail.com</p>
+
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>Library Management System</p>
+</footer>
+
+</body>
+</html>
