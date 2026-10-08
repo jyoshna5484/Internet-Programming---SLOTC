@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkyBook - Flight Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SKYBOOK</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#search">Flights</a>
+        <a href="#ticket">My Ticket</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#admin">Admin</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="hero">
+
+    <div class="hero-text">
+        <p>FLY EASY • TRAVEL SMART</p>
+        <h1>Find your next<br>destination.</h1>
+        <p>Search flights, select your seat and book your ticket easily.</p>
+    </div>
+
+    <div class="plane-box">
+        <span>✈</span>
+    </div>
+
+</section>
+
+
+<!-- SEARCH -->
+<section id="search" class="search-box">
+
+    <h2>Search Your Flight</h2>
+
+    <div class="search-row">
+
+        <div>
+            <label>From</label>
+            <input type="text" placeholder="Chennai">
+        </div>
+
+        <div>
+            <label>To</label>
+            <input type="text" placeholder="Delhi">
+        </div>
+
+        <div>
+            <label>Travel Date</label>
+            <input type="date">
+        </div>
+
+        <div>
+            <label>Class</label>
+            <select>
+                <option>Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+            </select>
+        </div>
+
+        <button>Search</button>
+
+    </div>
+
+</section>
+
+
+<!-- AVAILABLE FLIGHTS -->
+<section class="content">
+
+    <h2>Available Flights</h2>
+
+    <div class="flight-list">
+
+        <div class="flight-card">
+
+            <div class="airline">
+                <h3>Air India</h3>
+                <p>AI-102</p>
+            </div>
+
+            <div class="route">
+                <strong>08:00 AM</strong>
+                <span>Chennai</span>
+            </div>
+
+            <div class="line">
+                ───────── ✈ ─────────
+                <small>3h 00m</small>
+            </div>
+
+            <div class="route">
+                <strong>11:00 AM</strong>
+                <span>Delhi</span>
+            </div>
+
+            <div class="price">
+                <b>₹5,500</b>
+                <p>25 seats</p>
+                <button>Select</button>
+            </div>
+
+        </div>
+
+
+        <div class="flight-card">
+
+            <div class="airline">
+                <h3>IndiGo</h3>
+                <p>6E-421</p>
+            </div>
+
+            <div class="route">
+                <strong>10:30 AM</strong>
+                <span>Chennai</span>
+            </div>
+
+            <div class="line">
+                ───────── ✈ ─────────
+                <small>2h 00m</small>
+            </div>
+
+            <div class="route">
+                <strong>12:30 PM</strong>
+                <span>Mumbai</span>
+            </div>
+
+            <div class="price">
+                <b>₹4,800</b>
+                <p>18 seats</p>
+                <button>Select</button>
+            </div>
+
+        </div>
+
+
+        <div class="flight-card">
+
+            <div class="airline">
+                <h3>Vistara</h3>
+                <p>UK-803</p>
+            </div>
+
+            <div class="route">
+                <strong>06:00 PM</strong>
+                <span>Chennai</span>
+            </div>
+
+            <div class="line">
+                ───────── ✈ ─────────
+                <small>1h 00m</small>
+            </div>
+
+            <div class="route">
+                <strong>07:00 PM</strong>
+                <span>Bangalore</span>
+            </div>
+
+            <div class="price">
+                <b>₹3,900</b>
+                <p>12 seats</p>
+                <button>Select</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOGIN -->
+<section class="login-area">
+
+    <div class="login-card">
+
+        <h2>User Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+
+        <p><a href="#">Forgot Password?</a></p>
+
+        <hr>
+
+        <h3>New User</h3>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Create Password">
+
+        <button>Register</button>
+
+    </div>
+
+</section>
+
+
+<!-- BOOK TICKET -->
+<section class="booking-section">
+
+    <h2>Book Your Ticket</h2>
+
+    <div class="booking-grid">
+
+        <div class="booking-details">
+
+            <h3>Selected Flight</h3>
+
+            <p><b>Air India AI-102</b></p>
+            <p>Chennai → Delhi</p>
+            <p>15 October 2026</p>
+            <p>08:00 AM - 11:00 AM</p>
+
+            <h3>Passenger Details</h3>
+
+            <input type="text" placeholder="Passenger Name">
+            <input type="number" placeholder="Age">
+
+            <select>
+                <option>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <input type="text" placeholder="Passport / ID Number">
+
+        </div>
+
+
+        <!-- SEAT -->
+        <div class="seat-area">
+
+            <h3>Select Your Seat</h3>
+
+            <div class="seat-map">
+
+                <div>
+                    <button class="seat">1A</button>
+                    <button class="seat">1B</button>
+                    <button class="seat booked">1C</button>
+                    <button class="seat">1D</button>
+                </div>
+
+                <div>
+                    <button class="seat">2A</button>
+                    <button class="seat">2B</button>
+                    <button class="seat">2C</button>
+                    <button class="seat booked">2D</button>
+                </div>
+
+                <div>
+                    <button class="seat">3A</button>
+                    <button class="seat">3B</button>
+                    <button class="seat">3C</button>
+                    <button class="seat">3D</button>
+                </div>
+
+                <div>
+                    <button class="seat booked">4A</button>
+                    <button class="seat">4B</button>
+                    <button class="seat">4C</button>
+                    <button class="seat">4D</button>
+                </div>
+
+            </div>
+
+            <p>Available: 12 seats</p>
+            <p>Booked: 4 seats</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAYMENT -->
+<section class="payment">
+
+    <h2>Ticket Payment</h2>
+
+    <div class="payment-box">
+
+        <div>
+            <p>Flight Fare</p>
+            <b>₹5,000</b>
+        </div>
+
+        <div>
+            <p>Taxes</p>
+            <b>₹500</b>
+        </div>
+
+        <div>
+            <p>Total Amount</p>
+            <b>₹5,500</b>
+        </div>
+
+        <select>
+            <option>Select Payment Method</option>
+            <option>UPI</option>
+            <option>Debit Card</option>
+            <option>Credit Card</option>
+        </select>
+
+        <button>Pay Now</button>
+
+    </div>
+
+</section>
+
+
+<!-- MY TICKET -->
+<section id="ticket" class="ticket-section">
+
+    <h2>My Ticket</h2>
+
+    <div class="boarding-pass">
+
+        <div class="pass-top">
+
+            <div>
+                <h2>SKYBOOK</h2>
+                <p>BOARDING PASS</p>
+            </div>
+
+            <div class="flight-number">
+                AI-102
+            </div>
+
+        </div>
+
+
+        <div class="pass-middle">
+
+            <div>
+                <small>FROM</small>
+                <h1>MAA</h1>
+                <p>Chennai</p>
+            </div>
+
+            <div class="arrow">
+                ✈
+            </div>
+
+            <div>
+                <small>TO</small>
+                <h1>DEL</h1>
+                <p>Delhi</p>
+            </div>
+
+        </div>
+
+
+        <div class="pass-info">
+
+            <div>
+                <small>PASSENGER</small>
+                <p>Rahul Kumar</p>
+            </div>
+
+            <div>
+                <small>DATE</small>
+                <p>15 OCT 2026</p>
+            </div>
+
+            <div>
+                <small>SEAT</small>
+                <p>12A</p>
+            </div>
+
+            <div>
+                <small>PNR</small>
+                <p>SKY45821</p>
+            </div>
+
+        </div>
+
+        <button>Print Ticket</button>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING STATUS -->
+<section class="status">
+
+    <h2>View Booking Status</h2>
+
+    <input type="text" placeholder="Enter PNR / Booking ID">
+
+    <button>Check Status</button>
+
+    <div class="confirmed">
+        Booking Status: CONFIRMED
+    </div>
+
+</section>
+
+
+<!-- CANCEL -->
+<section class="cancel">
+
+    <h2>Cancel Ticket</h2>
+
+    <input type="text" placeholder="Enter PNR">
+
+    <button>Cancel Ticket</button>
+
+    <p>Refund will be calculated according to cancellation rules.</p>
+
+</section>
+
+
+<!-- TRAVEL HISTORY -->
+<section class="content">
+
+    <h2>My Travel History</h2>
+
+    <table>
+
+        <tr>
+            <th>Flight</th>
+            <th>Route</th>
+            <th>Date</th>
+            <th>Seat</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>AI-102</td>
+            <td>Chennai → Delhi</td>
+            <td>15-10-2026</td>
+            <td>12A</td>
+            <td>Confirmed</td>
+        </tr>
+
+        <tr>
+            <td>6E-421</td>
+            <td>Chennai → Mumbai</td>
+            <td>20-09-2026</td>
+            <td>10B</td>
+            <td>Completed</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- FEEDBACK -->
+<section id="feedback" class="feedback">
+
+    <h2>Customer Feedback</h2>
+
+    <input type="text" placeholder="Your Name">
+
+    <select>
+        <option>Select Rating</option>
+        <option>5 - Excellent</option>
+        <option>4 - Good</option>
+        <option>3 - Average</option>
+        <option>2 - Poor</option>
+    </select>
+
+    <textarea placeholder="Write your feedback"></textarea>
+
+    <button>Submit Feedback</button>
+
+</section>
+
+
+<!-- ADMIN -->
+<section id="admin" class="admin">
+
+    <h2>Administrator Dashboard</h2>
+
+    <div class="admin-cards">
+
+        <div>
+            <h3>32</h3>
+            <p>Total Flights</p>
+        </div>
+
+        <div>
+            <h3>186</h3>
+            <p>Total Bookings</p>
+        </div>
+
+        <div>
+            <h3>420</h3>
+            <p>Available Seats</p>
+        </div>
+
+        <div>
+            <h3>125</h3>
+            <p>Registered Users</p>
+        </div>
+
+    </div>
+
+
+    <h3>Manage Flights</h3>
+
+    <table>
+
+        <tr>
+            <th>Flight</th>
+            <th>Route</th>
+            <th>Seats</th>
+            <th>Fare</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>AI-102</td>
+            <td>Chennai - Delhi</td>
+            <td>25</td>
+            <td>₹5500</td>
+            <td>
+                <button>Update</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6E-421</td>
+            <td>Chennai - Mumbai</td>
+            <td>18</td>
+            <td>₹4800</td>
+            <td>
+                <button>Update</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+
+    </table>
+
+
+    <h3>Admin Report</h3>
+
+    <p>Total Bookings: 186</p>
+    <p>Confirmed Tickets: 160</p>
+    <p>Cancelled Tickets: 26</p>
+
+    <button>Generate Report</button>
+
+</section>
+
+
+<footer>
+    <h3>SKYBOOK</h3>
+    <p>Online Flight Reservation System</p>
+    <p>Search • Book • Fly</p>
+</footer>
+
+</body>
+</html>
