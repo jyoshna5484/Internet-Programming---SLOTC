@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beauty Parlour Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Glow Beauty Parlour</h1>
+    <p>Beauty and Personal Care Services</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book Appointment</a>
+        <a href="#account">My Account</a>
+        <a href="#admin">Manager</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="home">
+
+    <h2>Book Your Beauty Appointment</h2>
+
+    <p>
+        Search our services, select a stylist and choose
+        your preferred date and time.
+    </p>
+
+    <button>Book Now</button>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-list">
+
+        <div class="service">
+            <h3>Hair Cut</h3>
+            <p>Professional haircut and styling.</p>
+            <b>Rs.300</b>
+        </div>
+
+        <div class="service">
+            <h3>Hair Spa</h3>
+            <p>Hair treatment for healthy hair.</p>
+            <b>Rs.700</b>
+        </div>
+
+        <div class="service">
+            <h3>Facial</h3>
+            <p>Skin cleaning and facial treatment.</p>
+            <b>Rs.600</b>
+        </div>
+
+        <div class="service">
+            <h3>Manicure</h3>
+            <p>Nail care and hand treatment.</p>
+            <b>Rs.400</b>
+        </div>
+
+        <div class="service">
+            <h3>Bridal Makeup</h3>
+            <p>Complete makeup for special occasions.</p>
+            <b>Rs.3000</b>
+        </div>
+
+        <div class="service">
+            <h3>Threading</h3>
+            <p>Eyebrow and facial threading.</p>
+            <b>Rs.150</b>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STYLISTS -->
+
+<section class="stylists">
+
+    <h2>Our Stylists</h2>
+
+    <table>
+
+        <tr>
+            <th>Stylist</th>
+            <th>Specialization</th>
+            <th>Available Time</th>
+        </tr>
+
+        <tr>
+            <td>Anjali</td>
+            <td>Hair Styling</td>
+            <td>10:00 AM - 4:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>Facial and Skin Care</td>
+            <td>11:00 AM - 6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Divya</td>
+            <td>Makeup</td>
+            <td>10:00 AM - 5:00 PM</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- LOGIN -->
+
+<section>
+
+    <h2>Customer Login</h2>
+
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <br>
+
+    <button>Login</button>
+
+    <p><a href="#">Forgot Password?</a></p>
+
+</section>
+
+
+<!-- REGISTER -->
+
+<section>
+
+    <h2>Customer Registration</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Phone Number">
+    <input type="password" placeholder="Password">
+
+    <br>
+
+    <button>Register</button>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section id="booking" class="booking">
+
+    <h2>Book Appointment</h2>
+
+    <div class="booking-area">
+
+        <div>
+
+            <h3>1. Select Service</h3>
+
+            <select>
+                <option>Select Service</option>
+                <option>Hair Cut</option>
+                <option>Hair Spa</option>
+                <option>Facial</option>
+                <option>Manicure</option>
+                <option>Bridal Makeup</option>
+                <option>Threading</option>
+            </select>
+
+
+            <h3>2. Select Stylist</h3>
+
+            <select>
+                <option>Select Stylist</option>
+                <option>Anjali</option>
+                <option>Priya</option>
+                <option>Divya</option>
+            </select>
+
+
+            <h3>3. Select Date</h3>
+
+            <input type="date">
+
+
+            <h3>4. Select Time</h3>
+
+            <select>
+                <option>Select Time</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>02:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+            </select>
+
+        </div>
+
+
+        <div class="available">
+
+            <h3>Available Slots</h3>
+
+            <p class="slot">10:00 AM - Available</p>
+            <p class="slot">11:00 AM - Available</p>
+            <p class="slot">12:00 PM - Booked</p>
+            <p class="slot">02:00 PM - Available</p>
+            <p class="slot">04:00 PM - Available</p>
+            <p class="slot booked">05:00 PM - Booked</p>
+
+        </div>
+
+    </div>
+
+
+    <h3>Customer Details</h3>
+
+    <input type="text" placeholder="Customer Name">
+    <input type="text" placeholder="Phone Number">
+
+    <h3>Payment</h3>
+
+    <p>Service Amount: Rs.600</p>
+
+    <select>
+        <option>Payment Type</option>
+        <option>Full Payment</option>
+        <option>Partial Deposit</option>
+    </select>
+
+    <select>
+        <option>Payment Method</option>
+        <option>UPI</option>
+        <option>PayPal</option>
+        <option>Stripe</option>
+        <option>Debit Card</option>
+    </select>
+
+    <br>
+
+    <button>Confirm Appointment</button>
+
+</section>
+
+
+<!-- RESERVATION CALENDAR -->
+
+<section class="calendar">
+
+    <h2>Reservations Calendar</h2>
+
+    <table>
+
+        <tr>
+            <th>Date</th>
+            <th>10 AM</th>
+            <th>11 AM</th>
+            <th>12 PM</th>
+            <th>2 PM</th>
+            <th>4 PM</th>
+        </tr>
+
+        <tr>
+            <td>15 Oct</td>
+            <td>Free</td>
+            <td>Booked</td>
+            <td>Free</td>
+            <td>Free</td>
+            <td>Booked</td>
+        </tr>
+
+        <tr>
+            <td>16 Oct</td>
+            <td>Booked</td>
+            <td>Free</td>
+            <td>Free</td>
+            <td>Booked</td>
+            <td>Free</td>
+        </tr>
+
+        <tr>
+            <td>17 Oct</td>
+            <td>Free</td>
+            <td>Free</td>
+            <td>Booked</td>
+            <td>Free</td>
+            <td>Free</td>
+        </tr>
+
+    </table>
+
+    <p>
+        Manager can lock unavailable hours and check
+        reservation details for each date.
+    </p>
+
+</section>
+
+
+<!-- MY ACCOUNT -->
+
+<section id="account">
+
+    <h2>My Account</h2>
+
+    <div class="account-box">
+
+        <div>
+            <h3>Personal Details</h3>
+
+            <p>Name: Jyoshna</p>
+            <p>Email: jyoshna@example.com</p>
+            <p>Phone: 9876543210</p>
+
+            <button>Update Details</button>
+        </div>
+
+
+        <div>
+            <h3>Upcoming Appointment</h3>
+
+            <p>Service: Facial</p>
+            <p>Stylist: Priya</p>
+            <p>Date: 16-10-2026</p>
+            <p>Time: 11:00 AM</p>
+
+            <button>Reschedule</button>
+            <button>Cancel</button>
+        </div>
+
+    </div>
+
+
+    <h3>Reservation History</h3>
+
+    <table>
+
+        <tr>
+            <th>Service</th>
+            <th>Stylist</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>Hair Cut</td>
+            <td>Anjali</td>
+            <td>10-09-2026</td>
+            <td>Completed</td>
+        </tr>
+
+        <tr>
+            <td>Facial</td>
+            <td>Priya</td>
+            <td>16-10-2026</td>
+            <td>Upcoming</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- FEEDBACK -->
+
+<section>
+
+    <h2>Customer Feedback</h2>
+
+    <input type="text" placeholder="Your Name">
+
+    <select>
+        <option>Select Rating</option>
+        <option>5 - Excellent</option>
+        <option>4 - Good</option>
+        <option>3 - Average</option>
+        <option>2 - Poor</option>
+    </select>
+
+    <br>
+
+    <textarea placeholder="Write your experience"></textarea>
+
+    <br>
+
+    <button>Submit Feedback</button>
+
+</section>
+
+
+<!-- MANAGER / ADMIN -->
+
+<section id="admin" class="admin">
+
+    <h2>Salon Manager Panel</h2>
+
+    <h3>Manager Login</h3>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <br>
+
+    <button>Login</button>
+
+
+    <h3>Upcoming Reservations</h3>
+
+    <table>
+
+        <tr>
+            <th>Customer</th>
+            <th>Service</th>
+            <th>Stylist</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+
+        <tr>
+            <td>Rahul</td>
+            <td>Hair Cut</td>
+            <td>Anjali</td>
+            <td>15-10-2026</td>
+            <td>10:00 AM</td>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>Facial</td>
+            <td>Divya</td>
+            <td>15-10-2026</td>
+            <td>2:00 PM</td>
+        </tr>
+
+    </table>
+
+
+    <h3>Manage Reservation</h3>
+
+    <input type="text" placeholder="Reservation ID">
+
+    <button>Add Reservation</button>
+    <button>Edit Reservation</button>
+    <button>Cancel Reservation</button>
+
+
+    <h3>Lock Unavailable Hours</h3>
+
+    <input type="date">
+
+    <select>
+        <option>Select Time</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>12:00 PM</option>
+        <option>02:00 PM</option>
+        <option>04:00 PM</option>
+    </select>
+
+    <button>Lock Slot</button>
+
+
+    <h3>Customer Contact</h3>
+
+    <p>Customer: Rahul</p>
+    <p>Phone: 9876543210</p>
+
+    <button>Call Customer</button>
+    <button>Send SMS</button>
+
+
+    <h3>Payment Details</h3>
+
+    <p>Total Payment: Rs.600</p>
+    <p>Payment: Full Payment</p>
+    <p>Method: UPI</p>
+
+
+    <button>Logout</button>
+
+</section>
+
+
+<footer>
+
+    <h3>Glow Beauty Parlour</h3>
+
+    <p>Online Beauty Parlour Appointment Booking System</p>
+
+</footer>
+
+</body>
+</html>
