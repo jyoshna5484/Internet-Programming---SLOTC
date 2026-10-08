@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Train Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Online Train Reservation System</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#trains">Trains</a>
+        <a href="#booking">Book Ticket</a>
+        <a href="#pnr">PNR Status</a>
+        <a href="#login">Login</a>
+        <a href="#admin">Admin</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- HOME -->
+    <section id="home">
+        <h2>Search Trains</h2>
+
+        <input type="text" placeholder="From Station">
+        <input type="text" placeholder="To Station">
+        <input type="date">
+
+        <button>Search Trains</button>
+    </section>
+
+    <!-- AVAILABLE TRAINS -->
+    <section id="trains">
+        <h2>Available Trains</h2>
+
+        <table>
+            <tr>
+                <th>Train Name</th>
+                <th>Route</th>
+                <th>Time</th>
+                <th>Class</th>
+                <th>Seats</th>
+            </tr>
+
+            <tr>
+                <td>Chennai Express</td>
+                <td>Chennai - Bangalore</td>
+                <td>6:30 AM</td>
+                <td>Sleeper, 3A</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Coimbatore Intercity</td>
+                <td>Chennai - Coimbatore</td>
+                <td>7:00 AM</td>
+                <td>3A, 2A</td>
+                <td>Available</td>
+            </tr>
+
+            <tr>
+                <td>Southern Express</td>
+                <td>Chennai - Madurai</td>
+                <td>9:00 PM</td>
+                <td>Sleeper, 3A</td>
+                <td>Waiting</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- LOGIN -->
+    <section id="login">
+        <h2>Passenger Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+
+        <p>Forgot Password?</p>
+        <p>New passenger? Register now.</p>
+    </section>
+
+    <!-- REGISTRATION -->
+    <section>
+        <h2>Passenger Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="tel" placeholder="Phone Number">
+        <input type="password" placeholder="Password">
+
+        <button>Register</button>
+    </section>
+
+    <!-- BOOK TICKET -->
+    <section id="booking">
+        <h2>Book Your Train Ticket</h2>
+
+        <h3>1. Select Journey</h3>
+
+        <label>From Station</label>
+        <input type="text" value="Chennai">
+
+        <label>To Station</label>
+        <input type="text" value="Bangalore">
+
+        <label>Journey Date</label>
+        <input type="date">
+
+        <h3>2. Select Train and Class</h3>
+
+        <label>Train</label>
+        <select>
+            <option>Chennai Express</option>
+            <option>Coimbatore Intercity</option>
+            <option>Southern Express</option>
+        </select>
+
+        <label>Class</label>
+        <select>
+            <option>Sleeper</option>
+            <option>3A</option>
+            <option>2A</option>
+            <option>1A</option>
+        </select>
+
+        <h3>3. Passenger Details</h3>
+
+        <input type="text" placeholder="Passenger Name">
+        <input type="number" placeholder="Age">
+
+        <select>
+            <option>Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <h3>4. Select Seat</h3>
+
+        <select>
+            <option>Select Seat</option>
+            <option>S1 - 01</option>
+            <option>S1 - 02</option>
+            <option>S1 - 03</option>
+            <option>S1 - 04</option>
+            <option>S1 - 05</option>
+        </select>
+
+        <p><b>Available Seats:</b> 35</p>
+
+        <h3>5. Payment</h3>
+
+        <p><b>Ticket Fare:</b> Rs. 850</p>
+
+        <select>
+            <option>Select Payment Method</option>
+            <option>UPI</option>
+            <option>Debit Card</option>
+            <option>Credit Card</option>
+            <option>Offline Payment</option>
+        </select>
+
+        <br>
+
+        <button>Pay and Book Ticket</button>
+    </section>
+
+    <!-- TICKET -->
+    <section>
+        <h2>Generated Ticket</h2>
+
+        <div class="ticket">
+            <p><b>PNR Number:</b> 4567891234</p>
+            <p><b>Passenger:</b> Rahul Kumar</p>
+            <p><b>Train:</b> Chennai Express</p>
+            <p><b>From:</b> Chennai</p>
+            <p><b>To:</b> Bangalore</p>
+            <p><b>Journey Date:</b> 10-10-2026</p>
+            <p><b>Class:</b> 3A</p>
+            <p><b>Seat:</b> S1 - 25</p>
+            <p><b>Status:</b> Confirmed</p>
+
+            <button>Print Ticket</button>
+        </div>
+    </section>
+
+    <!-- PNR -->
+    <section id="pnr">
+        <h2>Check PNR Status</h2>
+
+        <input type="text" placeholder="Enter PNR Number">
+        <button>Check Status</button>
+
+        <p><b>PNR Status:</b> Confirmed</p>
+        <p>Other possible status: RAC / Waiting List</p>
+    </section>
+
+    <!-- BOOKING HISTORY -->
+    <section>
+        <h2>Booking History</h2>
+
+        <table>
+            <tr>
+                <th>PNR</th>
+                <th>Train</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>4567891234</td>
+                <td>Chennai Express</td>
+                <td>10-10-2026</td>
+                <td>Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>1234567890</td>
+                <td>Southern Express</td>
+                <td>15-09-2026</td>
+                <td>Cancelled</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- CANCEL -->
+    <section>
+        <h2>Cancel Ticket</h2>
+
+        <input type="text" placeholder="Enter PNR Number">
+
+        <button>Cancel Ticket</button>
+
+        <p>Refund will be provided according to the cancellation rules.</p>
+    </section>
+
+    <!-- REFUND -->
+    <section>
+        <h2>Refund Rules</h2>
+
+        <table>
+            <tr>
+                <th>Cancellation Time</th>
+                <th>Refund</th>
+            </tr>
+
+            <tr>
+                <td>More than 48 hours</td>
+                <td>80%</td>
+            </tr>
+
+            <tr>
+                <td>24 to 48 hours</td>
+                <td>50%</td>
+            </tr>
+
+            <tr>
+                <td>Less than 24 hours</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="admin">
+        <h2>Admin Panel</h2>
+
+        <input type="text" placeholder="Admin Username">
+        <input type="password" placeholder="Password">
+
+        <button>Admin Login</button>
+
+        <h3>Train Management</h3>
+
+        <table>
+            <tr>
+                <th>Train</th>
+                <th>Route</th>
+                <th>Class</th>
+                <th>Seats</th>
+            </tr>
+
+            <tr>
+                <td>Chennai Express</td>
+                <td>Chennai - Bangalore</td>
+                <td>3A</td>
+                <td>35</td>
+            </tr>
+
+            <tr>
+                <td>Southern Express</td>
+                <td>Chennai - Madurai</td>
+                <td>Sleeper</td>
+                <td>50</td>
+            </tr>
+        </table>
+
+        <button>Add Train</button>
+        <button>Update Train</button>
+        <button>Delete Train</button>
+
+        <h3>Fare Management</h3>
+        <p>Manage fare according to class, zone and journey date.</p>
+        <button>Update Fare</button>
+
+        <h3>User Management</h3>
+        <p>Manage registered passengers.</p>
+        <button>View Users</button>
+
+        <h3>Reports</h3>
+        <button>Generate Report</button>
+    </section>
+
+</div>
+
+<footer>
+    <p>Online Train Reservation System</p>
+</footer>
+
+</body>
+</html>
