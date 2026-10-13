@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f8f5f0;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #39302d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Sections */
+
+section {
+    width: 88%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd4cc;
+}
+
+h2 {
+    color: #795548;
+}
+
+h3 {
+    color: #5d4037;
+}
+
+/* Home */
+
+.home {
+    background-color: #eadfd5;
+    text-align: center;
+    padding: 40px;
+}
+
+.home h2 {
+    font-size: 32px;
+}
+
+/* Buttons */
+
+button {
+    background-color: #795548;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #39302d;
+}
+
+/* Inputs */
+
+input,
+select,
+textarea {
+    padding: 9px;
+    margin: 7px;
+    border: 1px solid #cbbeb4;
+}
+
+/* Categories */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.categories div {
+    background-color: #f5eee8;
+    border: 1px solid #ddd4cc;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Products */
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.product {
+    background-color: #fcfaf8;
+    border: 1px solid #ddd4cc;
+    padding: 15px;
+}
+
+.product b {
+    color: #795548;
+}
+
+/* Account */
+
+.account {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.account div {
+    background-color: #f5eee8;
+    padding: 20px;
+    border: 1px solid #ddd4cc;
+}
+
+.account input {
+    display: block;
+    width: 85%;
+}
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #cbbeb4;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #39302d;
+    color: white;
+}
+
+/* Admin */
+
+.admin {
+    background-color: #eee6df;
+}
+
+/* Footer */
+
+footer {
+    background-color: #39302d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .product-list,
+    .categories {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .account {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        width: 94%;
+    }
+
+    .product-list,
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 90%;
+    }
+
+    .home h2 {
+        font-size: 25px;
+    }
+}

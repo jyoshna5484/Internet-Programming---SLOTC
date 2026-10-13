@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechSavvy Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>TechSavvy</h1>
+    <p>Your Favourite Electronics Store</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#cart">My Cart</a>
+        <a href="#orders">My Orders</a>
+        <a href="#login">Login</a>
+        <a href="#admin">Admin</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="home">
+    <h2>Welcome to TechSavvy</h2>
+    <p>Discover the latest gadgets at affordable prices.</p>
+    <button>Shop Now</button>
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section>
+    <h2>Shop by Category</h2>
+
+    <div class="categories">
+        <div>
+            <h3>Smartphones</h3>
+            <p>Android and iOS Phones</p>
+        </div>
+
+        <div>
+            <h3>Laptops</h3>
+            <p>Personal and Gaming Laptops</p>
+        </div>
+
+        <div>
+            <h3>Tablets</h3>
+            <p>Smart Tablets</p>
+        </div>
+
+        <div>
+            <h3>Accessories</h3>
+            <p>Headphones, Chargers and More</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- SEARCH -->
+
+<section>
+    <h2>Search Products</h2>
+
+    <input type="text" placeholder="Enter product name">
+
+    <select>
+        <option>Select Category</option>
+        <option>Smartphones</option>
+        <option>Laptops</option>
+        <option>Tablets</option>
+        <option>Accessories</option>
+    </select>
+
+    <select>
+        <option>Select Price Range</option>
+        <option>Below Rs.10000</option>
+        <option>Rs.10000 - Rs.50000</option>
+        <option>Above Rs.50000</option>
+    </select>
+
+    <button>Search</button>
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+    <h2>Available Products</h2>
+
+    <div class="product-list">
+
+        <div class="product">
+            <h3>Samsung Smartphone</h3>
+            <p>Category: Smartphones</p>
+            <p>Subcategory: Android Phones</p>
+            <p>6GB RAM, 128GB Storage</p>
+            <p><b>Price: Rs.18000</b></p>
+            <p class="available">Availability: In Stock</p>
+            <button>Add to Cart</button>
+            <button>Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <h3>HP Laptop</h3>
+            <p>Category: Laptops</p>
+            <p>Subcategory: Student Laptops</p>
+            <p>8GB RAM, 512GB SSD</p>
+            <p><b>Price: Rs.48000</b></p>
+            <p class="available">Availability: In Stock</p>
+            <button>Add to Cart</button>
+            <button>Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <h3>Lenovo Tablet</h3>
+            <p>Category: Tablets</p>
+            <p>Subcategory: Android Tablets</p>
+            <p>4GB RAM, 64GB Storage</p>
+            <p><b>Price: Rs.14000</b></p>
+            <p class="available">Availability: In Stock</p>
+            <button>Add to Cart</button>
+            <button>Add to Wishlist</button>
+        </div>
+
+        <div class="product">
+            <h3>Wireless Headphones</h3>
+            <p>Category: Accessories</p>
+            <p>Subcategory: Audio Devices</p>
+            <p>Wireless Bluetooth Headphones</p>
+            <p><b>Price: Rs.2000</b></p>
+            <p class="available">Availability: In Stock</p>
+            <button>Add to Cart</button>
+            <button>Add to Wishlist</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- LOGIN AND REGISTRATION -->
+
+<section id="login" class="account">
+
+    <div>
+        <h2>Customer Login</h2>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <br>
+        <button>Login</button>
+
+        <p><a href="#">Forgot Password?</a></p>
+    </div>
+
+    <div>
+        <h2>New Customer Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Phone Number">
+        <input type="password" placeholder="Password">
+
+        <br>
+        <button>Register</button>
+    </div>
+
+</section>
+
+
+<!-- PRODUCT DETAILS -->
+
+<section>
+    <h2>Product Details</h2>
+
+    <h3>Samsung Smartphone</h3>
+    <p>Category: Smartphones</p>
+    <p>Price: Rs.18000</p>
+    <p>RAM: 6GB</p>
+    <p>Storage: 128GB</p>
+    <p>Customer Rating: 4.5 / 5</p>
+    <p>Customer Review: Good product and battery life.</p>
+
+    <button>Add to Cart</button>
+</section>
+
+
+<!-- CART -->
+
+<section id="cart">
+    <h2>Shopping Cart</h2>
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>Samsung Smartphone</td>
+            <td>1</td>
+            <td>Rs.18000</td>
+            <td><button>Remove</button></td>
+        </tr>
+
+        <tr>
+            <td>Wireless Headphones</td>
+            <td>1</td>
+            <td>Rs.2000</td>
+            <td><button>Remove</button></td>
+        </tr>
+    </table>
+
+    <h3>Total Amount: Rs.20000</h3>
+
+    <button>Update Cart</button>
+    <button>Checkout</button>
+</section>
+
+
+<!-- PAYMENT -->
+
+<section>
+    <h2>Checkout and Payment</h2>
+
+    <p>Order Total: Rs.20000</p>
+
+    <input type="text" placeholder="Delivery Address">
+    <input type="text" placeholder="City">
+    <input type="text" placeholder="Pincode">
+
+    <br>
+
+    <select>
+        <option>Select Payment Method</option>
+        <option>UPI</option>
+        <option>Debit Card</option>
+        <option>Credit Card</option>
+        <option>Cash on Delivery</option>
+    </select>
+
+    <br>
+
+    <button>Place Order</button>
+</section>
+
+
+<!-- ORDER STATUS -->
+
+<section id="orders">
+    <h2>Order Status</h2>
+
+    <p>Order ID: TS1001</p>
+    <p>Product: Samsung Smartphone</p>
+    <p>Order Date: 13-10-2026</p>
+    <p class="available">Status: Shipped</p>
+
+    <h3>Order History</h3>
+
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>TS1001</td>
+            <td>Samsung Smartphone</td>
+            <td>Rs.18000</td>
+            <td>Shipped</td>
+        </tr>
+
+        <tr>
+            <td>TS1002</td>
+            <td>HP Laptop</td>
+            <td>Rs.48000</td>
+            <td>Delivered</td>
+        </tr>
+    </table>
+</section>
+
+
+<!-- ADMIN -->
+
+<section id="admin" class="admin">
+    <h2>Admin Panel</h2>
+
+    <h3>Admin Login</h3>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <br>
+    <button>Login</button>
+
+    <h3>Manage Products</h3>
+
+    <input type="text" placeholder="Product Name">
+    <input type="text" placeholder="Price">
+    <input type="text" placeholder="Category">
+    <input type="text" placeholder="Subcategory">
+    <input type="text" placeholder="Product Description">
+
+    <br>
+
+    <button>Add Product</button>
+    <button>Update Product</button>
+    <button>Remove Product</button>
+
+    <h3>Customer Details</h3>
+
+    <table>
+        <tr>
+            <th>Customer</th>
+            <th>Email</th>
+            <th>Product</th>
+            <th>Amount</th>
+        </tr>
+
+        <tr>
+            <td>Rahul</td>
+            <td>rahul@example.com</td>
+            <td>Samsung Smartphone</td>
+            <td>Rs.18000</td>
+        </tr>
+
+        <tr>
+            <td>Priya</td>
+            <td>priya@example.com</td>
+            <td>HP Laptop</td>
+            <td>Rs.48000</td>
+        </tr>
+    </table>
+
+    <br>
+    <button>Logout</button>
+</section>
+
+
+<footer>
+    <h3>TechSavvy</h3>
+    <p>Online Electronic Gadgets Shopping System</p>
+</footer>
+
+</body>
+</html>
