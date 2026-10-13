@@ -1,0 +1,18 @@
+Experiment 1: Library Management System
+
+Aim:
+To create a Library Management System website using HTML and CSS.
+
+Algorithm:
+
+1. Create the basic HTML structure of the website.
+2. Add a navigation menu with Home, Books, and Contact sections.
+3. Display available books with their titles and details.
+4. Add a book search section.
+5. Create sections for issuing and returning books.
+6. Add a student login and registration section.
+7. Apply CSS to style the website.
+8. Run the HTML file in a web browser.
+
+Result:
+The Library Management System website was successfully created using HTML and CSS.
