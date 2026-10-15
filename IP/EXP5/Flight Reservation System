@@ -1,0 +1,16 @@
+Aim:
+To create a Flight Reservation System website using HTML and CSS.
+
+Algorithm:
+
+Create the basic HTML structure of the website.
+Add a navigation menu with Home, Flights, and Contact sections.
+Create a flight search section with departure and destination fields.
+Display available flights with their details and ticket prices.
+Add passenger details and seat selection sections.
+Create booking confirmation and payment sections.
+Apply CSS to style the website.
+Run the HTML file in a web browser.
+
+Result:
+The Flight Reservation System website was successfully created using HTML and CSS.
