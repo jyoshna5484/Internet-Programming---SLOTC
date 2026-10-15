@@ -1,0 +1,16 @@
+Aim:
+To create an Online Cake Ordering System website using HTML and CSS.
+
+Algorithm:
+
+Create the basic HTML structure of the website.
+Add a navigation menu with Home, Cakes, and Contact sections.
+Display available cakes with their names and prices.
+Add cake descriptions and available flavors.
+Create an order section with cake selection and quantity options.
+Add customer login and registration sections.
+Apply CSS to style the website.
+Run the HTML file in a web browser.
+
+Result:
+The Online Cake Ordering System website was successfully created using HTML and CSS.
