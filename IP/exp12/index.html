@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsureEasy | Insurance Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <span class="logo">IE</span>
+        <div>
+            <h1>InsureEasy</h1>
+            <p>Insurance made simple and secure</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#policies">Policies</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#claims">Claims</a>
+        <a href="#accounts">Accounts</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section id="home" class="hero">
+        <div>
+            <p class="eyebrow">YOUR FUTURE, PROTECTED</p>
+            <h2>Protection for Every Part of Your Life</h2>
+            <p>Compare insurance plans, manage your policies, and keep track of important due dates in one place.</p>
+            <a class="hero-button" href="#policies">Explore Policies</a>
+        </div>
+        <div class="hero-art">
+            <span>✓</span>
+            <h3>Your Protection Hub</h3>
+            <p>Health · Auto · Home</p>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <span>Available Plans</span>
+            <h2 id="policyCount">0</h2>
+        </div>
+        <div class="stat-card">
+            <span>My Policies</span>
+            <h2 id="myPolicyCount">0</h2>
+        </div>
+        <div class="stat-card">
+            <span>Pending Claims</span>
+            <h2 id="claimCount">0</h2>
+        </div>
+        <div class="stat-card">
+            <span>Registered Customers</span>
+            <h2 id="customerCount">0</h2>
+        </div>
+    </section>
+
+    <!-- POLICY COMPARISON -->
+    <section id="policies">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">FIND YOUR COVER</p>
+                <h2>Explore Insurance Policies</h2>
+            </div>
+            <input type="text" id="policySearch" placeholder="Search policies...">
+        </div>
+
+        <div class="filters">
+            <select id="policyType">
+                <option value="">All Insurance Types</option>
+                <option value="Health">Health Insurance</option>
+                <option value="Auto">Auto Insurance</option>
+                <option value="Home">Home Insurance</option>
+            </select>
+
+            <select id="policySort">
+                <option value="default">Sort by Default</option>
+                <option value="low">Premium: Low to High</option>
+                <option value="high">Premium: High to Low</option>
+            </select>
+        </div>
+
+        <div id="policyList" class="policy-grid">
+
+            <article class="policy-card" data-type="Health" data-premium="8000">
+                <div class="policy-icon health-icon">✚</div>
+                <p class="category">HEALTH INSURANCE</p>
+                <h3>Health Secure</h3>
+                <p>Medical expense protection for individuals and families.</p>
+                <div class="cover">₹5,00,000 <span>Example cover</span></div>
+                <p class="premium">₹8,000 / year</p>
+                <button class="compareBtn" type="button">Add to Compare</button>
+                <button class="applyBtn" type="button">Apply Now</button>
+            </article>
+
+            <article class="policy-card" data-type="Auto" data-premium="6000">
+                <div class="policy-icon auto-icon">🚗</div>
+                <p class="category">AUTO INSURANCE</p>
+                <h3>Auto Protect</h3>
+                <p>Protection for your vehicle against covered risks.</p>
+                <div class="cover">₹3,00,000 <span>Example cover</span></div>
+                <p class="premium">₹6,000 / year</p>
+                <button class="compareBtn" type="button">Add to Compare</button>
+                <button class="applyBtn" type="button">Apply Now</button>
+            </article>
+
+            <article class="policy-card" data-type="Home" data-premium="5000">
+                <div class="policy-icon home-icon">⌂</div>
+                <p class="category">HOME INSURANCE</p>
+                <h3>Home Shield</h3>
+                <p>Protection for your home against specified damages.</p>
+                <div class="cover">₹10,00,000 <span>Example cover</span></div>
+                <p class="premium">₹5,000 / year</p>
+                <button class="compareBtn" type="button">Add to Compare</button>
+                <button class="applyBtn" type="button">Apply Now</button>
+            </article>
+
+        </div>
+
+        <p id="policyMessage" class="message" aria-live="polite"></p>
+
+        <div class="comparison">
+            <h3>Compare Selected Policies</h3>
+            <div id="comparisonList">
+                <p>Select policies above to compare their premiums and coverage.</p>
+            </div>
+            <button type="button" id="clearCompareBtn" class="secondary-btn">Clear Comparison</button>
+        </div>
+    </section>
+
+    <!-- CUSTOMER ACCOUNT -->
+    <section id="accounts">
+        <p class="eyebrow">GET STARTED</p>
+        <h2>Customer Account</h2>
+
+        <div class="two-column">
+            <div class="form-card">
+                <h3>Customer Registration</h3>
+
+                <label for="customerName">Full Name</label>
+                <input id="customerName" type="text" placeholder="Enter your name">
+
+                <label for="customerEmail">Email Address</label>
+                <input id="customerEmail" type="email" placeholder="Enter your email">
+
+                <label for="customerPassword">Password</label>
+                <input id="customerPassword" type="password" placeholder="Create a password">
+
+                <button type="button" id="registerBtn">Register</button>
+                <p id="registerMessage" class="message" aria-live="polite"></p>
+            </div>
+
+            <div class="form-card">
+                <h3>Customer Login</h3>
+
+                <label for="loginEmail">Email Address</label>
+                <input id="loginEmail" type="email" placeholder="Enter your email">
+
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" placeholder="Enter your password">
+
+                <button type="button" id="loginBtn">Login</button>
+                <button type="button" id="logoutBtn" class="secondary-btn">Logout</button>
+
+                <p id="loginMessage" class="message" aria-live="polite"></p>
+            </div>
+        </div>
+
+        <p id="currentUser" class="welcome-message">You are browsing as a guest.</p>
+    </section>
+
+    <!-- AGENT REGISTRATION -->
+    <section id="agentSection">
+        <p class="eyebrow">INSURANCE PARTNERS</p>
+        <h2>Agent Registration</h2>
+
+        <div class="form-card">
+            <label for="agentName">Agent Name</label>
+            <input id="agentName" type="text" placeholder="Enter agent name">
+
+            <label for="agentEmail">Agent Email</label>
+            <input id="agentEmail" type="email" placeholder="Enter agent email">
+
+            <label for="agentPassword">Password</label>
+            <input id="agentPassword" type="password" placeholder="Create a password">
+
+            <button type="button" id="agentRegisterBtn">Register as Agent</button>
+            <p id="agentRegisterMessage" class="message" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <!-- CUSTOMER DASHBOARD -->
+    <section id="dashboard">
+        <p class="eyebrow">POLICY OVERVIEW</p>
+        <h2>My Insurance Dashboard</h2>
+        <p>View your policies, payment records, and upcoming renewal dates.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Policy</th>
+                        <th>Premium</th>
+                        <th>Renewal Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="myPolicies">
+                    <tr>
+                        <td colspan="5">Your policies will appear here after applying.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="dashboardMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- CUSTOMER MANAGEMENT -->
+    <section id="customerManagement">
+        <h2>Agent Customer Management</h2>
+        <p class="subtext">Register a customer record for demonstration purposes.</p>
+
+        <div class="form-card">
+            <label for="managedCustomerName">Customer Name</label>
+            <input id="managedCustomerName" type="text" placeholder="Customer name">
+
+            <label for="managedCustomerEmail">Customer Email</label>
+            <input id="managedCustomerEmail" type="email" placeholder="Customer email">
+
+            <button type="button" id="addCustomerBtn">Add Customer Record</button>
+            <p id="managedCustomerMessage" class="message" aria-live="polite"></p>
+        </div>
+
+        <div id="managedCustomerList"></div>
+    </section>
+
+    <!-- CLAIMS -->
+    <section id="claims">
+        <p class="eyebrow">CLAIM SUPPORT</p>
+        <h2>File an Insurance Claim</h2>
+
+        <div class="form-card">
+            <label for="claimPolicy">Select Policy</label>
+            <select id="claimPolicy">
+                <option value="">Choose a policy</option>
+            </select>
+
+            <label for="claimDescription">Claim Description</label>
+            <textarea id="claimDescription" rows="4" placeholder="Describe your claim"></textarea>
+
+            <button type="button" id="fileClaimBtn">Submit Claim</button>
+            <p id="claimMessage" class="message" aria-live="polite"></p>
+        </div>
+
+        <h3>My Claims</h3>
+        <div id="claimList"></div>
+    </section>
+
+    <!-- RENEWAL REMINDERS -->
+    <section id="reminders">
+        <p class="eyebrow">STAY PROTECTED</p>
+        <h2>Renewal Reminders</h2>
+        <p>Check your policy renewal dates and payment status.</p>
+
+        <button type="button" id="checkRemindersBtn">Check Reminders</button>
+        <div id="reminderList" class="reminder-list"></div>
+    </section>
+
+    <!-- ADMIN PANEL -->
+    <section id="admin">
+        <p class="eyebrow">ADMINISTRATION</p>
+        <h2>Admin Login</h2>
+
+        <div class="form-card">
+            <label for="adminUsername">Admin Username</label>
+            <input id="adminUsername" type="text" placeholder="Enter admin username">
+
+            <label for="adminPassword">Admin Password</label>
+            <input id="adminPassword" type="password" placeholder="Enter admin password">
+
+            <button type="button" id="adminLoginBtn">Admin Login</button>
+            <button type="button" id="adminLogoutBtn" class="secondary-btn">Admin Logout</button>
+
+            <p id="adminMessage" class="message" aria-live="polite"></p>
+        </div>
+
+        <div id="adminPanel" hidden>
+            <h3>Agent Approval Requests</h3>
+            <div id="agentApprovalList"></div>
+
+            <h3>Registered Agents</h3>
+            <div id="allAgentsList"></div>
+
+            <h3>Registered Customers</h3>
+            <div id="allCustomersList"></div>
+
+            <h3>All Issued Policies</h3>
+            <div id="allPoliciesList"></div>
+
+            <h3>Commission Summary</h3>
+            <p id="commissionSummary"></p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <h3>InsureEasy</h3>
+    <p>Understand your options. Choose your protection.</p>
+    <p>Educational demonstration website — not a real insurance provider.</p>
+</footer>
+
+</body>
+</html>

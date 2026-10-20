@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7f4;
+    color: #27352f;
+}
+
+header {
+    background: #244c3b;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
+
+header p {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #3b7158;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    margin: 22px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #244c3b;
+    margin-top: 0;
+}
+
+h3 {
+    color: #315b46;
+}
+
+.hero {
+    background: #e7f0e8;
+    padding: 35px 25px;
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+input,
+select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    margin: 8px 0 14px;
+    border: 1px solid #ccd6ce;
+    border-radius: 6px;
+    background: white;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+button {
+    padding: 11px 15px;
+    margin: 5px 5px 5px 0;
+    border: none;
+    border-radius: 6px;
+    background: #347655;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #244c3b;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #d69e43;
+    outline-offset: 2px;
+}
+
+.property-grid,
+.agent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.property-card,
+.agent-card,
+.advertisement {
+    border: 1px solid #e0e6e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    padding-bottom: 15px;
+}
+
+.property-visual {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #244c3b;
+    background: #dce9dd;
+    text-align: center;
+    padding: 15px;
+}
+
+.apartment-visual {
+    background: #e6e3f2;
+    color: #50436d;
+}
+
+.land-visual {
+    background: #e8e5ce;
+    color: #655b32;
+}
+
+.commercial-visual {
+    background: #dce8f0;
+    color: #315b75;
+}
+
+.property-info {
+    padding: 0 16px;
+}
+
+.price {
+    color: #347655;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.favoriteBtn {
+    background: #ad654e;
+}
+
+.details-panel {
+    margin-top: 20px;
+    padding: 20px;
+    background: #edf5ee;
+    border-radius: 8px;
+}
+
+.message {
+    color: #244c3b;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+#saved-history,
+#savedSearchList,
+#favoriteList,
+#appointmentList {
+    overflow-wrap: anywhere;
+}
+
+#saved-history > p,
+#savedSearchList > div,
+#favoriteList > div,
+#appointmentList > div {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #d9e2da;
+    border-radius: 6px;
+}
+
+.advertisement {
+    padding: 18px;
+    margin: 12px 0;
+    background: #f7f9f4;
+}
+
+.advertisement a,
+.agent-card a {
+    color: #286544;
+    font-weight: bold;
+}
+
+.agent-card {
+    padding: 18px;
+}
+
+footer {
+    background: #244c3b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 750px) {
+    .search-grid,
+    .property-grid,
+    .agent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        padding: 8px;
+    }
+}

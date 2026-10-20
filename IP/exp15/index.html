@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyToll | Smart Toll Payments</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo">🚘 Easy<span>Toll</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#services">Services</a>
+        <a href="#transactions">Transactions</a>
+        <a href="#accounts">Accounts</a>
+        <a href="#admin">Admin</a>
+        <a href="#gate">Toll Gate</a>
+    </nav>
+
+    <button class="wallet-button" type="button" onclick="showWallet()">
+        ₹ <span id="navBalance">0</span>
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">SMART TRAVEL. QUICK PAYMENTS.</span>
+
+        <h1>Every Journey.<br>One <span>Easy Toll</span> Solution.</h1>
+
+        <p>
+            Pay tolls in advance, manage your vehicle, and travel with less
+            waiting. Your journey begins with a smarter payment experience.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#services" class="btn btn-primary">Explore Services →</a>
+            <a href="#accounts" class="btn btn-outline">Get Started</a>
+        </div>
+
+        <div class="hero-stats">
+            <div><strong>24/7</strong><span>Account Access</span></div>
+            <div><strong>QR</strong><span>Quick Verification</span></div>
+            <div><strong>₹</strong><span>Digital Wallet</span></div>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="road-circle">
+            <div class="car-icon">🚙</div>
+            <div class="road-label label-top">✓ Advance Payment</div>
+            <div class="road-label label-bottom">⚡ Faster Travel</div>
+        </div>
+        <div class="floating-wallet">
+            <span>💳</span>
+            <div>
+                <small>EasyToll Wallet</small>
+                <strong id="heroBalance">₹0.00</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="quick-services" id="services">
+    <div class="section-heading">
+        <span class="eyebrow">EVERYTHING IN ONE PLACE</span>
+        <h2>Travel Smarter with EasyToll</h2>
+        <p>Manage toll payments before you reach the toll gate.</p>
+    </div>
+
+    <div class="service-grid">
+        <a href="#wallet" class="service-card">
+            <span class="service-icon green">₹</span>
+            <h3>eWallet</h3>
+            <p>Add money and view your available balance.</p>
+            <span class="card-link">Manage wallet →</span>
+        </a>
+
+        <a href="#ticket" class="service-card">
+            <span class="service-icon blue">🎫</span>
+            <h3>Buy e-Ticket</h3>
+            <p>Pay for a planned toll journey in advance.</p>
+            <span class="card-link">Buy ticket →</span>
+        </a>
+
+        <a href="#pass" class="service-card">
+            <span class="service-icon orange">🪪</span>
+            <h3>Toll Pass</h3>
+            <p>Apply for a pass or request a renewal.</p>
+            <span class="card-link">Manage pass →</span>
+        </a>
+
+        <a href="#transactions" class="service-card">
+            <span class="service-icon purple">📊</span>
+            <h3>Transactions</h3>
+            <p>Review your toll payments and purchases.</p>
+            <span class="card-link">View history →</span>
+        </a>
+    </div>
+</section>
+
+<section class="dashboard-section" id="dashboard">
+    <div class="section-heading">
+        <span class="eyebrow">YOUR TRAVEL OVERVIEW</span>
+        <h2>My Dashboard</h2>
+        <p>Sign in to view your account information and activities.</p>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="dashboard-card">
+            <span class="dash-icon">💰</span>
+            <p>Wallet Balance</p>
+            <h3 id="dashboardBalance">₹0.00</h3>
+            <a href="#wallet">Add money →</a>
+        </div>
+
+        <div class="dashboard-card">
+            <span class="dash-icon">🎫</span>
+            <p>My e-Tickets</p>
+            <h3 id="ticketCount">0</h3>
+            <a href="#transactions">View tickets →</a>
+        </div>
+
+        <div class="dashboard-card">
+            <span class="dash-icon">🪪</span>
+            <p>My Toll Passes</p>
+            <h3 id="passCount">0</h3>
+            <a href="#pass">Manage passes →</a>
+        </div>
+
+        <div class="dashboard-card">
+            <span class="dash-icon">🚗</span>
+            <p>Registered Vehicles</p>
+            <h3 id="vehicleCount">0</h3>
+            <a href="#vehicles">Manage vehicles →</a>
+        </div>
+    </div>
+
+    <div class="dashboard-message" id="dashboardMessage">
+        Welcome to EasyToll! Register or log in to manage your toll account.
+    </div>
+</section>
+
+<section class="main-content" id="wallet">
+    <div class="section-heading">
+        <span class="eyebrow">DIGITAL PAYMENTS</span>
+        <h2>My eWallet</h2>
+        <p>Add money to your demo wallet and pay for toll services.</p>
+    </div>
+
+    <div class="wallet-layout">
+        <div class="wallet-card">
+            <span class="wallet-card-label">AVAILABLE BALANCE</span>
+            <h2 id="walletBalance">₹0.00</h2>
+            <p>EasyToll Digital Wallet</p>
+            <div class="wallet-card-bottom">
+                <span>•••• •••• •••• 2026</span>
+                <span>♻ EasyToll</span>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <h3>Add Money</h3>
+            <p class="muted">Choose an amount to recharge your wallet.</p>
+
+            <div class="amount-options">
+                <button type="button" data-amount="200">₹200</button>
+                <button type="button" data-amount="500">₹500</button>
+                <button type="button" data-amount="1000">₹1,000</button>
+            </div>
+
+            <label for="addAmount">Custom Amount (₹)</label>
+            <input id="addAmount" type="number" min="1" placeholder="Enter amount">
+
+            <button class="btn btn-primary full-width" id="addMoneyButton" type="button">
+                Add Money to Wallet
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="main-content light-section" id="vehicles">
+    <div class="section-heading">
+        <span class="eyebrow">YOUR VEHICLES</span>
+        <h2>Vehicle Management</h2>
+        <p>Add or update the vehicle details used for your journeys.</p>
+    </div>
+
+    <div class="two-column">
+        <div class="form-card">
+            <h3>Add Vehicle</h3>
+
+            <label for="vehicleNumber">Vehicle Registration Number</label>
+            <input id="vehicleNumber" type="text" placeholder="e.g. TN01AB1234">
+
+            <label for="vehicleType">Vehicle Type</label>
+            <select id="vehicleType">
+                <option value="Car">Car</option>
+                <option value="Motorcycle">Motorcycle</option>
+                <option value="Van">Van</option>
+                <option value="Bus">Bus</option>
+                <option value="Truck">Truck</option>
+            </select>
+
+            <label for="vehicleModel">Vehicle Model</label>
+            <input id="vehicleModel" type="text" placeholder="e.g. Hyundai i20">
+
+            <button class="btn btn-primary full-width" id="addVehicleButton" type="button">
+                + Add Vehicle
+            </button>
+        </div>
+
+        <div class="form-card">
+            <h3>My Registered Vehicles</h3>
+            <div id="vehicleList" class="item-list"></div>
+        </div>
+    </div>
+</section>
+
+<section class="main-content" id="ticket">
+    <div class="section-heading">
+        <span class="eyebrow">PLAN BEFORE YOU TRAVEL</span>
+        <h2>Buy Toll e-Ticket</h2>
+        <p>Choose a toll gate, vehicle, and journey date.</p>
+    </div>
+
+    <div class="two-column">
+        <div class="form-card">
+            <h3>Journey Details</h3>
+
+            <label for="ticketVehicle">Select Vehicle</label>
+            <select id="ticketVehicle"></select>
+
+            <label for="ticketGate">Toll Gate</label>
+            <select id="ticketGate"></select>
+
+            <label for="journeyDate">Journey Date</label>
+            <input id="journeyDate" type="date">
+
+            <label for="ticketPayment">Payment Method</label>
+            <select id="ticketPayment">
+                <option value="Wallet">EasyToll Wallet</option>
+            </select>
+
+            <button class="btn btn-primary full-width" id="buyTicketButton" type="button">
+                Pay & Generate e-Ticket
+            </button>
+        </div>
+
+        <div class="ticket-preview">
+            <span class="eyebrow">YOUR DIGITAL PASS</span>
+            <div class="ticket-icon">🎫</div>
+            <h3>Advance Toll e-Ticket</h3>
+            <p>Purchase a ticket to receive a demo QR code for toll verification.</p>
+            <div class="ticket-note">
+                <span>✓</span>
+                <p>Keep your ticket ID ready for verification at the gate.</p>
+            </div>
+            <div id="latestTicket" class="latest-ticket">
+                No ticket purchased yet.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-content light-section" id="pass">
+    <div class="section-heading">
+        <span class="eyebrow">CONVENIENT REPEAT TRAVEL</span>
+        <h2>Toll Pass Application</h2>
+        <p>Apply for a new toll pass or request renewal of an existing pass.</p>
+    </div>
+
+    <div class="two-column">
+        <div class="form-card">
+            <h3>Apply / Renew Toll Pass</h3>
+
+            <label for="passVehicle">Select Vehicle</label>
+            <select id="passVehicle"></select>
+
+            <label for="passType">Pass Type</label>
+            <select id="passType">
+                <option value="Monthly">Monthly Pass — ₹1500</option>
+                <option value="Quarterly">Quarterly Pass — ₹4000</option>
+                <option value="Annual">Annual Pass — ₹14000</option>
+            </select>
+
+            <label for="passAction">Application Type</label>
+            <select id="passAction">
+                <option value="New">Apply for New Pass</option>
+                <option value="Renewal">Renew Existing Pass</option>
+            </select>
+
+            <label for="passRoute">Preferred Route</label>
+            <input id="passRoute" type="text" placeholder="e.g. Chennai to Vellore">
+
+            <button class="btn btn-primary full-width" id="applyPassButton" type="button">
+                Submit Pass Application
+            </button>
+        </div>
+
+        <div class="form-card">
+            <h3>My Toll Passes</h3>
+            <p class="muted">Passes require administrator approval in this demo.</p>
+            <div id="passList" class="item-list"></div>
+        </div>
+    </div>
+</section>
+
+<section class="main-content" id="transactions">
+    <div class="section-heading">
+        <span class="eyebrow">YOUR PAYMENT RECORDS</span>
+        <h2>Transaction History</h2>
+        <p>Review your wallet activity, toll tickets, and pass applications.</p>
+    </div>
+
+    <div class="summary-grid">
+        <div class="summary-card">
+            <span>Total Wallet Added</span>
+            <strong id="totalAdded">₹0</strong>
+        </div>
+        <div class="summary-card">
+            <span>Total Toll Spent</span>
+            <strong id="totalSpent">₹0</strong>
+        </div>
+        <div class="summary-card">
+            <span>Total Transactions</span>
+            <strong id="totalTransactions">0</strong>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="transactionTable"></tbody>
+        </table>
+    </div>
+</section>
+
+<section class="main-content account-section" id="accounts">
+    <div class="account-intro">
+        <span class="eyebrow">YOUR JOURNEY, YOUR CONTROL</span>
+        <h2>One Account.<br>Simpler Journeys.</h2>
+        <p>
+            Register for EasyToll to manage your vehicles, purchase toll tickets,
+            and keep track of your transactions in one place.
+        </p>
+        <div class="account-benefit">🔐 Demo account registration and login</div>
+        <div class="account-benefit">💳 Digital wallet management</div>
+        <div class="account-benefit">🎫 Advance ticket and pass applications</div>
+    </div>
+
+    <div class="form-card">
+        <h3>User Login / Registration</h3>
+
+        <label for="userName">Full Name</label>
+        <input id="userName" type="text" placeholder="Enter your name">
+
+        <label for="userEmail">Email Address</label>
+        <input id="userEmail" type="email" placeholder="Enter your email">
+
+        <label for="userPassword">Password</label>
+        <input id="userPassword" type="password" placeholder="Enter password">
+
+        <div class="button-row">
+            <button class="btn btn-primary" id="registerButton" type="button">
+                Register
+            </button>
+            <button class="btn btn-outline" id="loginButton" type="button">
+                Login
+            </button>
+        </div>
+
+        <button class="text-button" id="logoutButton" type="button">Logout</button>
+        <p id="accountMessage" class="message"></p>
+    </div>
+</section>
+
+<section class="admin-section" id="admin">
+    <div class="section-heading">
+        <span class="eyebrow">SYSTEM ADMINISTRATION</span>
+        <h2>Admin Control Center</h2>
+        <p>Manage user accounts, toll passes, toll gates, and approvals.</p>
+    </div>
+
+    <div class="form-card admin-login-card">
+        <h3>Administrator Login</h3>
+        <div class="admin-login-row">
+            <input id="adminUsername" type="text" placeholder="Admin username">
+            <input id="adminPassword" type="password" placeholder="Admin password">
+            <button class="btn btn-primary" id="adminLoginButton" type="button">
+                Login
+            </button>
+            <button class="btn btn-outline" id="adminLogoutButton" type="button">
+                Logout
+            </button>
+        </div>
+        <p id="adminMessage" class="message"></p>
+    </div>
+
+    <div id="adminDashboard" hidden>
+        <div class="summary-grid admin-summary">
+            <div class="summary-card">
+                <span>Registered Users</span>
+                <strong id="adminUserCount">0</strong>
+            </div>
+            <div class="summary-card">
+                <span>Toll Pass Applications</span>
+                <strong id="adminPassCount">0</strong>
+            </div>
+            <div class="summary-card">
+                <span>Toll Tickets</span>
+                <strong id="adminTicketCount">0</strong>
+            </div>
+        </div>
+
+        <div class="form-card admin-panel">
+            <h3>Manage Users</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Email</th><th>Action</th></tr>
+                    </thead>
+                    <tbody id="adminUsers"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="form-card admin-panel">
+            <h3>Approve Toll Passes</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pass ID</th><th>User</th><th>Vehicle</th>
+                            <th>Type</th><th>Status</th><th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminPasses"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="form-card admin-panel">
+            <h3>Create Toll Gate</h3>
+
+            <div class="admin-login-row">
+                <input id="newGateName" type="text" placeholder="Toll gate name">
+                <input id="newGateLocation" type="text" placeholder="Toll gate location">
+                <input id="newGateFee" type="number" min="1" placeholder="Toll fee (₹)">
+                <button class="btn btn-primary" id="createGateButton" type="button">
+                    Create Toll
+                </button>
+            </div>
+
+            <div id="adminGateList" class="item-list"></div>
+        </div>
+
+        <div class="form-card admin-panel">
+            <h3>Manage Toll Tickets</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th><th>User</th><th>Gate</th>
+                            <th>Fee</th><th>Status</th><th>QR / Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTickets"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gate-section" id="gate">
+    <div class="section-heading">
+        <span class="eyebrow">TOLL GATE OPERATIONS</span>
+        <h2>Toll Gate Operator</h2>
+        <p>Verify an e-ticket or toll pass before allowing a vehicle through.</p>
+    </div>
+
+    <div class="form-card gate-login-card">
+        <h3>Operator Login</h3>
+
+        <label for="gateUsername">Operator Username</label>
+        <input id="gateUsername" type="text" placeholder="Enter operator username">
+
+        <label for="gatePassword">Password</label>
+        <input id="gatePassword" type="password" placeholder="Enter operator password">
+
+        <button class="btn btn-primary full-width" id="gateLoginButton" type="button">
+            Login to Toll Gate
+        </button>
+
+        <button class="text-button" id="gateLogoutButton" type="button">
+            Operator Logout
+        </button>
+
+        <p id="gateMessage" class="message"></p>
+    </div>
+
+    <div id="gateDashboard" hidden>
+        <div class="form-card gate-scan-card">
+            <h3>Verify Ticket or Toll Pass</h3>
+            <p class="muted">Enter the ID from the user's demo QR code.</p>
+
+            <label for="verifyId">Ticket ID / Pass ID</label>
+            <input id="verifyId" type="text" placeholder="Enter ID">
+
+            <label for="gateLocation">Current Toll Gate Location</label>
+            <input id="gateLocation" type="text" placeholder="Enter location">
+
+            <button class="btn btn-primary full-width" id="verifyButton" type="button">
+                Verify Ticket / Pass
+            </button>
+
+            <div id="verificationResult" class="verification-result">
+                Waiting for verification.
+            </div>
+
+            <button class="btn btn-outline full-width" id="updateLocationButton" type="button">
+                Update Toll Gate Location
+            </button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <a href="#home" class="logo footer-logo">🚘 Easy<span>Toll</span></a>
+    <p>Smarter toll payments for smoother journeys.</p>
+    <p class="footer-note">
+        Student project demonstration. No real toll authority or payment gateway is connected.
+    </p>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+</body>
+</html>

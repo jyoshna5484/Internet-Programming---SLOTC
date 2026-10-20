@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReNewMarket | Give Items a Second Life</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">♻ ReNew<span>Market</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#market">Marketplace</a>
+        <a href="#sell">Sell Item</a>
+        <a href="#orders">My Orders</a>
+        <a href="#account">Account</a>
+        <a href="#admin">Admin</a>
+    </nav>
+
+    <button class="cart-button" type="button" onclick="showFavorites()">
+        ♥ Favorites <span id="favoriteCount">0</span>
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tagline">BUY SMART. SELL EASY. LIVE GREEN.</span>
+        <h1>Give Pre-Loved Items<br>A <span>New Beginning.</span></h1>
+        <p>Discover great deals on quality second-hand products.
+           Save money, reduce waste, and make a difference.</p>
+
+        <div class="hero-buttons">
+            <a href="#market" class="primary-btn">Explore Marketplace</a>
+            <a href="#sell" class="secondary-btn">Start Selling</a>
+        </div>
+
+        <div class="statistics">
+            <div><strong id="productStat">8+</strong><span>Products</span></div>
+            <div><strong>100%</strong><span>Reuse Mindset</span></div>
+            <div><strong>♻</strong><span>Less Waste</span></div>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <div class="art-circle">♻</div>
+        <div class="floating-card">🌱 Give items a second life</div>
+        <div class="floating-card second-card">💚 Shop sustainably</div>
+    </div>
+</section>
+
+<section class="categories-section">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">EXPLORE BY CATEGORY</span>
+            <h2>Find Your Next Treasure</h2>
+        </div>
+    </div>
+
+    <div class="category-grid" id="categoryButtons">
+        <button class="category-card active" type="button" data-category="All">
+            <span>🛍️</span>All Items
+        </button>
+        <button class="category-card" type="button" data-category="Electronics">
+            <span>💻</span>Electronics
+        </button>
+        <button class="category-card" type="button" data-category="Furniture">
+            <span>🪑</span>Furniture
+        </button>
+        <button class="category-card" type="button" data-category="Clothing">
+            <span>👕</span>Clothing
+        </button>
+        <button class="category-card" type="button" data-category="Collectibles">
+            <span>🎨</span>Collectibles
+        </button>
+    </div>
+</section>
+
+<section class="market-section" id="market">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">PRE-LOVED, RE-IMAGINED</span>
+            <h2>Explore the Marketplace</h2>
+            <p>Quality finds at prices you'll love.</p>
+        </div>
+    </div>
+
+    <div class="search-panel">
+        <input type="search" id="searchInput"
+               placeholder="Search products, brands or descriptions...">
+
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Collectibles">Collectibles</option>
+        </select>
+
+        <select id="conditionFilter">
+            <option value="All">Any Condition</option>
+            <option value="Like New">Like New</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+        </select>
+
+        <select id="sortFilter">
+            <option value="newest">Recently Added</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+
+        <button type="button" class="primary-btn" id="searchButton">
+            Search
+        </button>
+    </div>
+
+    <p class="result-count" id="resultCount"></p>
+    <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="sell-section" id="sell">
+    <div class="sell-intro">
+        <span class="eyebrow">YOUR ITEMS DESERVE ANOTHER HOME</span>
+        <h2>Turn Unused Items<br>Into Useful Finds.</h2>
+        <p>List your pre-loved items and connect with people who need them.</p>
+        <div class="sell-benefit">✓ Easy listing creation</div>
+        <div class="sell-benefit">✓ Set your own price</div>
+        <div class="sell-benefit">✓ Manage your orders</div>
+    </div>
+
+    <div class="form-card">
+        <h3>Create a Listing</h3>
+        <p class="muted">Add your item to the marketplace.</p>
+
+        <label for="itemName">Item Name</label>
+        <input id="itemName" type="text" placeholder="e.g. Wireless Headphones">
+
+        <label for="itemCategory">Category</label>
+        <select id="itemCategory">
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Collectibles">Collectibles</option>
+        </select>
+
+        <label for="itemPrice">Price (₹)</label>
+        <input id="itemPrice" type="number" min="1" placeholder="Enter price">
+
+        <label for="itemCondition">Condition</label>
+        <select id="itemCondition">
+            <option value="Like New">Like New</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+        </select>
+
+        <label for="itemImage">Image URL (optional)</label>
+        <input id="itemImage" type="url" placeholder="https://example.com/image.jpg">
+
+        <label for="itemDescription">Description</label>
+        <textarea id="itemDescription" rows="3"
+                  placeholder="Describe the item and its condition..."></textarea>
+
+        <label for="sellerName">Seller Name</label>
+        <input id="sellerName" type="text" placeholder="Your name">
+
+        <button class="primary-btn full-width" id="listItemButton" type="button">
+            + Publish Listing
+        </button>
+    </div>
+</section>
+
+<section class="orders-section" id="orders">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">KEEP EVERYTHING ORGANIZED</span>
+            <h2>Transaction History</h2>
+            <p>Track purchases and delivery status.</p>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Item</th>
+                    <th>Buyer</th>
+                    <th>Amount</th>
+                    <th>Delivery Status</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody id="ordersTable"></tbody>
+        </table>
+    </div>
+</section>
+
+<section class="account-section" id="account">
+    <div class="account-info">
+        <span class="eyebrow">JOIN OUR COMMUNITY</span>
+        <h2>Your Account,<br>Your Marketplace.</h2>
+        <p>Create an account to use the marketplace demo and manage your listings.</p>
+        <div class="account-feature">🔐 Account registration and login demo</div>
+        <div class="account-feature">❤️ Save your favorite products</div>
+        <div class="account-feature">📦 Track your orders</div>
+    </div>
+
+    <div class="form-card account-card">
+        <h3>Login / Register</h3>
+
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Enter username">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password">
+
+        <div class="button-row">
+            <button class="primary-btn" id="loginButton" type="button">Login</button>
+            <button class="secondary-btn" id="registerButton" type="button">Register</button>
+        </div>
+
+        <button class="text-button" id="logoutButton" type="button">Logout</button>
+        <p id="accountMessage" class="message"></p>
+
+        <div class="feedback-box">
+            <h4>Leave Feedback</h4>
+            <input id="feedbackItem" type="text" placeholder="Product name">
+            <select id="feedbackRating">
+                <option value="5">★★★★★ Excellent</option>
+                <option value="4">★★★★☆ Very Good</option>
+                <option value="3">★★★☆☆ Good</option>
+                <option value="2">★★☆☆☆ Fair</option>
+                <option value="1">★☆☆☆☆ Poor</option>
+            </select>
+            <textarea id="feedbackText" rows="2"
+                      placeholder="Share your experience..."></textarea>
+            <button class="primary-btn full-width" id="feedbackButton" type="button">
+                Submit Feedback
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="admin-section" id="admin">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">ADMINISTRATION</span>
+            <h2>Marketplace Management</h2>
+            <p>Manage users, categories, commodities and orders.</p>
+        </div>
+    </div>
+
+    <div class="admin-login">
+        <input id="adminUsername" type="text" placeholder="Admin username">
+        <input id="adminPassword" type="password" placeholder="Admin password">
+        <button class="primary-btn" id="adminLoginButton" type="button">
+            Admin Login
+        </button>
+        <button class="secondary-btn" id="adminLogoutButton" type="button">
+            Admin Logout
+        </button>
+    </div>
+
+    <p id="adminMessage" class="message"></p>
+
+    <div id="adminDashboard" hidden>
+        <div class="admin-stats">
+            <div><span>Registered Users</span><strong id="adminUserCount">0</strong></div>
+            <div><span>Active Listings</span><strong id="adminProductCount">0</strong></div>
+            <div><span>Total Orders</span><strong id="adminOrderCount">0</strong></div>
+        </div>
+
+        <div class="admin-card">
+            <h3>Category Management</h3>
+            <div class="inline-controls">
+                <input id="newCategory" type="text" placeholder="New category name">
+                <button class="primary-btn" id="addCategoryButton" type="button">
+                    Add Category
+                </button>
+            </div>
+            <div id="adminCategories" class="admin-list"></div>
+        </div>
+
+        <div class="admin-card">
+            <h3>User Management</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Username</th><th>Action</th></tr>
+                    </thead>
+                    <tbody id="adminUsers"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-card">
+            <h3>Commodity Management</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Seller</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminProducts"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-card">
+            <h3>Order Management</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Item</th>
+                            <th>Status</th>
+                            <th>Update Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminOrders"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="admin-card">
+            <h3>Customer Feedback</h3>
+            <div id="adminFeedback" class="admin-list"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <a href="#" class="logo">♻ ReNew<span>Market</span></a>
+    <p>Give products a second life. Build a greener tomorrow.</p>
+    <p class="footer-small">Student project demonstration · Reuse more, waste less.</p>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+</body>
+</html>

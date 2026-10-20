@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Finder | Find Your Dream Property</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Home Finder</h1>
+    <p>Find a place you'll love to call home.</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#agents">Agents</a>
+        <a href="#mortgage">Mortgage Calculator</a>
+        <a href="#login">Login</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- Home and Search -->
+    <section id="home" class="hero">
+        <h2>Find Your Perfect Property</h2>
+        <p>Search houses, apartments, plots, and commercial properties.</p>
+
+        <div class="search-grid">
+            <input type="text" id="location" placeholder="Enter location">
+
+            <select id="propertyType">
+                <option value="">All Property Types</option>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Land">Land</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+
+            <input type="number" id="minPrice" placeholder="Minimum budget">
+            <input type="number" id="maxPrice" placeholder="Maximum budget">
+
+            <select id="bedrooms">
+                <option value="">Any Bedrooms</option>
+                <option value="1">1 Bedroom</option>
+                <option value="2">2 Bedrooms</option>
+                <option value="3">3 Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+            </select>
+
+            <button type="button" id="searchBtn">Search Properties</button>
+            <button type="button" id="saveSearchBtn">Save Search</button>
+            <button type="button" id="loadSearchBtn">Load Saved Search</button>
+        </div>
+
+        <p id="searchMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- Property Listings -->
+    <section id="properties">
+        <h2>Available Properties</h2>
+        <p id="resultCount">Explore our property listings.</p>
+
+        <div class="property-grid" id="propertyList">
+
+            <article class="property-card"
+                data-location="Chennai"
+                data-type="House"
+                data-price="7500000"
+                data-bedrooms="3">
+                <div class="property-visual house-visual">Family Home</div>
+                <div class="property-info">
+                    <h3>Modern Family House</h3>
+                    <p>Location: Chennai</p>
+                    <p>Type: House | 3 Bedrooms</p>
+                    <p class="price">₹75,00,000</p>
+                    <p>Spacious home with parking and garden.</p>
+                    <button type="button" class="favoriteBtn">♡ Add Favorite</button>
+                    <button type="button" class="viewBtn">View Details</button>
+                    <button type="button" class="scheduleBtn">Schedule Visit</button>
+                </div>
+            </article>
+
+            <article class="property-card"
+                data-location="Bangalore"
+                data-type="Apartment"
+                data-price="4800000"
+                data-bedrooms="2">
+                <div class="property-visual apartment-visual">City Apartment</div>
+                <div class="property-info">
+                    <h3>Premium City Apartment</h3>
+                    <p>Location: Bangalore</p>
+                    <p>Type: Apartment | 2 Bedrooms</p>
+                    <p class="price">₹48,00,000</p>
+                    <p>Modern apartment near schools and transport.</p>
+                    <button type="button" class="favoriteBtn">♡ Add Favorite</button>
+                    <button type="button" class="viewBtn">View Details</button>
+                    <button type="button" class="scheduleBtn">Schedule Visit</button>
+                </div>
+            </article>
+
+            <article class="property-card"
+                data-location="Coimbatore"
+                data-type="Land"
+                data-price="2500000"
+                data-bedrooms="0">
+                <div class="property-visual land-visual">Residential Plot</div>
+                <div class="property-info">
+                    <h3>Residential Land</h3>
+                    <p>Location: Coimbatore</p>
+                    <p>Type: Land</p>
+                    <p class="price">₹25,00,000</p>
+                    <p>Plot suitable for building your dream home.</p>
+                    <button type="button" class="favoriteBtn">♡ Add Favorite</button>
+                    <button type="button" class="viewBtn">View Details</button>
+                    <button type="button" class="scheduleBtn">Schedule Visit</button>
+                </div>
+            </article>
+
+            <article class="property-card"
+                data-location="Chennai"
+                data-type="Commercial"
+                data-price="12000000"
+                data-bedrooms="0">
+                <div class="property-visual commercial-visual">Commercial Space</div>
+                <div class="property-info">
+                    <h3>Commercial Office Space</h3>
+                    <p>Location: Chennai</p>
+                    <p>Type: Commercial</p>
+                    <p class="price">₹1,20,00,000</p>
+                    <p>Office space suitable for business use.</p>
+                    <button type="button" class="favoriteBtn">♡ Add Favorite</button>
+                    <button type="button" class="viewBtn">View Details</button>
+                    <button type="button" class="scheduleBtn">Schedule Visit</button>
+                </div>
+            </article>
+
+        </div>
+
+        <div id="detailsPanel" class="details-panel" hidden>
+            <h3>Property Details</h3>
+            <p id="detailsText"></p>
+            <button type="button" id="closeDetailsBtn">Close Details</button>
+        </div>
+    </section>
+
+    <!-- Favorites -->
+    <section id="favorites">
+        <h2>My Favorite Properties</h2>
+        <div id="favoriteList">
+            <p>Your saved properties will appear here.</p>
+        </div>
+    </section>
+
+    <!-- Saved Searches -->
+    <section id="savedSearches">
+        <h2>My Saved Searches</h2>
+        <div id="savedSearchList">
+            <p>You have not saved any searches yet.</p>
+        </div>
+    </section>
+
+    <!-- Viewing Appointments -->
+    <section id="appointments">
+        <h2>Property Viewing Appointments</h2>
+
+        <div class="input-group">
+            <label for="visitorName">Your Name</label>
+            <input type="text" id="visitorName" placeholder="Enter your name">
+
+            <label for="visitorEmail">Email Address</label>
+            <input type="email" id="visitorEmail" placeholder="Enter your email">
+
+            <label for="visitDate">Preferred Visit Date</label>
+            <input type="date" id="visitDate">
+
+            <button type="button" id="appointmentBtn">Book Viewing</button>
+        </div>
+
+        <p id="appointmentMessage" class="message" aria-live="polite"></p>
+
+        <h3>My Appointments</h3>
+        <div id="appointmentList"></div>
+    </section>
+
+    <!-- Agent Search -->
+    <section id="agents">
+        <h2>Find Real Estate Agents</h2>
+
+        <input type="text" id="agentLocation" placeholder="Search by city">
+        <button type="button" id="agentSearchBtn">Search Agents</button>
+
+        <div id="agentList" class="agent-grid">
+            <article class="agent-card" data-city="Chennai">
+                <h3>Priya Real Estate</h3>
+                <p>City: Chennai</p>
+                <p>Specialization: Houses and Apartments</p>
+                <a href="mailto:agent@example.com">Contact Agent</a>
+            </article>
+
+            <article class="agent-card" data-city="Bangalore">
+                <h3>Urban Property Experts</h3>
+                <p>City: Bangalore</p>
+                <p>Specialization: Apartments and Commercial Spaces</p>
+                <a href="mailto:agent@example.com">Contact Agent</a>
+            </article>
+
+            <article class="agent-card" data-city="Coimbatore">
+                <h3>Green Land Properties</h3>
+                <p>City: Coimbatore</p>
+                <p>Specialization: Residential Land</p>
+                <a href="mailto:agent@example.com">Contact Agent</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section id="mapSection">
+        <h2>Explore Property Locations</h2>
+        <p>Select a property and open its location on a map.</p>
+
+        <select id="mapProperty">
+            <option value="">Select a Property</option>
+            <option value="Chennai">Modern Family House - Chennai</option>
+            <option value="Bangalore">Premium City Apartment - Bangalore</option>
+            <option value="Coimbatore">Residential Land - Coimbatore</option>
+        </select>
+
+        <button type="button" id="mapBtn">Explore on Map</button>
+        <p id="mapMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- Mortgage Calculator -->
+    <section id="mortgage">
+        <h2>Mortgage Calculator</h2>
+        <p>Estimate your monthly home loan payment.</p>
+
+        <label for="loanAmount">Loan Amount (₹)</label>
+        <input type="number" id="loanAmount" placeholder="Example: 3000000">
+
+        <label for="interestRate">Annual Interest Rate (%)</label>
+        <input type="number" id="interestRate" placeholder="Example: 8.5" step="0.1">
+
+        <label for="loanYears">Loan Duration (Years)</label>
+        <input type="number" id="loanYears" placeholder="Example: 20">
+
+        <button type="button" id="calculateBtn">Calculate EMI</button>
+        <p id="emiResult" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- Registration -->
+    <section id="register">
+        <h2>Create a Buyer Account</h2>
+
+        <label for="registerName">Full Name</label>
+        <input type="text" id="registerName" placeholder="Enter your name">
+
+        <label for="registerEmail">Email</label>
+        <input type="email" id="registerEmail" placeholder="Enter your email">
+
+        <label for="registerPassword">Password</label>
+        <input type="password" id="registerPassword" placeholder="Create a password">
+
+        <button type="button" id="registerBtn">Register</button>
+        <p id="registerMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- Login -->
+    <section id="login">
+        <h2>Buyer Login</h2>
+
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email">
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+
+        <button type="button" id="loginBtn">Login</button>
+        <button type="button" id="logoutBtn">Logout</button>
+
+        <p id="loginMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- Visitor Records -->
+    <section id="visitors">
+        <h2>Website Visitor Records</h2>
+        <p>Total recorded visits on this browser: <strong id="visitCount">0</strong></p>
+    </section>
+
+    <!-- Advertisements -->
+    <section id="advertisements">
+        <h2>Property News and Resources</h2>
+
+        <div class="advertisement">
+            <h3>Home Buying Guide</h3>
+            <p>Learn about budgeting, property inspections, and documentation.</p>
+            <a href="https://www.nhb.org.in/" target="_blank" rel="noopener noreferrer">
+                Visit National Housing Bank
+            </a>
+        </div>
+
+        <div class="advertisement">
+            <h3>Explore Property Listings</h3>
+            <p>Compare properties and learn more about the real estate market.</p>
+            <a href="https://www.magicbricks.com/" target="_blank" rel="noopener noreferrer">
+                Explore Magicbricks
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Home Finder | Find Your Place, Build Your Future</p>
+    <p>Demo website for Internet Programming</p>
+</footer>
+
+</body>
+</html>
