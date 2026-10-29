@@ -1,0 +1,16 @@
+Aim:
+To develop a ComplainEase website for submitting and tracking complaints online.
+
+Algorithm:
+
+Create the webpage structure using HTML.
+Apply CSS to design the website layout.
+Use JavaScript to manage complaint details.
+Provide a form to enter user and complaint details.
+Allow users to select the complaint category.
+Generate a complaint ID after submission.
+Display the complaint status.
+Allow users to search and track their complaints.
+
+Result:
+The ComplainEase website was developed successfully to submit and track complaints online.
