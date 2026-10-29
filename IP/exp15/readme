@@ -1,0 +1,16 @@
+Aim:
+To develop an EasyToll website for online toll payment and transaction management.
+
+Algorithm:
+
+Create the webpage structure using HTML.
+Apply CSS to design the website layout.
+Use JavaScript to display toll payment details.
+Allow users to enter vehicle information.
+Display toll charges based on the selected route.
+Provide an option to enter payment details.
+Calculate and display the total toll amount.
+Display the payment confirmation after submission.
+
+Result:
+The EasyToll website was developed successfully to display toll charges and simulate online toll payments.
