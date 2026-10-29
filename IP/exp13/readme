@@ -1,0 +1,16 @@
+Aim:
+To develop a BlossomGifts website for ordering flowers and gifts online.
+
+Algorithm:
+
+Create the webpage structure using HTML.
+Apply CSS to design the website layout.
+Use JavaScript to display flowers and gift items.
+Allow users to search and filter products.
+Display product images, names, and prices.
+Enable users to add items to the shopping cart.
+Calculate the total price of selected items.
+Allow users to enter delivery details and place orders.
+
+Result:
+The BlossomGifts website was developed successfully to browse flowers and gifts and place orders online.
