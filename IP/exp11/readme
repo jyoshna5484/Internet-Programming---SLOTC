@@ -1,0 +1,16 @@
+Aim:
+To develop a Home Finder website to search for houses and lands based on location, type, and budget.
+
+Algorithm:
+
+Create the webpage structure using HTML.
+Apply CSS to design the website layout.
+Use JavaScript to display available properties.
+Allow users to search properties by location and type.
+Provide filters to select properties based on budget and area.
+Display property images, details, and prices.
+Allow users to add properties to favorites.
+Provide an option to request property visits.
+
+Result:
+The Home Finder website was developed successfully to search, filter, and view properties online.
