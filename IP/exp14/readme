@@ -1,0 +1,16 @@
+Aim:
+To develop a ReNewMarket website for buying and selling second-hand products.
+
+Algorithm:
+
+Create the webpage structure using HTML.
+Apply CSS to design the website layout.
+Use JavaScript to display available products.
+Allow users to search and filter products by category and price.
+Display product images, details, and prices.
+Provide an option to add products for sale.
+Allow users to view product details and contact sellers.
+Display products based on the user's search criteria.
+
+Result:
+The ReNewMarket website was developed successfully to browse, search, and sell second-hand products.
