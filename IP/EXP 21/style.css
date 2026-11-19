@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fc;
+    color: #263248;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: white;
+    box-shadow: 0 3px 10px #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #5c55d8;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 12px;
+}
+
+button {
+    background: #5c55d8;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #4038b5;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    background: linear-gradient(120deg, #e9e8ff, #f4f0ff);
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #5148c8;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    font-size: 90px;
+}
+
+.search-section {
+    background: white;
+    text-align: center;
+    padding: 40px 7%;
+}
+
+.search-section h2 {
+    color: #5148c8;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.search-box input,
+.search-box select {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+section {
+    padding: 50px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #5148c8;
+    margin-bottom: 30px;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.job-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #ddd;
+    transition: 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card h3 {
+    color: #5148c8;
+    margin-bottom: 12px;
+}
+
+.job-card p {
+    margin: 8px 0;
+}
+
+.about {
+    background: #e9e8ff;
+}
+
+.about h2 {
+    text-align: center;
+    color: #5148c8;
+    margin-bottom: 30px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.about-card h3 {
+    margin-bottom: 12px;
+    color: #5148c8;
+}
+
+.auth-section {
+    background: #f0efff;
+    text-align: center;
+}
+
+.auth-box {
+    max-width: 450px;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.auth-box input,
+.auth-box select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.dashboard {
+    display: none;
+    background: white;
+    margin: 30px 7%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.dashboard h2 {
+    color: #5148c8;
+    margin-bottom: 20px;
+}
+
+.dashboard-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.application-card {
+    background: #f1f0ff;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #5c55d8;
+    border-radius: 10px;
+}
+
+.application-card input,
+.application-card textarea,
+.application-card select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background: #302c68;
+    color: white;
+    padding: 30px;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-image {
+        font-size: 55px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box select {
+        width: 100%;
+    }
+}

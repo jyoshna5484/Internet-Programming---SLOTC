@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCure - Veterinary Healthcare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🐾 VetCure</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#diseases">Diseases</a>
+        <a href="#news">News</a>
+    </nav>
+    <button onclick="showLogin()">Login</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Healthy Animals,<br>Happy Farmers!</h1>
+        <p>Connect with veterinary doctors and get expert care for your animals.</p>
+        <button onclick="showRegister()">Get Started</button>
+        <button class="secondary" onclick="showLogin()">Login</button>
+    </div>
+    <div class="hero-image">🐄 🐕 🐐 🐈</div>
+</section>
+
+<section class="stats">
+    <div><h2>500+</h2><p>Farmers</p></div>
+    <div><h2>50+</h2><p>Veterinary Doctors</p></div>
+    <div><h2>1000+</h2><p>Animals Treated</p></div>
+    <div><h2>24/7</h2><p>Animal Care</p></div>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="cards">
+        <div class="card">🩺<h3>Online Consultation</h3><p>Consult veterinary doctors online.</p></div>
+        <div class="card">📷<h3>Symptom Upload</h3><p>Upload images, audio, video or text.</p></div>
+        <div class="card">💊<h3>Disease Treatment</h3><p>Learn about common animal diseases.</p></div>
+        <div class="card">📊<h3>Disease Reports</h3><p>View common disease reports.</p></div>
+    </div>
+</section>
+
+<section id="diseases">
+    <h2 class="section-title">Common Animal Diseases</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🐄 Foot and Mouth Disease</h3>
+            <p>Symptoms: Fever, mouth sores and difficulty walking.</p>
+            <p><b>Care:</b> Veterinary examination and isolation.</p>
+        </div>
+        <div class="card">
+            <h3>🐕 Rabies</h3>
+            <p>Symptoms: Behavioral changes and excessive salivation.</p>
+            <p><b>Care:</b> Immediate veterinary attention.</p>
+        </div>
+        <div class="card">
+            <h3>🐐 PPR Disease</h3>
+            <p>Symptoms: Fever, discharge and breathing problems.</p>
+            <p><b>Care:</b> Consult a veterinary doctor immediately.</p>
+        </div>
+        <div class="card">
+            <h3>🐄 Mastitis</h3>
+            <p>Symptoms: Swelling and pain in the udder.</p>
+            <p><b>Care:</b> Veterinary examination and treatment.</p>
+        </div>
+    </div>
+</section>
+
+<section id="doctors">
+    <h2 class="section-title">Our Veterinary Doctors</h2>
+    <div class="cards" id="doctor-list"></div>
+</section>
+
+<section id="news">
+    <h2 class="section-title">Veterinary News</h2>
+    <div class="cards">
+        <div class="card"><h3>Animal Vaccination</h3><p>Vaccination helps prevent many animal diseases.</p></div>
+        <div class="card"><h3>Animal Nutrition</h3><p>Proper nutrition keeps animals healthy and active.</p></div>
+        <div class="card"><h3>Farm Hygiene</h3><p>Clean animal shelters help prevent disease spread.</p></div>
+    </div>
+</section>
+
+<section class="auth-section" id="auth-section">
+    <h2>Farmer Registration / Login</h2>
+    <div class="auth-box">
+        <input id="name" placeholder="Full Name">
+        <input id="email" placeholder="Email Address">
+        <input id="phone" placeholder="Phone Number">
+        <input id="location" placeholder="Village / Area">
+        <input id="password" type="password" placeholder="Password">
+
+        <select id="role">
+            <option value="farmer">Farmer</option>
+            <option value="doctor">Doctor</option>
+        </select>
+
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+    </div>
+</section>
+
+<section id="dashboard" class="dashboard">
+    <h2>User Dashboard</h2>
+    <div class="dashboard-buttons">
+        <button onclick="showComplaint()">Post Complaint</button>
+        <button onclick="showComplaints()">My Complaint Status</button>
+        <button onclick="showDoctors()">View Doctors</button>
+        <button onclick="showReports()">View Reports</button>
+        <button onclick="showPayment()">Make Payment</button>
+        <button onclick="showFeedback()">Post Feedback</button>
+        <button onclick="showProfile()">My Profile</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <div id="dashboard-content"></div>
+</section>
+
+<section id="doctor-dashboard" class="dashboard">
+    <h2>Doctor Dashboard</h2>
+    <div class="dashboard-buttons">
+        <button onclick="doctorComplaints()">View Complaints</button>
+        <button onclick="manageCures()">Manage Cure</button>
+        <button onclick="manageNews()">Manage News</button>
+        <button onclick="viewUsers()">View User Details</button>
+        <button onclick="viewPayments()">Payment Details</button>
+        <button onclick="viewFeedback()">Feedback Details</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <div id="doctor-content"></div>
+</section>
+
+<footer>
+    <h3>VetCure 🐾</h3>
+    <p>Helping farmers provide better healthcare for their animals.</p>
+    <p>© 2026 VetCure Veterinary Healthcare System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background: white;
+    box-shadow: 0 3px 10px #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #ff6b35;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 12px;
+}
+
+button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #e95320;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    background: linear-gradient(120deg, #fff0e8, #ffe0cc);
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #d94e20;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.hero-image {
+    font-size: 90px;
+}
+
+.search-section {
+    background: white;
+    padding: 40px 7%;
+    text-align: center;
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+    color: #d94e20;
+}
+
+.search-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.search-box input,
+.search-box select {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+section {
+    padding: 50px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d94e20;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.vehicle-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #ddd;
+    transition: 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+.vehicle-image {
+    height: 150px;
+    background: #ffe8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+}
+
+.vehicle-info {
+    padding: 20px;
+}
+
+.vehicle-info h3 {
+    color: #d94e20;
+    margin-bottom: 10px;
+}
+
+.vehicle-info p {
+    margin: 8px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.review {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.review p {
+    margin: 15px 0;
+}
+
+.auth-section {
+    background: #fff0e8;
+    text-align: center;
+}
+
+.auth-box {
+    max-width: 450px;
+    background: white;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.auth-box input,
+.auth-box select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.dashboard {
+    display: none;
+    background: white;
+    margin: 30px 7%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #ddd;
+}
+
+.dashboard h2 {
+    color: #d94e20;
+    margin-bottom: 20px;
+}
+
+.dashboard-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.booking-card {
+    background: #fff5ef;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #ff6b35;
+    border-radius: 10px;
+}
+
+.booking-card input,
+.booking-card textarea,
+.booking-card select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    background: #292929;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-image {
+        font-size: 55px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input,
+    .search-box select {
+        width: 100%;
+    }
+}

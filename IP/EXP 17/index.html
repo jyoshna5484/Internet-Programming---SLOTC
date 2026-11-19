@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteOnline - E Voting System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Vote<span>Online</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#candidates">Candidates</a>
+        <a href="#vote">Vote</a>
+        <a href="#results">Results</a>
+    </nav>
+
+    <button class="login-btn" onclick="showLogin()">Voter Login</button>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Your Vote.<br><span>Your Voice.</span></h1>
+
+        <p>
+            VoteOnline provides a simple and convenient way to participate
+            in elections through a digital voting platform.
+        </p>
+
+        <button onclick="showLogin()">Vote Now</button>
+        <a href="#candidates" class="secondary-btn">View Candidates</a>
+    </div>
+
+    <div class="hero-card">
+        <div class="vote-icon">🗳️</div>
+        <h2>Online Voting</h2>
+        <p>Easy • Fast • Convenient</p>
+        <div class="secure">🔒 Secure Voting Demo</div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Why VoteOnline?</h2>
+    <p class="subtitle">A simple digital voting experience</p>
+
+    <div class="feature-container">
+
+        <div class="feature-card">
+            <div class="icon">🔐</div>
+            <h3>Voter Verification</h3>
+            <p>Verify voters using Voter ID and OTP.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🗳️</div>
+            <h3>Easy Voting</h3>
+            <p>Select your preferred candidate easily.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h3>Election Results</h3>
+            <p>View candidate vote counts in the demo.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">📱</div>
+            <h3>Accessible Platform</h3>
+            <p>Participate using a simple online interface.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CANDIDATES -->
+<section class="candidate-section" id="candidates">
+    <h2>Election Candidates</h2>
+    <p class="subtitle">Choose your preferred candidate</p>
+
+    <div class="candidate-container" id="candidateList"></div>
+</section>
+
+<!-- LOGIN -->
+<section class="login-section" id="login">
+    <h2>Voter Login</h2>
+    <p>Enter your Voter ID to continue.</p>
+
+    <div class="login-box">
+        <input type="text" id="voterId" placeholder="Enter Voter ID">
+
+        <button onclick="sendLoginOTP()">Get Login OTP</button>
+
+        <input type="text" id="loginOTP" placeholder="Enter OTP">
+
+        <button onclick="verifyLogin()">Verify OTP</button>
+
+        <p id="loginMessage"></p>
+    </div>
+</section>
+
+<!-- VOTING -->
+<section class="vote-section" id="vote">
+    <h2>Cast Your Vote</h2>
+    <p>Select a candidate and confirm your vote.</p>
+
+    <div class="vote-box">
+        <select id="voteCandidate">
+            <option value="">Select Candidate</option>
+        </select>
+
+        <input type="text" id="voteOTP" placeholder="Enter Voting OTP">
+
+        <button onclick="getVoteOTP()">Get Voting OTP</button>
+
+        <button class="cast-btn" onclick="castVote()">Submit Vote</button>
+
+        <p id="voteMessage"></p>
+    </div>
+</section>
+
+<!-- RESULTS -->
+<section class="result-section" id="results">
+    <h2>Election Results</h2>
+    <p class="subtitle">Demo voting results</p>
+
+    <div id="resultList"></div>
+</section>
+
+<!-- ADMIN -->
+<section class="admin-section">
+    <h2>Admin Panel</h2>
+    <p>Add candidates to the election</p>
+
+    <div class="admin-box">
+        <input type="text" id="candidateName" placeholder="Candidate Name">
+        <input type="text" id="candidateParty" placeholder="Party / Group">
+        <input type="text" id="candidateSymbol" placeholder="Election Symbol">
+
+        <button onclick="addCandidate()">Add Candidate</button>
+
+        <p id="adminMessage"></p>
+    </div>
+</section>
+
+<!-- VOTING HISTORY -->
+<section class="history-section">
+    <h2>Voting Status</h2>
+    <div id="history"></div>
+</section>
+
+<footer>
+    <h2>VoteOnline</h2>
+    <p>Digital Voting Platform</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#candidates">Candidates</a>
+        <a href="#vote">Vote</a>
+        <a href="#results">Results</a>
+    </div>
+
+    <p>© 2026 VoteOnline. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

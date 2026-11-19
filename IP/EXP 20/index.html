@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRide - Vehicle Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🚗 RentRide</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#vehicles">Vehicles</a>
+        <a href="#reviews">Reviews</a>
+    </nav>
+
+    <button onclick="showAuth()">Login / Register</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Drive Your Journey<br>With RentRide</h1>
+        <p>Find the perfect vehicle for your next adventure.</p>
+        <button onclick="document.getElementById('vehicles').scrollIntoView()">Explore Vehicles</button>
+    </div>
+
+    <div class="hero-image">🚘 🚙 🛻</div>
+</section>
+
+<section class="search-section">
+    <h2>Find Your Perfect Ride</h2>
+
+    <div class="search-box">
+        <input type="text" id="searchLocation" placeholder="Enter location">
+        
+        <select id="searchType">
+            <option value="All">All Vehicles</option>
+            <option value="Car">Cars</option>
+            <option value="SUV">SUVs</option>
+            <option value="Truck">Trucks</option>
+        </select>
+
+        <input type="number" id="searchDays" placeholder="Rental days" min="1">
+
+        <button onclick="searchVehicles()">Search</button>
+    </div>
+</section>
+
+<section id="vehicles">
+    <h2 class="section-title">Available Vehicles</h2>
+    <div class="vehicle-grid" id="vehicle-list"></div>
+</section>
+
+<section id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="reviews">
+        <div class="review">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Excellent service and comfortable vehicles."</p>
+            <b>- Rahul</b>
+        </div>
+
+        <div class="review">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>"Booking was simple and quick."</p>
+            <b>- Priya</b>
+        </div>
+
+        <div class="review">
+            <h3>⭐⭐⭐⭐</h3>
+            <p>"Great experience with RentRide."</p>
+            <b>- Arjun</b>
+        </div>
+    </div>
+</section>
+
+<section class="auth-section" id="auth">
+    <h2>Register / Login</h2>
+
+    <div class="auth-box">
+        <input type="text" id="authName" placeholder="Full Name">
+        <input type="email" id="authEmail" placeholder="Email">
+        <input type="text" id="authPhone" placeholder="Customer Number">
+        <input type="text" id="authAddress" placeholder="Address">
+        <input type="password" id="authPassword" placeholder="Password">
+
+        <select id="authRole">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+    </div>
+</section>
+
+<section class="dashboard" id="user-dashboard">
+    <h2>👤 User Dashboard</h2>
+
+    <div class="dashboard-buttons">
+        <button onclick="showMyBookings()">My Bookings</button>
+        <button onclick="showHistory()">Past Bookings</button>
+        <button onclick="showProfile()">My Profile</button>
+        <button onclick="showReviews()">Post Review</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="user-content"></div>
+</section>
+
+<section class="dashboard" id="admin-dashboard">
+    <h2>🛠 Admin Dashboard</h2>
+
+    <div class="dashboard-buttons">
+        <button onclick="showAddVehicle()">Add Vehicle</button>
+        <button onclick="manageVehicles()">Manage Vehicles</button>
+        <button onclick="manageBookings()">Manage Bookings</button>
+        <button onclick="showProfile()">My Profile</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="admin-content"></div>
+</section>
+
+<footer>
+    <h2>RentRide 🚗</h2>
+    <p>Your journey, our responsibility.</p>
+    <p>© 2026 RentRide Vehicle Rental</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
