@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Income Tax Calculator</h1>
+    <p>Calculate your annual income tax easily</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('employee')">Employee Login</button>
+    <button onclick="showSection('admin')">Admin Login</button>
+</nav>
+
+<div class="container">
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Welcome to Income Tax Calculator</h2>
+        <p>Calculate your tax based on salary, allowances and deductions.</p>
+        <button onclick="showSection('employee')">Calculate Tax</button>
+    </section>
+
+    <!-- Employee Login -->
+    <section id="employee" class="hidden">
+        <h2>Employee Login</h2>
+
+        <input type="text" id="employeeName" placeholder="Enter Employee Name">
+        <input type="email" id="employeeEmail" placeholder="Enter Email ID">
+        <input type="password" id="employeePassword" placeholder="Enter Password">
+
+        <button onclick="employeeLogin()">Login</button>
+    </section>
+
+    <!-- Tax Calculator -->
+    <section id="calculator" class="hidden">
+        <h2>Income Tax Calculation</h2>
+
+        <p id="welcome"></p>
+
+        <input type="number" id="salary" placeholder="Monthly Gross Salary">
+        <input type="number" id="hra" placeholder="Monthly House Rent Allowance">
+        <input type="number" id="pension" placeholder="Monthly Pension Contribution">
+        <input type="number" id="insurance" placeholder="Monthly Health Insurance">
+
+        <input type="number" id="bonus" placeholder="Annual Bonus">
+        <input type="number" id="otherIncome" placeholder="Other Annual Taxable Income">
+
+        <button onclick="calculateTax()">Calculate Tax</button>
+
+        <div id="taxResult"></div>
+
+        <button onclick="downloadReport()">Download Tax Report</button>
+    </section>
+
+    <!-- Admin Login -->
+    <section id="admin" class="hidden">
+        <h2>Admin Login</h2>
+
+        <input type="text" id="adminUsername" placeholder="Admin Username">
+        <input type="password" id="adminPassword" placeholder="Admin Password">
+
+        <button onclick="adminLogin()">Login</button>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="adminDashboard" class="hidden">
+        <h2>Admin Dashboard</h2>
+
+        <h3>Tax Calculation Settings</h3>
+
+        <label>Standard Deduction</label>
+        <input type="number" id="standardDeduction" value="50000">
+
+        <label>Maximum Pension Deduction</label>
+        <input type="number" id="maxPension" value="150000">
+
+        <label>Tax Rate (5%)</label>
+        <input type="number" id="rate1" value="5">
+
+        <label>Tax Rate (20%)</label>
+        <input type="number" id="rate2" value="20">
+
+        <label>Tax Rate (30%)</label>
+        <input type="number" id="rate3" value="30">
+
+        <button onclick="updateSettings()">Update Tax Settings</button>
+
+        <p id="adminMessage"></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Income Tax Calculation System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

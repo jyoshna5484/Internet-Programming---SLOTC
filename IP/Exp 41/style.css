@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+header {
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #ffe0b2;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #ffe0b2;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home {
+    background-color: #f6dfc2;
+    padding: 60px 20px;
+}
+
+#home h2 {
+    color: #8b4513;
+    font-size: 32px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.recipes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 230px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #8b4513;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c2e0b;
+}
+
+.recipe-box {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+}
+
+ul, ol {
+    text-align: left;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+#commentList {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.comment {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

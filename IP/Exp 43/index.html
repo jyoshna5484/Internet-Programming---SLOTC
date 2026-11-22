@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Placement Examination System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Placement Examination Portal</h1>
+    <p>Online Examination System</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('candidate')">Candidate Login</button>
+    <button onclick="showSection('admin')">Admin Login</button>
+    <button onclick="showSection('results')">Results</button>
+</nav>
+
+<div class="container">
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Welcome to Placement Examination Portal</h2>
+        <p>Attend your placement examination and check your results online.</p>
+        <button onclick="showSection('candidate')">Candidate Login</button>
+    </section>
+
+    <!-- Candidate Login -->
+    <section id="candidate" class="hidden">
+        <h2>Candidate Login</h2>
+
+        <input type="text" id="candidateName" placeholder="Enter Candidate Name">
+        <input type="password" id="candidatePassword" placeholder="Enter Password">
+
+        <button onclick="candidateLogin()">Login</button>
+    </section>
+
+    <!-- Candidate Dashboard -->
+    <section id="dashboard" class="hidden">
+        <h2>Candidate Dashboard</h2>
+
+        <p id="welcomeMessage"></p>
+
+        <h3>Scheduled Examination</h3>
+        <p>Exam Name: Placement Aptitude Test</p>
+        <p id="examSchedule"></p>
+
+        <button onclick="startExam()">Start Examination</button>
+        <button onclick="showSection('results')">View Results</button>
+    </section>
+
+    <!-- Examination -->
+    <section id="exam" class="hidden">
+        <h2>Placement Aptitude Test</h2>
+
+        <form id="examForm">
+
+            <div class="question">
+                <p>1. Which language is used for web page styling?</p>
+                <label><input type="radio" name="q1" value="Java"> Java</label>
+                <label><input type="radio" name="q1" value="CSS"> CSS</label>
+                <label><input type="radio" name="q1" value="Python"> Python</label>
+            </div>
+
+            <div class="question">
+                <p>2. Which data structure follows FIFO?</p>
+                <label><input type="radio" name="q2" value="Stack"> Stack</label>
+                <label><input type="radio" name="q2" value="Queue"> Queue</label>
+                <label><input type="radio" name="q2" value="Tree"> Tree</label>
+            </div>
+
+            <div class="question">
+                <p>3. Which keyword is used to define a function in Python?</p>
+                <label><input type="radio" name="q3" value="function"> function</label>
+                <label><input type="radio" name="q3" value="def"> def</label>
+                <label><input type="radio" name="q3" value="fun"> fun</label>
+            </div>
+
+            <div class="question">
+                <p>4. Which SQL command is used to retrieve data?</p>
+                <label><input type="radio" name="q4" value="INSERT"> INSERT</label>
+                <label><input type="radio" name="q4" value="DELETE"> DELETE</label>
+                <label><input type="radio" name="q4" value="SELECT"> SELECT</label>
+            </div>
+
+            <div class="question">
+                <p>5. Which of the following is an operating system?</p>
+                <label><input type="radio" name="q5" value="Linux"> Linux</label>
+                <label><input type="radio" name="q5" value="HTML"> HTML</label>
+                <label><input type="radio" name="q5" value="CSS"> CSS</label>
+            </div>
+
+            <button type="button" onclick="submitExam()">Submit Examination</button>
+
+        </form>
+    </section>
+
+    <!-- Result -->
+    <section id="results" class="hidden">
+        <h2>Examination Results</h2>
+
+        <div id="resultDisplay">
+            <p>Login and complete the examination to view your result.</p>
+        </div>
+
+        <button onclick="showLeaderboard()">View Ranking</button>
+        <button onclick="downloadScorecard()">Download Scorecard</button>
+        <button onclick="applyRevaluation()">Apply for Re-evaluation</button>
+
+        <div id="leaderboard"></div>
+    </section>
+
+    <!-- Admin Login -->
+    <section id="admin" class="hidden">
+        <h2>Admin Login</h2>
+
+        <input type="text" id="adminUsername" placeholder="Admin Username">
+        <input type="password" id="adminPassword" placeholder="Admin Password">
+
+        <button onclick="adminLogin()">Login</button>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="adminDashboard" class="hidden">
+        <h2>Admin Dashboard</h2>
+
+        <h3>Candidate Login Rights</h3>
+        <button onclick="enableCandidate()">Enable Candidate Login</button>
+
+        <h3>Schedule Examination</h3>
+        <input type="datetime-local" id="scheduleDate">
+        <button onclick="scheduleExam()">Schedule Exam</button>
+
+        <h3>Load Questions</h3>
+        <textarea id="newQuestion" placeholder="Enter a question"></textarea>
+        <button onclick="loadQuestion()">Load Question</button>
+
+        <h3>Publish Result</h3>
+        <button onclick="publishResult()">Publish Results</button>
+
+        <p id="adminMessage"></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Online Placement Examination System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

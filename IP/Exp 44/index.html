@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Painting Rating and Review System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Art Review Gallery</h1>
+    <p>Explore paintings and share your opinions</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('paintings')">Paintings</button>
+    <button onclick="showSection('customer')">Customer Login</button>
+    <button onclick="showSection('owner')">Owner Registration</button>
+    <button onclick="showSection('admin')">Admin Login</button>
+</nav>
+
+<div class="container">
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Welcome to Art Review Gallery</h2>
+        <p>View beautiful paintings and rate them based on your experience.</p>
+        <button onclick="showSection('paintings')">View Paintings</button>
+    </section>
+
+    <!-- Painting Gallery -->
+    <section id="paintings" class="hidden">
+        <h2>Available Paintings</h2>
+        <div id="paintingList"></div>
+    </section>
+
+    <!-- Customer Login -->
+    <section id="customer" class="hidden">
+        <h2>Customer Login</h2>
+
+        <input type="text" id="customerName" placeholder="Enter Your Name">
+        <input type="email" id="customerEmail" placeholder="Enter Email">
+
+        <button onclick="customerLogin()">Login</button>
+    </section>
+
+    <!-- Review Section -->
+    <section id="review" class="hidden">
+        <h2>Submit Your Review</h2>
+
+        <p id="selectedPainting"></p>
+
+        <label>Rating (1 to 5)</label>
+        <select id="rating">
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Poor</option>
+            <option value="1">1 - Very Poor</option>
+        </select>
+
+        <textarea id="reviewText" placeholder="Write your review"></textarea>
+
+        <button onclick="submitReview()">Submit Review</button>
+    </section>
+
+    <!-- Owner Registration -->
+    <section id="owner" class="hidden">
+        <h2>Painting Owner Registration</h2>
+
+        <input type="text" id="ownerName" placeholder="Owner Name">
+        <input type="email" id="ownerEmail" placeholder="Email">
+        <input type="text" id="paintingName" placeholder="Painting Name">
+        <input type="text" id="paintingArtist" placeholder="Artist Name">
+        <input type="text" id="paintingImage" placeholder="Image URL">
+        <input type="number" id="packageDays" placeholder="Package Days (1-30)">
+
+        <button onclick="registerOwner()">Register Painting</button>
+    </section>
+
+    <!-- Admin Login -->
+    <section id="admin" class="hidden">
+        <h2>Admin Login</h2>
+
+        <input type="text" id="adminUsername" placeholder="Username">
+        <input type="password" id="adminPassword" placeholder="Password">
+
+        <button onclick="adminLogin()">Login</button>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="adminDashboard" class="hidden">
+        <h2>Admin Dashboard</h2>
+
+        <h3>Upload New Painting</h3>
+
+        <input type="text" id="adminPaintingName" placeholder="Painting Name">
+        <input type="text" id="adminArtist" placeholder="Artist Name">
+        <input type="text" id="adminImage" placeholder="Painting Image URL">
+
+        <button onclick="addPainting()">Upload Painting</button>
+
+        <h3>Previous Painting Reviews</h3>
+        <div id="previousReviews"></div>
+
+        <h3>Owner Registration and Packages</h3>
+        <div id="ownerDetails"></div>
+
+        <h3>Customer Reviews</h3>
+        <div id="adminReviews"></div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Art Review Gallery | Painting Rating System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

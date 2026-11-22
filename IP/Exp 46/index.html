@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Phone Bill Payment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Phone Bill Payment Portal</h1>
+    <p>Manage and pay your monthly phone bills online</p>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('register')">Register</button>
+    <button onclick="showSection('login')">Customer Login</button>
+    <button onclick="showSection('admin')">Admin Login</button>
+</nav>
+
+<div class="container">
+
+    <!-- Home -->
+    <section id="home">
+        <h2>Welcome to Phone Bill Payment Portal</h2>
+        <p>Pay your monthly phone bill easily and securely.</p>
+        <button onclick="showSection('register')">Register Now</button>
+        <button onclick="showSection('login')">Login</button>
+    </section>
+
+    <!-- Registration -->
+    <section id="register" class="hidden">
+        <h2>Customer Registration</h2>
+
+        <input type="text" id="regName" placeholder="Customer Name">
+        <input type="text" id="regPhone" placeholder="Phone Number">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+
+        <button onclick="registerCustomer()">Register</button>
+    </section>
+
+    <!-- Customer Login -->
+    <section id="login" class="hidden">
+        <h2>Customer Login</h2>
+
+        <input type="text" id="loginPhone" placeholder="Phone Number">
+        <input type="password" id="loginPassword" placeholder="Password">
+
+        <button onclick="customerLogin()">Login</button>
+    </section>
+
+    <!-- Customer Dashboard -->
+    <section id="dashboard" class="hidden">
+        <h2>Customer Dashboard</h2>
+
+        <p id="welcome"></p>
+
+        <div class="bill-box">
+            <h3>Current Bill Details</h3>
+            <p id="billPeriod"></p>
+            <p id="dueDate"></p>
+            <p id="billAmount"></p>
+            <p id="fineAmount"></p>
+            <p id="totalAmount"></p>
+        </div>
+
+        <h3>Bill Payment</h3>
+
+        <input type="number" id="paymentAmount" placeholder="Enter Payment Amount">
+
+        <label>Payment Method</label>
+        <select id="paymentMethod">
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Net Banking">Net Banking</option>
+            <option value="Mobile Wallet">Mobile Wallet</option>
+        </select>
+
+        <button onclick="payBill()">Pay Bill</button>
+
+        <h3>Payment History</h3>
+        <div id="paymentHistory"></div>
+
+        <button onclick="downloadReceipt()">Download Receipt</button>
+    </section>
+
+    <!-- Admin Login -->
+    <section id="admin" class="hidden">
+        <h2>Admin Login</h2>
+
+        <input type="text" id="adminUsername" placeholder="Username">
+        <input type="password" id="adminPassword" placeholder="Password">
+
+        <button onclick="adminLogin()">Login</button>
+    </section>
+
+    <!-- Admin Dashboard -->
+    <section id="adminDashboard" class="hidden">
+        <h2>Admin Dashboard</h2>
+
+        <h3>Monthly Billing Details</h3>
+
+        <label>Billing Start Date</label>
+        <input type="date" id="startDate">
+
+        <label>Billing End Date</label>
+        <input type="date" id="endDate">
+
+        <label>Last Payment Date</label>
+        <input type="date" id="lastDate">
+
+        <label>Monthly Bill Amount (₹)</label>
+        <input type="number" id="monthlyBill" value="500">
+
+        <label>Fine Per Day (₹)</label>
+        <input type="number" id="finePerDay" value="10">
+
+        <button onclick="updateBill()">Update Bill Details</button>
+
+        <p id="adminMessage"></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Online Phone Bill Payment System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

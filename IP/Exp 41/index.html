@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Digital Recipe Book</h1>
+    <p>Discover, Cook and Share Delicious Recipes</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#planner">Meal Planner</a>
+        <a href="#shopping">Shopping List</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to Recipe Book</h2>
+    <p>Explore delicious recipes and discover new cooking ideas.</p>
+    <a href="#recipes" class="btn">Explore Recipes</a>
+</section>
+
+<section id="recipes">
+    <h2>Popular Recipes</h2>
+
+    <input type="text" id="search" placeholder="Search recipes..." onkeyup="searchRecipes()">
+
+    <select id="category" onchange="filterRecipes()">
+        <option value="all">All Categories</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dessert">Dessert</option>
+        <option value="vegetarian">Vegetarian</option>
+    </select>
+
+    <div class="recipes">
+
+        <div class="card" data-category="breakfast vegetarian">
+            <h3>Masala Dosa</h3>
+            <p>South Indian crispy dosa with potato masala.</p>
+            <p>Time: 30 Minutes</p>
+            <p>Servings: 2</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+
+            <button onclick="viewRecipe('Masala Dosa')">View Recipe</button>
+            <button onclick="addFavorite('Masala Dosa')">Add Favorite</button>
+        </div>
+
+        <div class="card" data-category="lunch vegetarian">
+            <h3>Vegetable Biryani</h3>
+            <p>Rice cooked with vegetables and aromatic spices.</p>
+            <p>Time: 45 Minutes</p>
+            <p>Servings: 4</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+
+            <button onclick="viewRecipe('Vegetable Biryani')">View Recipe</button>
+            <button onclick="addFavorite('Vegetable Biryani')">Add Favorite</button>
+        </div>
+
+        <div class="card" data-category="dessert">
+            <h3>Chocolate Cake</h3>
+            <p>Soft and delicious chocolate cake.</p>
+            <p>Time: 50 Minutes</p>
+            <p>Servings: 6</p>
+            <p>Rating: ⭐⭐⭐⭐</p>
+
+            <button onclick="viewRecipe('Chocolate Cake')">View Recipe</button>
+            <button onclick="addFavorite('Chocolate Cake')">Add Favorite</button>
+        </div>
+
+        <div class="card" data-category="lunch vegetarian">
+            <h3>Paneer Butter Masala</h3>
+            <p>Paneer cooked in a creamy tomato gravy.</p>
+            <p>Time: 35 Minutes</p>
+            <p>Servings: 3</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+
+            <button onclick="viewRecipe('Paneer Butter Masala')">View Recipe</button>
+            <button onclick="addFavorite('Paneer Butter Masala')">Add Favorite</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="recipeDetails">
+    <h2>Recipe Details</h2>
+
+    <div class="card recipe-box">
+        <h3 id="recipeName">Select a Recipe</h3>
+        <p id="recipeDescription">Recipe details will appear here.</p>
+
+        <h3>Ingredients</h3>
+        <ul id="ingredients"></ul>
+
+        <h3>Cooking Instructions</h3>
+        <ol id="instructions"></ol>
+
+        <label>Servings:</label>
+        <input type="number" id="servings" value="2" min="1" max="20">
+        <button onclick="updateServings()">Update Servings</button>
+
+        <button onclick="printRecipe()">Print Recipe</button>
+        <button onclick="shareRecipe()">Share Recipe</button>
+    </div>
+</section>
+
+<section id="favorites">
+    <h2>My Favorite Recipes</h2>
+    <ul id="favoriteList"></ul>
+</section>
+
+<section id="planner">
+    <h2>Weekly Meal Planner</h2>
+
+    <form id="plannerForm">
+        <select id="day" required>
+            <option value="">Select Day</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
+
+        <input type="text" id="meal" placeholder="Enter Meal/Recipe" required>
+
+        <button type="submit">Add Meal</button>
+    </form>
+
+    <ul id="mealList"></ul>
+</section>
+
+<section id="shopping">
+    <h2>Shopping List</h2>
+
+    <input type="text" id="shoppingItem" placeholder="Enter ingredient">
+    <button onclick="addShoppingItem()">Add Item</button>
+
+    <ul id="shoppingList"></ul>
+</section>
+
+<section id="comments">
+    <h2>Recipe Comments</h2>
+
+    <form id="commentForm">
+        <input type="text" id="userName" placeholder="Your Name" required>
+        <textarea id="comment" placeholder="Share your cooking experience..." required></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+
+    <div id="commentList"></div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Digital Recipe Book. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

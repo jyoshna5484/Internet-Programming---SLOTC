@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f1eb;
+}
+
+header {
+    background-color: #4b3621;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    background-color: #70543e;
+    text-align: center;
+    padding: 12px;
+}
+
+nav button {
+    background-color: white;
+    color: #4b3621;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    width: 85%;
+    margin: 25px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+input, textarea, select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 10px 16px;
+    margin: 8px 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #684329;
+}
+
+.painting-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: #fffaf4;
+}
+
+.painting-card img {
+    width: 100%;
+    max-width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.rating {
+    color: #e3a008;
+    font-size: 20px;
+}
+
+.review-card {
+    background-color: #f8f5f0;
+    padding: 12px;
+    margin: 10px 0;
+    border-left: 4px solid #8b5e3c;
+}
+
+footer {
+    background-color: #4b3621;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
