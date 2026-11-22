@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #182848;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #c9d6ff;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #3a6073, #16222a);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: #ffb703;
+    color: #182848;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fb8500;
+}
+
+/* General Sections */
+section {
+    padding: 45px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #182848;
+    margin-bottom: 25px;
+}
+
+/* Speakers */
+#speakers {
+    background-color: white;
+}
+
+.speaker-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.speaker {
+    background-color: #f4f6fb;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.speaker img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.speaker h3 {
+    margin: 15px 0 8px;
+    color: #182848;
+}
+
+.speaker p {
+    margin-bottom: 10px;
+}
+
+.speaker a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+/* About */
+#about {
+    background-color: #e8f1ff;
+    line-height: 1.8;
+}
+
+#about h3 {
+    margin: 20px 0 10px;
+    color: #243b55;
+}
+
+/* Schedule */
+#schedule {
+    background-color: white;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #182848;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f6fb;
+}
+
+/* Venue */
+#venue {
+    background-color: #dceefb;
+}
+
+.venue-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.venue-box p {
+    margin: 10px;
+}
+
+/* Registration */
+#register {
+    background-color: #182848;
+    color: white;
+}
+
+#register h2 {
+    color: white;
+}
+
+form {
+    width: 350px;
+    max-width: 100%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #101827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    table {
+        width: 100%;
+    }
+}

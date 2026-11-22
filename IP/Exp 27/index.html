@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartBus - Bus Pass Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚌 SmartBus</h1>
+    <p>Smart Bus Pass & eTicket Management System</p>
+</header>
+
+<div class="container" id="auth">
+    <h2>Login / Register</h2>
+
+    <select id="role">
+        <option value="user">User</option>
+        <option value="conductor">Conductor</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="dashboard" class="hidden">
+
+    <h2 id="welcome"></h2>
+
+    <!-- USER PANEL -->
+    <div id="userPanel" class="hidden">
+
+        <div class="container">
+            <h2>💰 eWallet</h2>
+
+            <h3>Balance: ₹<span id="balance">0</span></h3>
+
+            <input type="number" id="money" placeholder="Enter Amount">
+            <button onclick="addMoney()">Add Money</button>
+        </div>
+
+        <div class="container">
+            <h2>🎫 Buy Bus eTicket</h2>
+
+            <select id="ticketRoute"></select>
+            <input type="number" id="ticketCount" placeholder="Number of Tickets">
+
+            <button onclick="buyTicket()">Buy Ticket</button>
+
+            <h3>My Tickets</h3>
+            <div id="myTickets"></div>
+        </div>
+
+        <div class="container">
+            <h2>📝 Apply for Bus Pass</h2>
+
+            <input type="text" id="address" placeholder="Address">
+            <input type="date" id="dob">
+            <input type="text" id="institution" placeholder="School / Organization Name">
+
+            <select id="passType">
+                <option value="Student Pass">Student Pass</option>
+                <option value="Route Pass">Route Pass</option>
+            </select>
+
+            <select id="passPeriod">
+                <option value="1">1 Month</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+            </select>
+
+            <input type="file" id="photo" accept="image/*">
+
+            <button onclick="applyPass()">Apply Bus Pass</button>
+
+            <h3>My Bus Pass</h3>
+            <div id="myPass"></div>
+        </div>
+
+        <div class="container">
+            <h2>🔄 Renew Bus Pass</h2>
+
+            <select id="renewPeriod">
+                <option value="1">1 Month</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+            </select>
+
+            <button onclick="renewPass()">Renew Pass</button>
+        </div>
+
+        <div class="container">
+            <h2>⏱️ Calculate Travel Time</h2>
+
+            <select id="timeRoute"></select>
+
+            <button onclick="calculateTime()">Calculate Expected Time</button>
+
+            <div id="timeResult"></div>
+        </div>
+
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="hidden">
+
+        <div class="container">
+            <h2>🚌 Create Bus Details</h2>
+
+            <input type="text" id="busNumber" placeholder="Bus Number">
+            <input type="text" id="busName" placeholder="Bus Name">
+
+            <button onclick="addBus()">Add Bus</button>
+
+            <div id="busList"></div>
+        </div>
+
+        <div class="container">
+            <h2>🗺️ Create Route Information</h2>
+
+            <input type="text" id="routeFrom" placeholder="From">
+            <input type="text" id="routeTo" placeholder="To">
+            <input type="text" id="routeStops" placeholder="Route Stops">
+            <input type="text" id="routeTime" placeholder="Travel Time (e.g. 45 minutes)">
+            <input type="number" id="routeFare" placeholder="Ticket Fare">
+
+            <button onclick="addRoute()">Add Route</button>
+
+            <div id="routeList"></div>
+        </div>
+
+        <div class="container">
+            <h2>👨‍✈️ Manage Conductor Login</h2>
+
+            <input type="text" id="conductorName" placeholder="Conductor Name">
+            <input type="email" id="conductorEmail" placeholder="Conductor Email">
+            <input type="password" id="conductorPassword" placeholder="Password">
+
+            <button onclick="addConductor()">Create Conductor Account</button>
+
+            <div id="conductorList"></div>
+        </div>
+
+        <div class="container">
+            <h2>📋 Manage & Approve Bus Pass</h2>
+            <div id="passRequests"></div>
+        </div>
+
+        <div class="container">
+            <h2>🎫 Manage Student & Route Pass</h2>
+            <div id="adminPasses"></div>
+        </div>
+
+    </div>
+
+    <!-- CONDUCTOR PANEL -->
+    <div id="conductorPanel" class="hidden">
+
+        <div class="container">
+            <h2>📷 Scan / Verify QR</h2>
+
+            <input type="text" id="qrInput" placeholder="Enter Bus Pass / Ticket ID">
+
+            <button onclick="verifyQR()">Verify Pass / Ticket</button>
+
+            <div id="verificationResult"></div>
+        </div>
+
+        <div class="container">
+            <h2>📍 Update Bus Location</h2>
+
+            <input type="text" id="busLocation" placeholder="Current Bus Location">
+
+            <button onclick="updateBusLocation()">Update Location</button>
+
+            <div id="locationUpdates"></div>
+        </div>
+
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

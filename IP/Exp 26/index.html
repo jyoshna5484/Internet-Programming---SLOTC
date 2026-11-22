@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Squad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚦 Traffic Squad</h1>
+    <p>Penalty Collection & Management System</p>
+</header>
+
+<div class="container" id="auth">
+    <h2>Login / Register</h2>
+
+    <select id="role">
+        <option value="user">User</option>
+        <option value="police">Police</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="dashboard" class="hidden">
+
+    <h2 id="welcome"></h2>
+
+    <!-- USER PANEL -->
+    <div id="userPanel" class="hidden">
+
+        <div class="container">
+            <h2>🚘 View Challan</h2>
+            <div id="myChallans"></div>
+        </div>
+
+        <div class="container">
+            <h2>📋 View Cases Filed</h2>
+            <div id="myCases"></div>
+        </div>
+
+    </div>
+
+    <!-- POLICE PANEL -->
+    <div id="policePanel" class="hidden">
+
+        <div class="container">
+            <h2>📖 Traffic Rules</h2>
+            <div id="rules"></div>
+        </div>
+
+        <div class="container">
+            <h2>🚨 Create Traffic Case</h2>
+
+            <input type="text" id="ownerName" placeholder="Vehicle Owner Name">
+            <input type="text" id="vehicleNumber" placeholder="Vehicle Number">
+
+            <select id="violation">
+                <option value="">Select Violation</option>
+                <option value="Overspeeding">Overspeeding</option>
+                <option value="No Helmet">No Helmet</option>
+                <option value="No Seat Belt">No Seat Belt</option>
+                <option value="Signal Violation">Signal Violation</option>
+                <option value="Wrong Parking">Wrong Parking</option>
+                <option value="Driving Without License">Driving Without License</option>
+            </select>
+
+            <input type="number" id="fine" placeholder="Fine Amount (₹)">
+            <input type="text" id="location" placeholder="Violation Location">
+
+            <label>Upload Proof Photo</label>
+            <input type="file" id="proof" accept="image/*">
+
+            <button onclick="createCase()">Create Case</button>
+
+        </div>
+
+        <div class="container">
+            <h2>📢 Manage Traffic Updates</h2>
+
+            <input type="text" id="updateTitle" placeholder="Update Title">
+            <textarea id="updateMessage" placeholder="Enter Traffic Update"></textarea>
+
+            <button onclick="postUpdate()">Post Update</button>
+
+            <div id="trafficUpdates"></div>
+        </div>
+
+        <div class="container">
+            <h2>🗺️ Google Maps Traffic</h2>
+
+            <a href="https://www.google.com/maps"
+               target="_blank">
+                Open Google Maps Traffic
+            </a>
+        </div>
+
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="hidden">
+
+        <div class="container">
+            <h2>👮 Manage Police Login</h2>
+
+            <input type="text" id="policeName" placeholder="Police Name">
+            <input type="email" id="policeEmail" placeholder="Police Email">
+            <input type="password" id="policePassword" placeholder="Police Password">
+
+            <button onclick="addPolice()">Add Police Account</button>
+
+            <div id="policeList"></div>
+        </div>
+
+        <div class="container">
+            <h2>📊 Daily Report</h2>
+            <div id="dailyReport"></div>
+        </div>
+
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

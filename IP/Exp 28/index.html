@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ArtistryHub | Emily Harris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ArtistryHub</h1>
+    <p>The Creative World of Emily Harris</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#works">Works</a>
+        <a href="#media">Media</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h2>Art That Speaks Beyond Words</h2>
+        <p>Discover the beautiful and inspiring artistic journey of Emily Harris.</p>
+        <a href="#portfolio" class="btn">Explore Artwork</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Emily Harris</h2>
+
+    <div class="about-content">
+        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262"
+             alt="Artist painting">
+
+        <div>
+            <h3>Artist | Painter | Creative Soul</h3>
+
+            <p>
+                Emily Harris is a contemporary artist known for her expressive
+                paintings and creative use of colors. Her artwork reflects
+                emotions, nature, imagination and everyday experiences.
+            </p>
+
+            <p>
+                Through her artistic journey, Emily has explored different
+                techniques including abstract painting, watercolor, acrylic
+                painting and modern illustration.
+            </p>
+
+            <p>
+                Her work aims to inspire people, express feelings and create
+                a meaningful connection between art and viewers.
+            </p>
+
+            <h3>Achievements</h3>
+
+            <ul>
+                <li>Participated in contemporary art exhibitions.</li>
+                <li>Featured in local art galleries.</li>
+                <li>Created collections inspired by nature and emotions.</li>
+                <li>Recognized for creative and expressive artwork.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section">
+    <h2>Featured Artwork</h2>
+    <p class="subtitle">Explore selected works from Emily's collection.</p>
+
+    <div class="gallery">
+
+        <div class="art-card">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"
+                 alt="Abstract painting">
+            <h3>Colors of Emotion</h3>
+            <p>Abstract art expressing emotions through vibrant colors.</p>
+        </div>
+
+        <div class="art-card">
+            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262"
+                 alt="Painting artwork">
+            <h3>Silent Dreams</h3>
+            <p>A creative reflection of dreams and imagination.</p>
+        </div>
+
+        <div class="art-card">
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa1c0"
+                 alt="Modern painting">
+            <h3>Nature's Whisper</h3>
+            <p>Inspired by the peaceful beauty of nature.</p>
+        </div>
+
+        <div class="art-card">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"
+                 alt="Colorful art">
+            <h3>Beyond the Horizon</h3>
+            <p>A painting representing hope and new beginnings.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WORKS -->
+<section id="works" class="section works">
+    <h2>Art Collection</h2>
+
+    <div class="work-list">
+
+        <div class="work">
+            <h3>Colors of Emotion</h3>
+            <p>Collection: Abstract Series</p>
+            <p>Year: 2024</p>
+        </div>
+
+        <div class="work">
+            <h3>Silent Dreams</h3>
+            <p>Collection: Imagination Series</p>
+            <p>Year: 2023</p>
+        </div>
+
+        <div class="work">
+            <h3>Nature's Whisper</h3>
+            <p>Collection: Nature Series</p>
+            <p>Year: 2024</p>
+        </div>
+
+        <div class="work">
+            <h3>Beyond the Horizon</h3>
+            <p>Collection: Hope Series</p>
+            <p>Year: 2025</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media" class="section">
+    <h2>Media Gallery</h2>
+    <p class="subtitle">A glimpse into the creative process.</p>
+
+    <div class="media-gallery">
+
+        <div class="media-card">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f"
+                 alt="Artist painting in studio">
+            <h3>Inside the Studio</h3>
+        </div>
+
+        <div class="media-card">
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b"
+                 alt="Art studio">
+            <h3>Creative Process</h3>
+        </div>
+
+        <div class="media-card">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a"
+                 alt="Creative workspace">
+            <h3>Artist Workspace</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- NEWS -->
+<section id="news" class="section news">
+    <h2>News & Updates</h2>
+
+    <div class="news-card">
+        <h3>Upcoming Art Exhibition</h3>
+        <p>Emily's latest collection will be showcased in an upcoming art exhibition.</p>
+        <span>📅 December 2026</span>
+    </div>
+
+    <div class="news-card">
+        <h3>New Art Collection</h3>
+        <p>A new collection inspired by nature, emotions and everyday life is coming soon.</p>
+        <span>🎨 Coming Soon</span>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <h2>Contact & Booking Inquiries</h2>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" id="contactName" placeholder="Your Name" required>
+        <input type="email" id="contactEmail" placeholder="Your Email" required>
+        <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <h3>Subscribe to Newsletter</h3>
+
+    <form onsubmit="subscribe(event)">
+        <input type="email" id="newsletterEmail" placeholder="Enter Email" required>
+        <button type="submit" class="btn">Subscribe</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 ArtistryHub | Emily Harris</p>
+    <p>Celebrating creativity, colors and imagination.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

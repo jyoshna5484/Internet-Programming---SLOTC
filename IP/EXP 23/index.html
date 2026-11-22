@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🩸 BloodConnect</h1>
+    <p>Donate Blood • Save Lives</p>
+</header>
+
+<div class="container">
+
+    <!-- LOGIN / REGISTER -->
+    <div id="auth">
+        <div class="card">
+            <h2>Welcome to BloodConnect</h2>
+
+            <select id="role">
+                <option value="donor">Donor / User</option>
+                <option value="hospital">Hospital</option>
+            </select>
+
+            <input type="text" id="name" placeholder="Name / Hospital Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="register()">Register</button>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="hidden">
+
+        <div class="top">
+            <h2 id="welcome"></h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- DONOR DASHBOARD -->
+        <div id="donorPanel" class="hidden">
+
+            <h2>Donor Dashboard</h2>
+
+            <div class="card">
+                <h3>Post Donor Information</h3>
+
+                <input id="donorName" placeholder="Donor Name">
+                <input id="donorAge" type="number" placeholder="Age">
+
+                <select id="bloodGroup">
+                    <option value="">Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+
+                <input id="donorPhone" placeholder="Phone Number">
+                <input id="donorLocation" placeholder="Location">
+
+                <button onclick="postDonor()">Post Donor Information</button>
+            </div>
+
+            <div class="card">
+                <h3>My Donor Information</h3>
+                <div id="myDonor"></div>
+            </div>
+
+            <div class="card">
+                <h3>Search Donors</h3>
+
+                <select id="searchGroup">
+                    <option value="">All Blood Groups</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+
+                <input id="searchLocation" placeholder="Search by location">
+
+                <button onclick="searchDonors()">Search Donors</button>
+
+                <div id="donorResults"></div>
+            </div>
+
+            <div class="card">
+                <h3>Search Blood Banks</h3>
+                <input id="bankSearch" placeholder="Enter location or hospital name">
+                <button onclick="searchBanks()">Search Blood Banks</button>
+                <div id="bankResults"></div>
+            </div>
+
+        </div>
+
+        <!-- HOSPITAL DASHBOARD -->
+        <div id="hospitalPanel" class="hidden">
+
+            <h2>Hospital Dashboard</h2>
+
+            <div class="card">
+                <h3>Post Blood Bank Information</h3>
+
+                <input id="hospitalName" placeholder="Hospital Name">
+                <input id="hospitalLocation" placeholder="Location">
+                <input id="hospitalPhone" placeholder="Contact Number">
+
+                <button onclick="postHospital()">Post Blood Bank Information</button>
+            </div>
+
+            <div class="card">
+                <h3>Update Blood Group Availability</h3>
+
+                <select id="updateGroup">
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+
+                <input id="units" type="number" placeholder="Available units">
+
+                <button onclick="updateBlood()">Update Availability</button>
+            </div>
+
+            <div class="card">
+                <h3>My Blood Bank Details</h3>
+                <div id="myBank"></div>
+            </div>
+
+            <div class="card">
+                <h3>Blood Bank Information</h3>
+                <div id="allBanks"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>🩸 BloodConnect | Every Drop Counts</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

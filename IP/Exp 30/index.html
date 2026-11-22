@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IJSSE - International Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>IJSSE</h1>
+    <h2>International Journal of Scientific and Social Excellence</h2>
+    <p>Print ISSN: 2395-1443 | Online ISSN: 2395-1451</p>
+    <p>Academic Research | Innovation | Excellence</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Journal</a>
+    <a href="#ethics">Publication Ethics</a>
+    <a href="#editorial">Editorial Board</a>
+    <a href="#reviewers">Reviewers</a>
+    <a href="#authors">Authors</a>
+    <a href="#articles">Articles</a>
+    <a href="#call">Call for Papers</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<!-- Home -->
+<section id="home" class="hero">
+    <h2>Welcome to IJSSE</h2>
+    <p>
+        A platform for researchers, academicians and scholars
+        to share knowledge and innovative research.
+    </p>
+    <a href="#call" class="btn">Submit Manuscript</a>
+</section>
+
+<!-- About Journal -->
+<section id="about">
+    <h2>About Journal</h2>
+    <p>
+        The International Journal of Scientific and Social Excellence (IJSSE)
+        is a multidisciplinary academic journal dedicated to publishing
+        quality research papers in science, technology, engineering,
+        management and social sciences.
+    </p>
+
+    <h3>Mission</h3>
+    <p>
+        To encourage research, innovation and knowledge sharing among
+        researchers, students and academic professionals.
+    </p>
+
+    <h3>Journal Information</h3>
+    <div class="info-box">
+        <p><b>Print ISSN:</b> 2395-1443</p>
+        <p><b>Online ISSN:</b> 2395-1451</p>
+        <p><b>Publication Type:</b> Multidisciplinary Research Journal</p>
+        <p><b>Review Process:</b> Peer Review</p>
+    </div>
+</section>
+
+<!-- Publication Ethics -->
+<section id="ethics" class="light">
+    <h2>Publication Ethics</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Original Research</h3>
+            <p>Authors must submit original work without plagiarism.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fair Review</h3>
+            <p>Manuscripts are evaluated fairly and objectively.</p>
+        </div>
+
+        <div class="card">
+            <h3>Confidentiality</h3>
+            <p>Research manuscripts and reviewer information are protected.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ethical Conduct</h3>
+            <p>Authors, reviewers and editors must follow ethical publishing practices.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Editorial Board -->
+<section id="editorial">
+    <h2>Editorial Board</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Editor Registration</h3>
+            <p>Register to join the journal editorial team.</p>
+            <button onclick="showForm('editor')">Register</button>
+        </div>
+
+        <div class="card">
+            <h3>Editor Login</h3>
+            <p>Access the editorial management dashboard.</p>
+            <button onclick="showLogin('editor')">Login</button>
+        </div>
+
+        <div class="card">
+            <h3>Editorial Committee</h3>
+            <p>View the editorial committee members.</p>
+            <button onclick="showInfo('Editorial Committee','Dr. A. Kumar - Editor in Chief, Dr. P. Ravi - Associate Editor, Dr. S. Meena - Editorial Member')">View Members</button>
+        </div>
+
+        <div class="card">
+            <h3>Editor Responsibility</h3>
+            <p>Learn about editorial responsibilities.</p>
+            <button onclick="showInfo('Editor Responsibilities','Editors manage manuscript submissions, select reviewers, ensure quality, maintain confidentiality and make publication decisions.')">View Details</button>
+        </div>
+    </div>
+</section>
+
+<!-- Reviewers -->
+<section id="reviewers" class="light">
+    <h2>Reviewers</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Reviewer Registration</h3>
+            <p>Join our reviewer panel and contribute to research evaluation.</p>
+            <button onclick="showForm('reviewer')">Register</button>
+        </div>
+
+        <div class="card">
+            <h3>Reviewer Login</h3>
+            <p>Access manuscripts assigned for review.</p>
+            <button onclick="showLogin('reviewer')">Login</button>
+        </div>
+
+        <div class="card">
+            <h3>Article Reviewers</h3>
+            <p>View reviewers assigned to articles.</p>
+            <button onclick="showInfo('Article Reviewers','Article 1: Dr. S. Kumar and Dr. P. Meena. Article 2: Dr. R. Anand and Dr. K. Priya.')">View List</button>
+        </div>
+    </div>
+</section>
+
+<!-- Authors -->
+<section id="authors">
+    <h2>For Authors</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Author Registration</h3>
+            <p>Create an author account.</p>
+            <button onclick="showForm('author')">Register</button>
+        </div>
+
+        <div class="card">
+            <h3>Author Login</h3>
+            <p>Login to submit and track papers.</p>
+            <button onclick="showLogin('author')">Login</button>
+        </div>
+
+        <div class="card">
+            <h3>Author Papers</h3>
+            <p>View papers submitted by authors.</p>
+            <button onclick="showInfo('Author Papers','Recent submissions: AI in Healthcare, Smart Agriculture, Sustainable Development.')">View Papers</button>
+        </div>
+
+        <div class="card">
+            <h3>Author Instructions</h3>
+            <p>Read instructions before manuscript submission.</p>
+            <button onclick="showInfo('Author Instructions','Manuscripts must be original, formatted according to journal guidelines, and include an abstract, keywords, references and author details.')">Read Instructions</button>
+        </div>
+
+        <div class="card">
+            <h3>Publication Charge</h3>
+            <p>View publication fee details.</p>
+            <button onclick="showInfo('Publication Charge','Publication charges depend on the manuscript category and journal policies. Contact the journal for details.')">View Charge</button>
+        </div>
+
+        <div class="card">
+            <h3>Article Template</h3>
+            <p>Guidelines for formatting research papers.</p>
+            <button onclick="showInfo('Article Template','Research paper format: Title, Abstract, Keywords, Introduction, Methodology, Results, Conclusion and References.')">View Template</button>
+        </div>
+
+        <div class="card">
+            <h3>Copyright Form</h3>
+            <p>Copyright information for published manuscripts.</p>
+            <button onclick="showInfo('Copyright Form','Authors must provide copyright details and consent before publication.')">View Form</button>
+        </div>
+
+        <div class="card">
+            <h3>Author Guidelines</h3>
+            <p>Learn about manuscript submission and formatting.</p>
+            <button onclick="showInfo('Author Guidelines','Submit original research, use proper citations, follow the prescribed template and include complete author information.')">View Guidelines</button>
+        </div>
+    </div>
+</section>
+
+<!-- Articles -->
+<section id="articles" class="light">
+    <h2>Articles</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Current Issue</h3>
+            <p>Explore the latest published research.</p>
+            <button onclick="showInfo('Current Issue','Latest articles: Machine Learning Applications, Smart Cities and Sustainable Innovation.')">View Articles</button>
+        </div>
+
+        <div class="card">
+            <h3>Archive</h3>
+            <p>Access previous issues of the journal.</p>
+            <button onclick="showInfo('Archive','Browse previous journal issues and published research papers.')">View Archive</button>
+        </div>
+
+        <div class="card">
+            <h3>Most Viewed Articles</h3>
+            <p>Explore articles with high readership.</p>
+            <button onclick="showInfo('Most Viewed','1. Artificial Intelligence in Education 2. Sustainable Technology 3. Digital Transformation.')">View List</button>
+        </div>
+
+        <div class="card">
+            <h3>Most Cited Articles</h3>
+            <p>Read frequently cited research papers.</p>
+            <button onclick="showInfo('Most Cited','Highly cited articles on technology, science and social research.')">View List</button>
+        </div>
+
+        <div class="card">
+            <h3>About to Print</h3>
+            <p>View articles accepted for upcoming publication.</p>
+            <button onclick="showInfo('About to Print','Accepted manuscripts currently preparing for publication.')">View Articles</button>
+        </div>
+    </div>
+</section>
+
+<!-- Call for Papers -->
+<section id="call">
+    <h2>Call for Papers</h2>
+    <p>Submit your innovative research and contribute to academic excellence.</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Submit Manuscript</h3>
+            <button onclick="showForm('manuscript')">Submit Paper</button>
+        </div>
+
+        <div class="card">
+            <h3>Indexed List</h3>
+            <p>View journal indexing information.</p>
+            <button onclick="showInfo('Indexed List','The journal indexing and database information is available for reference. Please verify indexing details through the official database.')">View Indexing</button>
+        </div>
+
+        <div class="card">
+            <h3>Newsletter</h3>
+            <p>Subscribe to receive journal updates.</p>
+            <form id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Feedback</h3>
+            <p>Share your feedback about the journal.</p>
+            <button onclick="showForm('feedback')">Give Feedback</button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="light">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+        <p><b>International Journal of Scientific and Social Excellence</b></p>
+        <p>Email: ijsse@example.com</p>
+        <p>Website: www.ijsse.org</p>
+
+        <form id="contactForm">
+            <input type="text" id="contactName" placeholder="Your Name" required>
+            <input type="email" id="contactEmail" placeholder="Your Email" required>
+            <textarea id="contactMessage" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popupTitle"></h2>
+        <div id="popupBody"></div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 International Journal of Scientific and Social Excellence</p>
+    <p>Academic Research | Innovation | Excellence</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

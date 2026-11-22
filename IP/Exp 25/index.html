@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RoadAssist - Vehicle Breakdown Assistance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚗 RoadAssist</h1>
+    <p>Reliable Help When Your Vehicle Breaks Down</p>
+</header>
+
+<div class="container" id="auth">
+    <h2>Welcome to RoadAssist</h2>
+
+    <select id="role">
+        <option value="user">User</option>
+        <option value="mechanic">Mechanic</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="dashboard" class="hidden">
+
+    <h2 id="welcome"></h2>
+
+    <!-- USER PANEL -->
+    <div id="userPanel" class="hidden">
+
+        <div class="container">
+            <h2>🔍 Search Mechanics</h2>
+
+            <input type="text" id="searchLocation"
+                   placeholder="Enter your location">
+
+            <select id="searchVehicle">
+                <option value="">All Vehicles</option>
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+                <option value="Truck">Truck</option>
+            </select>
+
+            <button onclick="searchMechanics()">Search Mechanics</button>
+
+            <div id="mechanicResults"></div>
+        </div>
+
+        <div class="container">
+            <h2>📍 My Location</h2>
+
+            <button onclick="getLocation()">View Google Geo Location</button>
+
+            <div id="locationResult"></div>
+        </div>
+
+        <div class="container">
+            <h2>⭐ Post Feedback</h2>
+
+            <input type="text" id="feedbackMechanic"
+                   placeholder="Mechanic Name">
+
+            <textarea id="feedbackText"
+                      placeholder="Write your feedback"></textarea>
+
+            <button onclick="postFeedback()">Submit Feedback</button>
+        </div>
+
+        <div class="container">
+            <h2>👤 My Profile</h2>
+            <div id="myProfile"></div>
+        </div>
+
+    </div>
+
+    <!-- MECHANIC PANEL -->
+    <div id="mechanicPanel" class="hidden">
+
+        <div class="container">
+            <h2>🔧 Post Business Details</h2>
+
+            <input type="text" id="businessName"
+                   placeholder="Business Name">
+
+            <input type="text" id="mechanicLocation"
+                   placeholder="Business Location">
+
+            <input type="text" id="mechanicPhone"
+                   placeholder="Phone Number">
+
+            <select id="vehicleType">
+                <option value="">Select Vehicle Type</option>
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+                <option value="Truck">Truck</option>
+            </select>
+
+            <input type="text" id="license"
+                   placeholder="Mechanic License Number">
+
+            <input type="text" id="services"
+                   placeholder="Services Offered">
+
+            <button onclick="postBusiness()">Post Business</button>
+        </div>
+
+        <div class="container">
+            <h2>🛠️ Manage Business</h2>
+            <div id="myBusiness"></div>
+        </div>
+
+        <div class="container">
+            <h2>⭐ View Feedback</h2>
+            <div id="mechanicFeedback"></div>
+        </div>
+
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="hidden">
+
+        <div class="container">
+            <h2>👨‍💼 Mechanic Approval</h2>
+            <div id="adminMechanics"></div>
+        </div>
+
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>♻️ Waste Management System</h1>
+    <p>Clean City • Green Future</p>
+</header>
+
+<div class="container">
+
+    <div id="auth">
+        <div class="card">
+            <h2>Welcome</h2>
+            <p>Manage waste collection efficiently</p>
+
+            <select id="role">
+                <option value="public">General Public</option>
+                <option value="driver">Driver</option>
+                <option value="admin">Administrator</option>
+            </select>
+
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="register()">Register</button>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+
+        <div class="top">
+            <h2 id="welcome"></h2>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- ADMIN DASHBOARD -->
+        <div id="adminPanel" class="hidden">
+
+            <h2>Admin Dashboard</h2>
+
+            <div class="stats">
+                <div class="stat">Garbage Bins<br><h2 id="binCount">0</h2></div>
+                <div class="stat">Complaints<br><h2 id="complaintCount">0</h2></div>
+                <div class="stat">Drivers<br><h2 id="driverCount">0</h2></div>
+            </div>
+
+            <div class="card">
+                <h3>Create Garbage Bin</h3>
+                <input id="binLocation" placeholder="Bin Location">
+                <input id="binType" placeholder="Bin Type">
+                <button onclick="addBin()">Add Bin</button>
+            </div>
+
+            <div class="card">
+                <h3>Garbage Bins</h3>
+                <div id="bins"></div>
+            </div>
+
+            <div class="card">
+                <h3>Manage Drivers</h3>
+                <div id="drivers"></div>
+            </div>
+
+            <div class="card">
+                <h3>Assign Route</h3>
+                <select id="routeDriver"></select>
+                <input id="routeLocation" placeholder="Route / Locations">
+                <button onclick="assignRoute()">Assign Route</button>
+            </div>
+
+            <div class="card">
+                <h3>Public Complaints</h3>
+                <div id="adminComplaints"></div>
+            </div>
+
+            <div class="card">
+                <h3>Garbage Collection Report</h3>
+                <div id="reports"></div>
+            </div>
+
+        </div>
+
+        <!-- PUBLIC DASHBOARD -->
+        <div id="publicPanel" class="hidden">
+
+            <h2>Public Dashboard</h2>
+
+            <div class="card">
+                <h3>Register Complaint</h3>
+                <input id="complaintLocation" placeholder="Complaint Location">
+                <textarea id="complaintText" placeholder="Describe the complaint"></textarea>
+                <button onclick="submitComplaint()">Submit Complaint</button>
+            </div>
+
+            <div class="card">
+                <h3>My Complaints & Status</h3>
+                <div id="myComplaints"></div>
+            </div>
+
+        </div>
+
+        <!-- DRIVER DASHBOARD -->
+        <div id="driverPanel" class="hidden">
+
+            <h2>Driver Dashboard</h2>
+
+            <div class="card">
+                <h3>Daily Work Updates</h3>
+                <div id="driverTasks"></div>
+            </div>
+
+            <div class="card">
+                <h3>Choose Route</h3>
+                <select id="driverRoute"></select>
+                <button onclick="chooseRoute()">Choose Route</button>
+            </div>
+
+            <div class="card">
+                <h3>Update Garbage Load</h3>
+                <input type="number" id="load" placeholder="Garbage load in kg">
+                <button onclick="updateLoad()">Update Load</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>♻️ Smart Waste Management | Clean City Initiative</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

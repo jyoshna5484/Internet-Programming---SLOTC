@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wanderlust Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌍 Wanderlust Travels</h1>
+    <p>Explore • Travel • Experience</p>
+</header>
+
+<div class="container" id="auth">
+    <h2>Travel with Us!</h2>
+
+    <select id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<div id="dashboard" class="hidden">
+
+    <h2 id="welcome"></h2>
+
+    <!-- USER PANEL -->
+    <div id="userPanel" class="hidden">
+
+        <div class="container">
+            <h2>🏞️ Tourism Destinations</h2>
+            <div id="tourismDetails"></div>
+        </div>
+
+        <div class="container">
+            <h2>🍴 Food Details</h2>
+            <div id="foodDetails"></div>
+        </div>
+
+        <div class="container">
+            <h2>🏨 Hostel Details</h2>
+            <div id="hotelDetails"></div>
+        </div>
+
+        <div class="container">
+            <h2>🗺️ Route Details</h2>
+            <div id="routeDetails"></div>
+        </div>
+
+        <div class="container">
+            <h2>🛏️ Book Accommodation</h2>
+
+            <input type="text" id="bookingPlace" placeholder="Enter Destination">
+            <input type="text" id="bookingHotel" placeholder="Enter Hotel Name">
+            <input type="date" id="bookingDate">
+            <input type="number" id="bookingPeople" placeholder="Number of People">
+
+            <button onclick="bookAccommodation()">Book Now</button>
+
+            <h3>My Bookings</h3>
+            <div id="myBookings"></div>
+        </div>
+
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="hidden">
+
+        <div class="container">
+            <h2>🏞️ Post Tourism Details</h2>
+
+            <input type="text" id="tourName" placeholder="Destination Name">
+            <input type="text" id="tourLocation" placeholder="Location">
+            <textarea id="tourDescription" placeholder="Destination Description"></textarea>
+
+            <button onclick="postTourism()">Post Tourism Details</button>
+
+            <h3>Tourism Details</h3>
+            <div id="adminTourism"></div>
+        </div>
+
+        <div class="container">
+            <h2>🍴 Manage Food Details</h2>
+
+            <input type="text" id="foodName" placeholder="Food Name">
+            <input type="text" id="foodPlace" placeholder="Restaurant / Location">
+            <input type="text" id="foodPrice" placeholder="Price">
+
+            <button onclick="addFood()">Add Food</button>
+
+            <div id="adminFood"></div>
+        </div>
+
+        <div class="container">
+            <h2>🏨 Manage Hotel Details</h2>
+
+            <input type="text" id="hotelName" placeholder="Hotel Name">
+            <input type="text" id="hotelLocation" placeholder="Location">
+            <input type="text" id="hotelPrice" placeholder="Price per Night">
+
+            <button onclick="addHotel()">Add Hotel</button>
+
+            <div id="adminHotels"></div>
+        </div>
+
+        <div class="container">
+            <h2>🗺️ Manage Route Details</h2>
+
+            <input type="text" id="routeFrom" placeholder="From">
+            <input type="text" id="routeTo" placeholder="To">
+            <input type="text" id="routeTransport" placeholder="Transport / Route">
+
+            <button onclick="addRoute()">Add Route</button>
+
+            <div id="adminRoutes"></div>
+        </div>
+
+        <div class="container">
+            <h2>📋 View Booking Details</h2>
+            <div id="allBookings"></div>
+        </div>
+
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
