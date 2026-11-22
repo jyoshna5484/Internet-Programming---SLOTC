@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gourmet Haven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Gourmet Haven</h1>
+    <p>Fine Dining • Exceptional Taste</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#offers">Offers</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to Gourmet Haven</h2>
+    <p>Experience delicious food, elegant ambiance and unforgettable moments.</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+
+    <div class="categories">
+        <button onclick="showMenu('all')">All</button>
+        <button onclick="showMenu('starter')">Starters</button>
+        <button onclick="showMenu('main')">Main Course</button>
+        <button onclick="showMenu('dessert')">Desserts</button>
+        <button onclick="showMenu('drink')">Drinks</button>
+    </div>
+
+    <div class="menu-items">
+
+        <div class="card starter">
+            <h3>Tomato Soup</h3>
+            <p>Fresh tomatoes blended with herbs and cream.</p>
+            <p>₹180</p>
+        </div>
+
+        <div class="card starter">
+            <h3>Paneer Tikka</h3>
+            <p>Grilled paneer with spices and vegetables.</p>
+            <p>₹250</p>
+        </div>
+
+        <div class="card main">
+            <h3>Veg Biryani</h3>
+            <p>Fragrant rice cooked with vegetables and spices.</p>
+            <p>₹320</p>
+        </div>
+
+        <div class="card main">
+            <h3>Grilled Chicken</h3>
+            <p>Juicy grilled chicken served with vegetables.</p>
+            <p>₹450</p>
+        </div>
+
+        <div class="card dessert">
+            <h3>Chocolate Cake</h3>
+            <p>Rich chocolate cake with creamy frosting.</p>
+            <p>₹180</p>
+        </div>
+
+        <div class="card drink">
+            <h3>Fresh Lime Juice</h3>
+            <p>Refreshing lime juice with mint.</p>
+            <p>₹100</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+
+    <p>
+        Gourmet Haven is a fine-dining restaurant dedicated to providing
+        excellent food, quality service and a memorable dining experience.
+        Our chefs prepare every dish with fresh ingredients and creativity.
+    </p>
+
+    <h3>Our Culinary Team</h3>
+
+    <div class="card">
+        <h3>Chef Arjun</h3>
+        <p>Head Chef – Specializes in traditional and modern cuisine.</p>
+    </div>
+
+    <div class="card">
+        <h3>Chef Meera</h3>
+        <p>Pastry Chef – Creates delicious desserts and bakery items.</p>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Our Gallery</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">Restaurant Interior</div>
+        <div class="gallery-item">Signature Dishes</div>
+        <div class="gallery-item">Fine Dining</div>
+        <div class="gallery-item">Chef's Special</div>
+    </div>
+</section>
+
+<section id="offers">
+    <h2>Special Offers & Events</h2>
+
+    <div class="card">
+        <h3>Weekend Special</h3>
+        <p>Enjoy 15% off on selected dishes every weekend.</p>
+    </div>
+
+    <div class="card">
+        <h3>Birthday Celebration</h3>
+        <p>Celebrate birthdays with a complimentary dessert.</p>
+    </div>
+
+    <div class="card">
+        <h3>Seasonal Menu</h3>
+        <p>Discover special dishes prepared with seasonal ingredients.</p>
+    </div>
+</section>
+
+<section id="reviews">
+    <h2>Customer Testimonials</h2>
+
+    <div class="card">
+        <p>"Amazing food and wonderful atmosphere!"</p>
+        <h4>- Priya</h4>
+    </div>
+
+    <div class="card">
+        <p>"The service was excellent and the food was delicious."</p>
+        <h4>- Rahul</h4>
+    </div>
+
+    <div class="card">
+        <p>"A perfect place for family dinners and celebrations."</p>
+        <h4>- Sneha</h4>
+    </div>
+</section>
+
+<section id="reservation">
+    <h2>Book a Table</h2>
+
+    <form id="reservationForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="date" id="date" required>
+        <input type="time" required>
+
+        <select required>
+            <option value="">Select Number of Guests</option>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6 Guests</option>
+        </select>
+
+        <button type="submit">Reserve Table</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <p>Address: 25 Gourmet Street, Chennai</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Email: gourmet@example.com</p>
+
+    <h3>Location</h3>
+    <iframe
+        src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="250">
+    </iframe>
+
+    <h3>Send Us a Message</h3>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 Gourmet Haven. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

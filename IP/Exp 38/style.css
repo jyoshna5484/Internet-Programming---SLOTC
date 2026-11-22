@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+}
+
+header {
+    background-color: #4b2415;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #f4c27a;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #f4c27a;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home {
+    background-color: #f3dfc1;
+    padding: 80px 20px;
+}
+
+#home h2 {
+    font-size: 35px;
+    color: #4b2415;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.categories {
+    margin: 20px;
+}
+
+.categories button {
+    margin: 5px;
+    background-color: #8b4513;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 230px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    background-color: #e8c9a0;
+    padding: 40px;
+    margin: 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5c2e0b;
+}
+
+iframe {
+    border: none;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #4b2415;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

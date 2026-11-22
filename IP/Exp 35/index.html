@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartBus Pass Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚌 SmartBus</h1>
+    <p>Bus Pass, eTicket & Route Management System</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#admin">Admin</a>
+    <a href="#user">User</a>
+    <a href="#pass">Bus Pass</a>
+    <a href="#ticket">eTicket</a>
+    <a href="#routes">Routes</a>
+    <a href="#conductor">Conductor</a>
+    <a href="#tracking">Tracking</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to SmartBus</h2>
+    <p>Travel easily with digital bus passes and online tickets.</p>
+    <button onclick="alert('Welcome to SmartBus!')">Get Started</button>
+</section>
+
+<!-- ADMIN SECTION -->
+<section id="admin">
+    <h2>Admin Login & Registration</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Admin Registration</h3>
+            <form id="adminRegister">
+                <input type="text" id="adminName" placeholder="Admin Name" required>
+                <input type="email" id="adminEmail" placeholder="Email" required>
+                <input type="password" id="adminPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Admin Login</h3>
+            <form id="adminLogin">
+                <input type="email" id="adminLoginEmail" placeholder="Email" required>
+                <input type="password" id="adminLoginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <h3>Manage Bus Details</h3>
+
+    <form id="busForm">
+        <input type="text" id="busNumber" placeholder="Bus Number" required>
+        <input type="text" id="busName" placeholder="Bus Name" required>
+        <input type="text" id="busCapacity" placeholder="Bus Capacity" required>
+        <button type="submit">Add Bus</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Bus Number</th>
+                <th>Bus Name</th>
+                <th>Capacity</th>
+            </tr>
+        </thead>
+        <tbody id="busTable"></tbody>
+    </table>
+
+    <h3>Manage Conductor</h3>
+
+    <form id="conductorForm">
+        <input type="text" id="conductorName" placeholder="Conductor Name" required>
+        <input type="email" id="conductorEmail" placeholder="Conductor Email" required>
+        <input type="password" id="conductorPassword" placeholder="Password" required>
+        <button type="submit">Add Conductor</button>
+    </form>
+</section>
+
+<!-- USER SECTION -->
+<section id="user">
+    <h2>User Registration & Login</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>User Registration</h3>
+
+            <form id="userRegister">
+                <input type="text" id="userName" placeholder="Full Name" required>
+                <input type="text" id="userAddress" placeholder="Address" required>
+                <input type="date" id="userDOB" required>
+                <input type="email" id="userEmail" placeholder="Email" required>
+                <input type="text" id="userOrganization" placeholder="School / Organization" required>
+                <input type="tel" id="userPhone" placeholder="Phone Number" required>
+                <select id="userType">
+                    <option>Student</option>
+                    <option>Working Person</option>
+                    <option>General User</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>User Login</h3>
+
+            <form id="userLogin">
+                <input type="email" id="userLoginEmail" placeholder="Email" required>
+                <input type="password" id="userLoginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <h3>eWallet</h3>
+
+    <div class="card">
+        <h3>Wallet Balance: ₹<span id="walletBalance">0</span></h3>
+
+        <input type="number" id="walletAmount" placeholder="Enter Amount">
+        <button onclick="addMoney()">Add Money</button>
+    </div>
+</section>
+
+<!-- BUS PASS SECTION -->
+<section id="pass">
+    <h2>Apply for Bus Pass</h2>
+
+    <form id="passForm">
+        <input type="text" id="passName" placeholder="Candidate Name" required>
+        <input type="text" id="passAddress" placeholder="Address" required>
+        <input type="date" id="passDOB" required>
+        <input type="email" id="passEmail" placeholder="Email" required>
+        <input type="text" id="passOrganization" placeholder="School / Organization" required>
+
+        <select id="passType">
+            <option>Student Pass</option>
+            <option>Route Pass</option>
+            <option>General Pass</option>
+        </select>
+
+        <select id="schoolType">
+            <option value="private">Private School</option>
+            <option value="government">Government School</option>
+        </select>
+
+        <select id="passDuration">
+            <option value="1">1 Month</option>
+            <option value="3">3 Months</option>
+            <option value="6">6 Months</option>
+        </select>
+
+        <input type="text" id="passRoute" placeholder="Bus Route" required>
+
+        <input type="number" id="passAmount" placeholder="Amount Paid (₹)" required>
+
+        <button type="submit">Apply for Bus Pass</button>
+    </form>
+
+    <div id="passResult"></div>
+
+    <h3>Bus Pass Renewal</h3>
+
+    <form id="renewForm">
+        <input type="text" id="renewPassID" placeholder="Bus Pass ID" required>
+
+        <select id="renewDuration">
+            <option value="1">Renew for 1 Month</option>
+            <option value="3">Renew for 3 Months</option>
+            <option value="6">Renew for 6 Months</option>
+        </select>
+
+        <button type="submit">Renew Pass</button>
+    </form>
+
+    <div id="renewResult"></div>
+</section>
+
+<!-- ETICKET SECTION -->
+<section id="ticket">
+    <h2>Buy Bus eTicket</h2>
+
+    <form id="ticketForm">
+        <input type="text" id="ticketName" placeholder="Passenger Name" required>
+        <input type="text" id="ticketFrom" placeholder="From" required>
+        <input type="text" id="ticketTo" placeholder="To" required>
+
+        <select id="ticketBus">
+            <option>Bus 101</option>
+            <option>Bus 102</option>
+            <option>Bus 103</option>
+        </select>
+
+        <input type="number" id="ticketPrice" placeholder="Ticket Amount (₹)" required>
+
+        <button type="submit">Buy Ticket</button>
+    </form>
+
+    <div id="ticketResult"></div>
+</section>
+
+<!-- ROUTE SECTION -->
+<section id="routes">
+    <h2>Bus Route Information</h2>
+
+    <form id="routeForm">
+        <input type="text" id="routeFrom" placeholder="From Location" required>
+        <input type="text" id="routeTo" placeholder="To Location" required>
+        <input type="text" id="routeStops" placeholder="Route Stops" required>
+        <input type="time" id="routeTime" required>
+        <button type="submit">Add Route</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Stops</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="routeTable"></tbody>
+    </table>
+</section>
+
+<!-- CONDUCTOR SECTION -->
+<section id="conductor">
+    <h2>Conductor Login</h2>
+
+    <form id="conductorLogin">
+        <input type="email" id="conductorLoginEmail" placeholder="Conductor Email" required>
+        <input type="password" id="conductorLoginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <h3>QR / Pass Verification</h3>
+
+    <form id="verifyForm">
+        <input type="text" id="verifyID" placeholder="Enter Pass ID / Ticket ID" required>
+        <button type="submit">Verify</button>
+    </form>
+
+    <div id="verifyResult"></div>
+
+    <h3>Update Bus Location</h3>
+
+    <form id="locationForm">
+        <input type="text" id="locationBus" placeholder="Bus Number" required>
+        <input type="text" id="locationValue" placeholder="Current Location" required>
+        <button type="submit">Update Location</button>
+    </form>
+
+    <div id="locationResult"></div>
+</section>
+
+<!-- TRACKING -->
+<section id="tracking">
+    <h2>Expected Arrival Time</h2>
+
+    <form id="trackingForm">
+        <input type="text" id="trackingBus" placeholder="Bus Number" required>
+        <input type="text" id="trackingLocation" placeholder="Current Location" required>
+        <input type="number" id="travelMinutes" placeholder="Expected Travel Minutes" required>
+        <button type="submit">Calculate Arrival</button>
+    </form>
+
+    <div id="trackingResult"></div>
+</section>
+
+<footer>
+    <p>© 2026 SmartBus | Bus Pass & eTicket System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

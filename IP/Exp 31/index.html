@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ko-Matha Dairy Farm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🐄 Ko-Matha Dairy Farm</h1>
+    <p>Freshness, Quality and Purity</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#farm">Farm</a>
+    <a href="#products">Products</a>
+    <a href="#order">Order Online</a>
+    <a href="#contact">Contact</a>
+    <a href="#admin">Admin</a>
+    <a href="#stock">Stock</a>
+    <a href="#customers">Customers</a>
+    <a href="#vendors">Vendors</a>
+</nav>
+
+<!-- Home -->
+<section id="home" class="hero">
+    <h2>Welcome to Ko-Matha Dairy Farm</h2>
+    <p>Pure dairy products directly from our farm to your home.</p>
+    <a href="#products" class="btn">Explore Products</a>
+</section>
+
+<!-- About Us -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Ko-Matha Dairy Farm provides fresh and high-quality dairy products
+        obtained from Indian cow holders. We believe in purity, quality,
+        customer satisfaction and healthy living.
+    </p>
+</section>
+
+<!-- Farm -->
+<section id="farm" class="light">
+    <h2>Our Farm</h2>
+    <p>
+        Our farm follows hygienic milk collection and storage practices.
+        We use modern technology for quality checking, milk storage
+        and dairy product preparation.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Healthy Cows</h3>
+            <p>Proper care and feeding of cows.</p>
+        </div>
+        <div class="card">
+            <h3>Quality Milk</h3>
+            <p>Fresh milk collected and maintained hygienically.</p>
+        </div>
+        <div class="card">
+            <h3>Modern Technology</h3>
+            <p>Technology for milk quality and storage management.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+    <h2>Our Products</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Fresh Milk</h3>
+            <p>Fresh and nutritious milk.</p>
+            <p><b>₹60 / litre</b></p>
+            <button onclick="addOrder('Fresh Milk',60)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Curd</h3>
+            <p>Fresh and creamy curd.</p>
+            <p><b>₹50 / kg</b></p>
+            <button onclick="addOrder('Curd',50)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Cova Sweet</h3>
+            <p>Traditional milk-based sweet.</p>
+            <p><b>₹250 / kg</b></p>
+            <button onclick="addOrder('Cova Sweet',250)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Butter</h3>
+            <p>Fresh and delicious dairy butter.</p>
+            <p><b>₹200 / kg</b></p>
+            <button onclick="addOrder('Butter',200)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Ghee</h3>
+            <p>Pure homemade ghee.</p>
+            <p><b>₹600 / litre</b></p>
+            <button onclick="addOrder('Ghee',600)">Buy Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Order Online -->
+<section id="order" class="light">
+    <h2>Order Online</h2>
+
+    <form id="orderForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="text" id="customerPhone" placeholder="Phone Number" required>
+        <input type="text" id="customerAddress" placeholder="Delivery Address" required>
+
+        <select id="product" required>
+            <option value="">Select Product</option>
+            <option value="Fresh Milk">Fresh Milk</option>
+            <option value="Curd">Curd</option>
+            <option value="Cova Sweet">Cova Sweet</option>
+            <option value="Butter">Butter</option>
+            <option value="Ghee">Ghee</option>
+        </select>
+
+        <input type="number" id="quantity" placeholder="Quantity" min="1" required>
+
+        <input type="date" id="deliveryDate" required>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <p id="orderMessage"></p>
+</section>
+
+<!-- Admin -->
+<section id="admin">
+    <h2>Administrator</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Admin Registration</h3>
+            <button onclick="showForm('Admin Registration')">Register</button>
+        </div>
+
+        <div class="card">
+            <h3>Admin Login</h3>
+            <button onclick="showForm('Admin Login')">Login</button>
+        </div>
+    </div>
+</section>
+
+<!-- Stock -->
+<section id="stock" class="light">
+    <h2>Stock Management</h2>
+
+    <form id="stockForm">
+        <input type="text" id="stockProduct" placeholder="Product Name" required>
+        <input type="number" id="stockQuantity" placeholder="Stock Quantity" min="1" required>
+        <button type="submit">Add Stock</button>
+    </form>
+
+    <h3>Stock Details</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="stockTable"></tbody>
+    </table>
+
+    <h3>Reports</h3>
+    <button onclick="showReport('Daily')">Daily Report</button>
+    <button onclick="showReport('Monthly')">Monthly Report</button>
+    <button onclick="showReport('Yearly')">Yearly Report</button>
+</section>
+
+<!-- Customers -->
+<section id="customers">
+    <h2>Customer Details</h2>
+    <button onclick="showCustomers()">View Customers</button>
+
+    <h3>Purchase Details</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="customerTable"></tbody>
+    </table>
+</section>
+
+<!-- Vendors -->
+<section id="vendors" class="light">
+    <h2>Milk Vendor Details</h2>
+
+    <form id="vendorForm">
+        <input type="text" id="vendorName" placeholder="Vendor Name" required>
+        <input type="text" id="vendorPhone" placeholder="Phone Number" required>
+        <input type="text" id="vendorAddress" placeholder="Address" required>
+        <input type="number" id="vendorMilk" placeholder="Milk Quantity (Litres)" required>
+        <button type="submit">Add Vendor</button>
+    </form>
+
+    <h3>Vendor Information</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Milk (L)</th>
+            </tr>
+        </thead>
+        <tbody id="vendorTable"></tbody>
+    </table>
+</section>
+
+<!-- Cow Details -->
+<section id="cow">
+    <h2>Cow Detail Maintenance</h2>
+
+    <form id="cowForm">
+        <input type="text" id="cowId" placeholder="Cow ID" required>
+        <input type="text" id="cowBreed" placeholder="Breed" required>
+        <input type="number" id="cowMilk" placeholder="Milk Production (Litres)" required>
+        <input type="text" id="cowHealth" placeholder="Health Status" required>
+        <button type="submit">Add Cow Details</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cow ID</th>
+                <th>Breed</th>
+                <th>Milk (L)</th>
+                <th>Health</th>
+            </tr>
+        </thead>
+        <tbody id="cowTable"></tbody>
+    </table>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="light">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Ko-Matha Dairy Farm | Freshness and Purity</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

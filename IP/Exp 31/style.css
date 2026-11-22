@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f2;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #315b35;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    background: #234329;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #d9f99d;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #6b9b55, #315b35);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin: 15px;
+}
+
+/* Sections */
+section {
+    padding: 40px 7%;
+    text-align: center;
+}
+
+section h2 {
+    color: #315b35;
+    margin-bottom: 25px;
+}
+
+.light {
+    background: #e7f0df;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    width: 240px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #315b35;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+/* Forms */
+form {
+    background: white;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Buttons */
+button, .btn {
+    background: #4d7c3d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+button:hover, .btn:hover {
+    background: #315b35;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background: #315b35;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #234329;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

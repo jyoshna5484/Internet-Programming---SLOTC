@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KodaikanalEats & Resorts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>KodaikanalEats & Resorts</h1>
+    <p>Comfortable Stay in the Beautiful Hills of Kodaikanal</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#rooms">Suites</a>
+    <a href="#availability">Availability</a>
+    <a href="#booking">Booking</a>
+    <a href="#staff">Room Boys</a>
+    <a href="#customers">Customers</a>
+    <a href="#admin">Admin</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to Kodaikanal</h2>
+    <p>Enjoy a peaceful and comfortable stay surrounded by beautiful hills and nature.</p>
+    <button onclick="alert('Welcome to KodaikanalEats & Resorts!')">Explore Rooms</button>
+</section>
+
+<section id="rooms">
+    <h2>Suites & Room Details</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Single Room</h3>
+            <p>One bed with basic facilities for one person.</p>
+            <p>Cost: ₹2,000 per night</p>
+        </div>
+
+        <div class="card">
+            <h3>Double Room</h3>
+            <p>Comfortable room for two guests.</p>
+            <p>Cost: ₹3,500 per night</p>
+        </div>
+
+        <div class="card">
+            <h3>Deluxe Room</h3>
+            <p>Luxury room with mountain view and premium facilities.</p>
+            <p>Cost: ₹5,000 per night</p>
+        </div>
+    </div>
+</section>
+
+<section id="availability">
+    <h2>Room Availability</h2>
+
+    <form id="availabilityForm">
+        <input type="date" id="checkIn" required>
+        <input type="date" id="checkOut" required>
+
+        <select id="roomType">
+            <option>Single Room</option>
+            <option>Double Room</option>
+            <option>Deluxe Room</option>
+        </select>
+
+        <button type="submit">Check Availability</button>
+    </form>
+
+    <div id="availabilityResult"></div>
+</section>
+
+<section id="booking">
+    <h2>Online Room Booking</h2>
+
+    <form id="bookingForm">
+        <input type="text" id="bookingName" placeholder="Customer Name" required>
+        <input type="tel" id="bookingPhone" placeholder="Phone Number" required>
+
+        <select id="bookingRoom">
+            <option>Single Room</option>
+            <option>Double Room</option>
+            <option>Deluxe Room</option>
+        </select>
+
+        <label>Check-in Date</label>
+        <input type="date" id="bookingStart" required>
+
+        <label>Check-out Date</label>
+        <input type="date" id="bookingEnd" required>
+
+        <select id="season">
+            <option value="seasonal">Seasonal Booking</option>
+            <option value="normal">Non-Seasonal Booking</option>
+        </select>
+
+        <button type="submit">Book Room</button>
+    </form>
+
+    <div id="bookingResult"></div>
+</section>
+
+<section id="staff">
+    <h2>Room Boys Availability</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Ramesh</h3>
+            <p>Room Service</p>
+            <p>Status: Available</p>
+        </div>
+
+        <div class="card">
+            <h3>Suresh</h3>
+            <p>Room Cleaning</p>
+            <p>Status: Available</p>
+        </div>
+
+        <div class="card">
+            <h3>Arun</h3>
+            <p>Guest Assistance</p>
+            <p>Status: Busy</p>
+        </div>
+    </div>
+</section>
+
+<section id="customers">
+    <h2>Customer Details</h2>
+
+    <form id="customerForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+        <input type="text" id="customerAddress" placeholder="Address" required>
+
+        <button type="submit">Add Customer</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="customerTable"></tbody>
+    </table>
+</section>
+
+<section id="admin">
+    <h2>Admin Registration & Login</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Admin Registration</h3>
+            <form id="registerForm">
+                <input type="text" id="adminName" placeholder="Admin Name" required>
+                <input type="email" id="adminEmail" placeholder="Email" required>
+                <input type="password" id="adminPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Admin Login</h3>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: kodairesort@example.com</p>
+    <p>Phone: 9876543210</p>
+    <p>Location: Kodaikanal, Tamil Nadu</p>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 KodaikanalEats & Resorts</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

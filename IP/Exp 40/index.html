@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Diaries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Travel Diaries</h1>
+    <p>Explore the World, One Journey at a Time</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#articles">Blog</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#map">Travel Map</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#resources">Travel Tips</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Discover Beautiful Places</h2>
+    <p>Travel, explore, experience and create unforgettable memories.</p>
+    <a href="#articles" class="btn">Explore Travel Blogs</a>
+</section>
+
+<section id="articles">
+    <h2>Latest Travel Articles</h2>
+
+    <div class="blogs">
+
+        <div class="card">
+            <h3>Exploring the Beauty of Kerala</h3>
+            <p>
+                Discover the beautiful backwaters, green landscapes,
+                beaches and peaceful surroundings of Kerala.
+            </p>
+            <p><b>Travel Tips:</b> Carry comfortable clothes and visit during pleasant weather.</p>
+            <button onclick="readBlog('Kerala')">Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>A Journey to Manali</h3>
+            <p>
+                Experience mountains, snowfall, scenic roads and
+                adventure activities in the beautiful town of Manali.
+            </p>
+            <p><b>Travel Tips:</b> Carry warm clothes and plan mountain activities carefully.</p>
+            <button onclick="readBlog('Manali')">Read More</button>
+        </div>
+
+        <div class="card">
+            <h3>Discover the Wonders of Jaipur</h3>
+            <p>
+                Explore historical forts, royal palaces, colourful markets
+                and the rich culture of Rajasthan.
+            </p>
+            <p><b>Travel Tips:</b> Visit forts early in the morning to avoid crowds.</p>
+            <button onclick="readBlog('Jaipur')">Read More</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="destinations">
+    <h2>Travel Destinations</h2>
+
+    <select id="destinationFilter" onchange="filterDestination()">
+        <option value="all">All Destinations</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Manali">Manali</option>
+        <option value="Jaipur">Jaipur</option>
+    </select>
+
+    <div class="blogs">
+        <div class="card destination" data-place="Kerala">
+            <h3>Kerala</h3>
+            <p>Backwaters, beaches and beautiful greenery.</p>
+        </div>
+
+        <div class="card destination" data-place="Manali">
+            <h3>Manali</h3>
+            <p>Snow-covered mountains and adventure experiences.</p>
+        </div>
+
+        <div class="card destination" data-place="Jaipur">
+            <h3>Jaipur</h3>
+            <p>Royal palaces, forts and cultural heritage.</p>
+        </div>
+    </div>
+</section>
+
+<section id="map">
+    <h2>My Travel Map</h2>
+    <p>Explore some of the destinations I have visited.</p>
+
+    <iframe
+        src="https://maps.google.com/maps?q=India&t=&z=5&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="350">
+    </iframe>
+</section>
+
+<section id="gallery">
+    <h2>Travel Photo Gallery</h2>
+
+    <div class="gallery">
+        <div class="photo" onclick="showPhoto('Mountain View')">Mountain View</div>
+        <div class="photo" onclick="showPhoto('Beach Sunset')">Beach Sunset</div>
+        <div class="photo" onclick="showPhoto('Forest Adventure')">Forest Adventure</div>
+        <div class="photo" onclick="showPhoto('City Exploration')">City Exploration</div>
+        <div class="photo" onclick="showPhoto('Beautiful Waterfalls')">Waterfalls</div>
+        <div class="photo" onclick="showPhoto('Historical Places')">Historical Places</div>
+    </div>
+</section>
+
+<section id="resources">
+    <h2>Travel Resources & Tips</h2>
+
+    <div class="blogs">
+        <div class="card">
+            <h3>Packing Checklist</h3>
+            <p>Pack clothes, toiletries, chargers, travel documents and medicines.</p>
+        </div>
+
+        <div class="card">
+            <h3>Travel Planning</h3>
+            <p>Plan your destination, transportation, accommodation and budget.</p>
+        </div>
+
+        <div class="card">
+            <h3>Travel Safety</h3>
+            <p>Keep your belongings safe and maintain emergency contact details.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About the Traveler</h2>
+
+    <div class="card">
+        <h3>Hello, I'm a Travel Enthusiast!</h3>
+        <p>
+            I love exploring new places, experiencing different cultures,
+            tasting local foods and capturing beautiful memories.
+            Through this blog, I share my travel experiences,
+            stories and useful tips with fellow travelers.
+        </p>
+        <p>My dream is to explore more destinations around the world.</p>
+    </div>
+</section>
+
+<section id="comments">
+    <h2>Share Your Thoughts</h2>
+
+    <form id="commentForm">
+        <input type="text" id="commentName" placeholder="Your Name" required>
+        <textarea id="commentText" placeholder="Write your comment..." required></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+
+    <div id="commentList"></div>
+</section>
+
+<section id="share">
+    <h2>Share Our Travel Blog</h2>
+    <button onclick="shareBlog()">Share Blog</button>
+</section>
+
+<footer>
+    <p>&copy; 2026 Travel Diaries | Explore the World</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

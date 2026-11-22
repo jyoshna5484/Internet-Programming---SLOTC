@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ram Infotech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>💻 Ram Infotech</h1>
+    <p>Laptop Sales, Services & Rentals</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#sales">Online Store</a>
+    <a href="#services">Services</a>
+    <a href="#customers">Customers</a>
+    <a href="#rental">Rental</a>
+    <a href="#stock">Stock</a>
+    <a href="#admin">Admin</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome to Ram Infotech</h2>
+    <p>Buy laptops, repair your devices and rent laptops at affordable prices.</p>
+    <button onclick="showMessage('Welcome to Ram Infotech!')">Explore Now</button>
+</section>
+
+<section id="sales">
+    <h2>Online Laptop Store</h2>
+
+    <div class="products">
+        <div class="card">
+            <h3>HP Pavilion</h3>
+            <p>Intel Core i5 | 8GB RAM | 512GB SSD</p>
+            <p>Price: ₹55,000</p>
+            <button onclick="buyLaptop('HP Pavilion',55000)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Dell Inspiron</h3>
+            <p>Intel Core i7 | 16GB RAM | 512GB SSD</p>
+            <p>Price: ₹70,000</p>
+            <button onclick="buyLaptop('Dell Inspiron',70000)">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <h3>Lenovo IdeaPad</h3>
+            <p>Ryzen 5 | 8GB RAM | 512GB SSD</p>
+            <p>Price: ₹48,000</p>
+            <button onclick="buyLaptop('Lenovo IdeaPad',48000)">Buy Now</button>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Laptop Services</h2>
+
+    <div class="products">
+        <div class="card">
+            <h3>Screen Replacement</h3>
+            <p>Replacement of damaged laptop screens.</p>
+        </div>
+
+        <div class="card">
+            <h3>Software Installation</h3>
+            <p>OS installation, software updates and troubleshooting.</p>
+        </div>
+
+        <div class="card">
+            <h3>Hardware Repair</h3>
+            <p>Keyboard, battery, motherboard and hardware repairs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Virus Removal</h3>
+            <p>Virus scanning and system security maintenance.</p>
+        </div>
+    </div>
+
+    <h3>Book a Service</h3>
+
+    <form id="serviceForm">
+        <input type="text" id="serviceName" placeholder="Customer Name" required>
+        <input type="text" id="serviceLaptop" placeholder="Laptop Model" required>
+
+        <select id="serviceType" required>
+            <option value="">Select Service</option>
+            <option>Screen Replacement</option>
+            <option>Software Installation</option>
+            <option>Hardware Repair</option>
+            <option>Virus Removal</option>
+        </select>
+
+        <input type="text" id="serviceProblem" placeholder="Describe the Problem" required>
+        <button type="submit">Book Service</button>
+    </form>
+
+    <h3>Service Status</h3>
+    <button onclick="checkService()">Check Service Status</button>
+</section>
+
+<section id="customers">
+    <h2>Customer Information</h2>
+
+    <form id="customerForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+        <input type="email" id="customerEmail" placeholder="Email Address" required>
+
+        <select id="customerType">
+            <option>Purchase</option>
+            <option>Service</option>
+        </select>
+
+        <button type="submit">Save Customer</button>
+    </form>
+
+    <h3>Customer Records</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="customerTable"></tbody>
+    </table>
+</section>
+
+<section id="rental">
+    <h2>Laptop Rental Agreement</h2>
+
+    <form id="rentalForm">
+        <input type="text" id="renterName" placeholder="Customer Name" required>
+        <input type="text" id="renterPhone" placeholder="Phone Number" required>
+        <input type="text" id="rentalLaptop" placeholder="Laptop Model" required>
+
+        <label>Rental Start Date</label>
+        <input type="date" id="startDate" required>
+
+        <label>Rental End Date</label>
+        <input type="date" id="endDate" required>
+
+        <input type="number" id="rentalAmount" placeholder="Rental Amount (₹)" required>
+
+        <button type="submit">Create Rental Agreement</button>
+    </form>
+
+    <div id="agreement"></div>
+</section>
+
+<section id="stock">
+    <h2>Shop Stock Maintenance</h2>
+
+    <form id="stockForm">
+        <input type="text" id="stockLaptop" placeholder="Laptop Model" required>
+        <input type="number" id="stockQuantity" placeholder="Quantity" required>
+        <input type="number" id="stockPrice" placeholder="Price (₹)" required>
+        <button type="submit">Add Stock</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Laptop Model</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="stockTable"></tbody>
+    </table>
+</section>
+
+<section id="admin">
+    <h2>Admin Login & Registration</h2>
+
+    <div class="products">
+        <div class="card">
+            <h3>Admin Registration</h3>
+            <form id="registerForm">
+                <input type="text" id="adminName" placeholder="Admin Name" required>
+                <input type="email" id="adminEmail" placeholder="Email" required>
+                <input type="password" id="adminPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Admin Login</h3>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="card">
+        <h3>Do you provide laptop repairs?</h3>
+        <p>Yes, we provide hardware and software repair services.</p>
+    </div>
+
+    <div class="card">
+        <h3>Can I rent a laptop?</h3>
+        <p>Yes, laptops are available for rental for different periods.</p>
+    </div>
+
+    <div class="card">
+        <h3>How can I track my service?</h3>
+        <p>You can check your service status using the service status option.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@raminfotech.com</p>
+    <p>Phone: 9876543210</p>
+    <p>Address: Ram Infotech Laptop Store</p>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Ram Infotech | Laptop Sales & Services</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

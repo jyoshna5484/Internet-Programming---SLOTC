@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8f6;
+    color: #333;
+}
+
+header {
+    background-color: #205c4b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #d7f5c5;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #d7f5c5;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home {
+    background-color: #d9eee2;
+    padding: 70px 20px;
+}
+
+#home h2 {
+    font-size: 35px;
+    color: #205c4b;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #205c4b;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.blogs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #205c4b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #143e32;
+}
+
+select, input, textarea {
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo {
+    background-color: #b9d9c5;
+    width: 200px;
+    padding: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo:hover {
+    background-color: #8fc0a3;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}
+
+#commentList {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.comment {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+iframe {
+    border: none;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #205c4b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 25px 15px;
+    }
+
+    .card, .photo {
+        width: 90%;
+    }
+}
